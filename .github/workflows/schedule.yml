@@ -1,0 +1,41 @@
+name: Read PRC schedule
+
+# Twice a day (6 AM and 6 PM Manila): read PRC's Schedule of Examination pages for this year and next.
+# A changed schedule is committed, and the push makes Cloudflare Pages rebuild the site.
+# If a page doesn't look like a schedule any more, prc.py exits with an error and nothing is written,
+# so this job fails (and GitHub emails the owner) instead of publishing bad dates.
+on:
+  schedule:
+    - cron: "0 22 * * *"
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  read:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Read the schedule
+        run: python pipeline/prc.py
+      - name: Commit what changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898729+github-actions[bot]@users.noreply.github.com"
+          git add data/prc
+          if git diff --cached --quiet; then
+            # Nothing new from PRC: record the check once a day so the page can say "checked today".
+            [ "${{ github.event.schedule }}" = "0 22 * * *" ] || { echo "No changes."; exit 0; }
+            git add data/status.json
+            git diff --cached --quiet && exit 0
+            git commit -m "Checked PRC schedule $(date -u +%Y-%m-%d): no changes"
+          else
+            git add data/status.json
+            git commit -m "PRC schedule changed $(date -u +%Y-%m-%d)"
+          fi
+          git push

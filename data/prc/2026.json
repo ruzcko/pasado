@@ -1,0 +1,4708 @@
+{
+ "year": 2026,
+ "source": "https://www.prc.gov.ph/2026-schedule-examination",
+ "updated_at": "2026-10-12T01:25:31Z",
+ "hash": "24bdc3ac97ef6195",
+ "count": 158,
+ "unknown_names": [],
+ "rows": [
+  {
+   "seq": "1",
+   "name": "Real Estate Consultants (Revalida)",
+   "key": "real-estate-consultants",
+   "phase": "Revalida",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-01-12",
+    "2026-01-13",
+    "2026-01-14"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2025-08-21",
+   "deadline": "2025-10-21",
+   "results": "2026-01-16",
+   "notices": [],
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-RealEstateConsultants.pdf",
+   "id": "real-estate-consultants-revalida-2026-01-12"
+  },
+  {
+   "seq": "2",
+   "name": "Architects",
+   "key": "architects",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-01-20",
+    "2026-01-22"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-11-11",
+   "deadline": "2025-12-15",
+   "results": "2026-01-27",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/January 2026 Examination Program for Architects_rev.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Architecture.pdf",
+   "id": "architects-2026-01-20"
+  },
+  {
+   "seq": "3",
+   "name": "Sanitary Engineers (CBLE)",
+   "key": "sanitary-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-01-26",
+    "2026-01-27",
+    "2026-01-28"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao",
+    "Rosales",
+    "Pampanga",
+    "Tuguegarao"
+   ],
+   "opens": "2025-11-11",
+   "deadline": "2025-12-29",
+   "results": "2026-01-30",
+   "notices": [
+    {
+     "text": "Resolution No. 2136(B) s.2025 - Designating Davao As Additional Testing Center For The January 2026 Sanitary Engineers Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2136(B) Designating Davao As Additional Testing Center For The January.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program january 2026 sanengg.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-SanitaryEngineering.pdf",
+   "id": "sanitary-engineers-2026-01-26"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electrical Engineers Oral Examination",
+   "key": "professional-electrical-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-01-22",
+    "2026-01-23",
+    "2026-01-24",
+    "2026-01-25",
+    "2026-01-26",
+    "2026-01-27",
+    "2026-01-28"
+   ],
+   "centers": [
+    "Doha",
+    "Qatar"
+   ],
+   "opens": "2025-12-22",
+   "deadline": "2026-01-15",
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/2025-2138 Scheduling The PEE Oral Examination Doha Qatar  and Dubai UAE.pdf",
+   "id": "professional-electrical-engineers-oral-2026-01-22"
+  },
+  {
+   "seq": "4",
+   "name": "Criminologists",
+   "key": "criminologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-02-04",
+    "2026-02-05",
+    "2026-02-06"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Palawan",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Bacolod",
+    "Bayambang",
+    "Bohol",
+    "Catarman",
+    "Cauayan",
+    "Dumaguete",
+    "Ilocos Norte",
+    "Ilocos Sur",
+    "Kidapawan",
+    "Lipa (Batangas)",
+    "Nueva Vizcaya",
+    "Romblon",
+    "Naga"
+   ],
+   "opens": "2025-11-11",
+   "deadline": "2025-12-29",
+   "results": "2026-03-13",
+   "notices": [
+    {
+     "text": "Resolution No. 2141 s.2026 Designating Naga City as an Additional Testing Center for the February 2026 Licensure Examination for Criminologists",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2141 Designating Naga City As An Additional Testing Center For The February 2026.pdf"
+    },
+    {
+     "text": "Resolution No. 2144 s.2026 Cancellation of the Licensure Examination for Criminologists in the Cities of Butuan and Cagayan De Oro on February 06, 2026 and Rescheduling the Same to February 08, 2026",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2141 Designating Naga City As An Additional Testing Center For The February 2026.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Program of Exam Feb 2026 LE for Criminologists.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Criminology.pdf",
+   "id": "criminologists-2026-02-04"
+  },
+  {
+   "seq": "5",
+   "name": "Respiratory Therapists (CBLE)",
+   "key": "respiratory-therapists",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-02-09",
+    "2026-02-10"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao",
+    "Pagadian",
+    "Pampanga",
+    "Cagayan De Oro",
+    "Tuguegarao"
+   ],
+   "opens": "2025-11-11",
+   "deadline": "2026-01-12",
+   "results": "2026-02-13",
+   "notices": [
+    {
+     "text": "Resolution No. 2142 s.2026 Designating Cagayan De Oro as Additional Testing Center for the February 2026 Respiratory Therapists Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2142 Designating Cagayan De Oro As Additional Testing Center For The.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/11192025 exam program (respiratory)_rev.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-RespiratoryTherapy.pdf",
+   "id": "respiratory-therapists-2026-02-09"
+  },
+  {
+   "seq": "6",
+   "name": "Mechanical Engineers",
+   "key": "mechanical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-02-11",
+    "2026-02-12",
+    "2026-02-13"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Palawan",
+    "Rosales",
+    "Tacloban",
+    "Zamboanga"
+   ],
+   "opens": "2025-11-13",
+   "deadline": "2026-01-12",
+   "results": "2026-02-19",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program feb 2026 mele.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-MechanicalEngineering.pdf",
+   "id": "mechanical-engineers-2026-02-11"
+  },
+  {
+   "seq": "7",
+   "name": "Certified Plant Mechanics (CBLE)",
+   "key": "plant-mechanics",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-02-11",
+    "2026-02-12",
+    "2026-02-13"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga"
+   ],
+   "opens": "2025-11-13",
+   "deadline": "2026-01-12",
+   "results": "2026-02-19",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program feb 2026 cpm w memo 57.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-CertifiedPlantMechanic.pdf",
+   "id": "plant-mechanics-2026-02-11"
+  },
+  {
+   "seq": "8",
+   "name": "Master Plumbers",
+   "key": "master-plumbers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-02-19",
+    "2026-02-20"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao"
+   ],
+   "opens": "2025-11-21",
+   "deadline": "2026-01-20",
+   "results": "2026-02-25",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/112626-FEBRUARY 2026 MPLE PROGRAM-1st draft -fINAL (2).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-MasterPlumbing.pdf",
+   "id": "master-plumbers-2026-02-19"
+  },
+  {
+   "seq": "9",
+   "name": "Nurses",
+   "key": "nurses",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-02-26",
+    "2026-02-27"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Ilocos Sur",
+    "Dumaguete (Negros Oriental)",
+    "Laguna",
+    "Lipa (Batangas)",
+    "Tagbilaran (Bohol)",
+    "Urdaneta (Pangasinan)"
+   ],
+   "opens": "2025-11-28",
+   "deadline": "2026-01-27",
+   "results": "2026-03-19",
+   "notices": [
+    {
+     "text": "Resolution No. 2148 s.2026 Removing the Cities of Dumaguete and Tagbilaran as Testing Centers for the February 2026 Nurses Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/nurse 2026-2148 Removing The Cities Of Dumaguete And Tagbilaran As Testing Centers.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam progam feb 2026 nle (nursing) approved.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Nursing.pdf",
+   "id": "nurses-2026-02-26"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electrical Engineers Oral Examination",
+   "key": "professional-electrical-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-02-26",
+    "2026-02-27",
+    "2026-02-28",
+    "2026-03-01",
+    "2026-03-02",
+    "2026-03-03",
+    "2026-03-04"
+   ],
+   "centers": [
+    "Dubai",
+    "United Arab Emirates"
+   ],
+   "opens": "2026-01-19",
+   "deadline": "2026-02-19",
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/2025-2138 Scheduling The PEE Oral Examination Doha Qatar  and Dubai UAE.pdf",
+   "id": "professional-electrical-engineers-oral-2026-02-26"
+  },
+  {
+   "seq": "10",
+   "name": "Medical Technologists",
+   "key": "medical-technologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-03-05",
+    "2026-03-06"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-12-05",
+   "deadline": "2026-02-03",
+   "results": "2026-03-11",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/March 2026 MTLE Program.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-MedicalTechnology.pdf",
+   "id": "medical-technologists-2026-03-05"
+  },
+  {
+   "seq": "11",
+   "name": "Professional Teachers",
+   "key": "teachers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-03-15"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Bacolod",
+    "Batanes",
+    "Bayambang",
+    "Bohol",
+    "Cauayan",
+    "Digos",
+    "Dumaguete",
+    "General Santos",
+    "Ilocos Norte",
+    "Ilocos Sur",
+    "Kidapawan",
+    "Laguna",
+    "Lipa (Batangas)",
+    "Maasin (Southern Leyte)",
+    "Marinduque",
+    "Mati",
+    "Nueva Vizcaya",
+    "Oroquieta (Misamis Occidental)",
+    "Romblon",
+    "Sablayan (Occidental Mindoro)",
+    "Tagum",
+    "Masbate City",
+    "Virac",
+    "Catanduanes"
+   ],
+   "opens": "2025-12-03",
+   "deadline": "2026-02-03",
+   "results": "2026-05-15",
+   "notices": [
+    {
+     "text": "Resolution No. 2146 s.2026 Designating Masbate City and Virac, Catanduanes as Additional Testing Centers for the March 2026 Licensure Examination for Professional Teachers",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2146 Designating Masbate City And Virac, Catanduanes As Additional.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/March 2026  lept exam program (prof teachers) revised.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-ProfessionalTeachers.pdf",
+   "id": "teachers-2026-03-15"
+  },
+  {
+   "seq": "12",
+   "name": "Electronics Engineers",
+   "key": "electronics-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-03-17",
+    "2026-03-18"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-12-17",
+   "deadline": "2026-02-16",
+   "results": "2026-03-24",
+   "notices": [
+    {
+     "text": "Resolution No. 2154 s.2026 Removing Pagadian City as Testing Center for the March 2026 Electronics Engineers Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2154 Removing Pagadian City as Testing Center for the March 2026 EE Licensure Exam.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program march 2026 (ece).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-ElectronicsEngineering.pdf",
+   "id": "electronics-engineers-2026-03-17"
+  },
+  {
+   "seq": "13",
+   "name": "Electronics Technicians",
+   "key": "electronics-technicians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-03-19"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-12-17",
+   "deadline": "2026-02-16",
+   "results": "2026-03-24",
+   "notices": [
+    {
+     "text": "Resolution No. 2155 s.2026 Removing Pagadian City as Testing Center for the March 2026 Electronics Technicians Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2155 Removing Pagadian City as Testing Center for the March 2026 ET Licensure Exam.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program march 2026 (ece).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-ElectronicsTechnician.pdf",
+   "id": "electronics-technicians-2026-03-19"
+  },
+  {
+   "seq": "14",
+   "name": "Physicians",
+   "key": "physicians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-03-23",
+    "2026-03-24",
+    "2026-03-30",
+    "2026-03-31"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-12-23",
+   "deadline": "2026-02-23",
+   "results": "2026-04-08",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Physicians LE program March 2026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Medicine.pdf",
+   "id": "physicians-2026-03-23"
+  },
+  {
+   "seq": "15",
+   "name": "Civil Engineers",
+   "key": "civil-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-03-26",
+    "2026-03-27"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Ilocos Sur"
+   ],
+   "opens": "2025-12-26",
+   "deadline": "2026-02-24",
+   "results": "2026-04-07",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/RevisedExamProgramMarch2026CivilEngg.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-CivilEngineering.pdf",
+   "id": "civil-engineers-2026-03-26"
+  },
+  {
+   "seq": "16",
+   "name": "Midwives",
+   "key": "midwives",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-04-14",
+    "2026-04-15"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-01-14",
+   "deadline": "2026-03-16",
+   "results": "2026-04-20",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Revised Exam Program for Midwives.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Midwifery.pdf",
+   "id": "midwives-2026-04-14"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electrical Engineers (Oral Examination)",
+   "key": "professional-electrical-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-04-15",
+    "2026-04-16",
+    "2026-04-17"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-03-24",
+   "deadline": "2026-04-08",
+   "results": "2026-04-28",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-electrical-engineers-oral-2026-04-15"
+  },
+  {
+   "seq": "17",
+   "name": "Real Estate Brokers",
+   "key": "real-estate-brokers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-04-16"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao"
+   ],
+   "opens": "2026-01-16",
+   "deadline": "2026-03-17",
+   "results": "2026-04-21",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program REB 2026 revised.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-RealEstateBrokers.pdf",
+   "id": "real-estate-brokers-2026-04-16"
+  },
+  {
+   "seq": "18",
+   "name": "Pharmacists",
+   "key": "pharmacists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-04-18",
+    "2026-04-19"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-01-16",
+   "deadline": "2026-03-20",
+   "results": "2026-04-22",
+   "notices": [
+    {
+     "text": "Resolution No. 2164 s.2026 Removing Legazpi City as Testing Center for the April 2026 Pharmacists Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2164 Removing Legazpi City As Testing Center April 2026 Pharmacists LE.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/April 18 and 19 2026 Exam Program (Pharmacy) revised.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/Documentary Requirements pharmacist reso 28 2026.pdf",
+   "id": "pharmacists-2026-04-18"
+  },
+  {
+   "seq": "19",
+   "name": "Registered Electrical Engineers",
+   "key": "electrical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-04-21",
+    "2026-04-22"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-01-21",
+   "deadline": "2026-03-23",
+   "results": "2026-04-28",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/program april 2026  (electrical engg) revised (1).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-RegisteredElectricalEngineer.pdf",
+   "id": "electrical-engineers-2026-04-21"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-04-21",
+    "2026-04-22",
+    "2026-04-23"
+   ],
+   "centers": [
+    "Cagayan de Oro"
+   ],
+   "opens": "2026-03-31",
+   "deadline": "2026-04-14",
+   "results": "2026-08-12",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-04-21"
+  },
+  {
+   "seq": "20",
+   "name": "Registered Master Electricians",
+   "key": "master-electricians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-04-23"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-01-21",
+   "deadline": "2026-03-23",
+   "results": "2026-04-28",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/program april 2026  (electrical engg) revised (1).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-RegisteredMasterElectrician.pdf",
+   "id": "master-electricians-2026-04-23"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-04-14",
+    "2026-04-15",
+    "2026-04-16"
+   ],
+   "centers": [
+    "San Fernando"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/2026-2158 Scheduling the Professional Mechanical Engineers Technical Evaluation in Pampanga on 14 to 16 April 2.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-04-14"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-04-27",
+    "2026-04-28",
+    "2026-04-29",
+    "2026-04-30"
+   ],
+   "centers": [
+    "Cebu"
+   ],
+   "opens": "2026-04-06",
+   "deadline": "2026-04-20",
+   "results": "2026-08-12",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-04-27"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electronics Engineers (Oral Examination)",
+   "key": "professional-electronics-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-04-29",
+    "2026-04-30"
+   ],
+   "centers": [
+    "Legazpi"
+   ],
+   "opens": "2026-04-08",
+   "deadline": "2026-04-22",
+   "results": "2026-10-23",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-electronics-engineers-oral-2026-04-29"
+  },
+  {
+   "seq": "21",
+   "name": "Dentists (Written)",
+   "key": "dentists",
+   "phase": "Written",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-05-04",
+    "2026-05-05",
+    "2026-05-06"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao"
+   ],
+   "opens": "2026-02-03",
+   "deadline": "2026-04-06",
+   "results": "2026-05-20",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Revised May 2026 DLE Written Phase Program.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Dentistry-Written.pdf",
+   "id": "dentists-written-2026-05-04"
+  },
+  {
+   "seq": "22",
+   "name": "Dental Hygienists (Written-CBLE)",
+   "key": "dental-hygienists",
+   "phase": "Written",
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-05-07"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-02-06",
+   "deadline": "2026-04-07",
+   "results": "2026-05-20",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Revised May 2026 DHLE Program.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-DentalHygienist-Written.pdf",
+   "id": "dental-hygienists-written-2026-05-07"
+  },
+  {
+   "seq": "23",
+   "name": "Dental Hygienists (Practical)",
+   "key": "dental-hygienists",
+   "phase": "Practical",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-05-08"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-02-06",
+   "deadline": "2026-04-07",
+   "results": "2026-05-20",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Revised May 2026 DHLE Program.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-DentalHygienist-Practical.pdf",
+   "id": "dental-hygienists-practical-2026-05-08"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-05-11",
+    "2026-05-12",
+    "2026-05-13"
+   ],
+   "centers": [
+    "Legazpi"
+   ],
+   "opens": "2026-04-20",
+   "deadline": "2026-05-04",
+   "results": "2026-08-12",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-05-11"
+  },
+  {
+   "seq": "24",
+   "name": "Dentists (Practical)",
+   "key": "dentists",
+   "phase": "Practical",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-05-11",
+    "2026-05-12",
+    "2026-05-13",
+    "2026-05-14"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-02-03",
+   "deadline": "2026-04-06",
+   "results": "2026-05-20",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Revised May 2026 DLE Practical Phase.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Dentistry-Practical.pdf",
+   "id": "dentists-practical-2026-05-11"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electronics Engineers (Oral Examination)",
+   "key": "professional-electronics-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-05-14",
+    "2026-05-15"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-04-23",
+   "deadline": "2026-05-07",
+   "results": "2026-10-23",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-electronics-engineers-oral-2026-05-14"
+  },
+  {
+   "seq": "25",
+   "name": "Speech-Language Pathologists (CBLE)",
+   "key": "speech-language-pathologists",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-05-18",
+    "2026-05-19"
+   ],
+   "centers": [
+    "NCR",
+    "Cebu"
+   ],
+   "opens": "2026-02-17",
+   "deadline": "2026-04-20",
+   "results": "2026-05-21",
+   "notices": [
+    {
+     "text": "Resolution No. 2172 s.2026 - Removing the Cities of Pampanga, Lucena, Cagayan De Oro, and Davao as Testing Centers for the May 2026 Speech-Language Pathologists Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2172 Removing the Cities of Pampanga Lucena Cagayan De Oro and Davao as Testing Centers for the May 2026 Speech.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/may 2026 exam program (slp) rev w memo 57 logo.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Speech-LanguagePathologists.pdf",
+   "id": "speech-language-pathologists-2026-05-18"
+  },
+  {
+   "seq": "26",
+   "name": "Chemical Engineers (CBLE)",
+   "key": "chemical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-05-20",
+    "2026-05-21",
+    "2026-05-22"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tuguegarao"
+   ],
+   "opens": "2026-02-19",
+   "deadline": "2026-04-20",
+   "results": "2026-05-26",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/CHELE program_20MAY_202026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-ChemicalEngineering.pdf",
+   "id": "chemical-engineers-2026-05-20"
+  },
+  {
+   "seq": "27",
+   "name": "Certified Public Accountants",
+   "key": "cpa",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-05-24",
+    "2026-05-25",
+    "2026-05-26"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-02-06",
+   "deadline": "2026-04-10",
+   "results": "2026-06-02",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/May 2026 CPALE Program_rev1.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Accountancy.pdf",
+   "id": "cpa-2026-05-24"
+  },
+  {
+   "seq": "28",
+   "name": "Environmental Planners (CBLE)",
+   "key": "environmental-planners",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-05-27",
+    "2026-05-28"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Rosales",
+    "Tuguegarao"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [
+    {
+     "text": "Resolution No. 2169 s.2026 Designating Baguio City as an Additional Testing Center for the May 2026 Environmental Planners Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2169 Designating Baguio City As An Additional Testing Center For The May 2026 EP.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/revised exam program may 2026 (envi planning).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-EnvironmentalPlanning.pdf",
+   "id": "environmental-planners-2026-05-27"
+  },
+  {
+   "seq": null,
+   "name": "Architect (SPLE)",
+   "key": "architects",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Hong Kong",
+    "Singapore"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/sple exam program may 2026 (archi).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Architecture-SPLE.pdf",
+   "id": "architects-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Medical Technologists (SPLE)",
+   "key": "medical-technologists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/May 2026 SPLE Program-MTLE.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-MedicalTechnology-SPLE.pdf",
+   "id": "medical-technologists-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Certified Public Accountants (SPLE)",
+   "key": "cpa",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30",
+    "2026-05-31"
+   ],
+   "centers": [
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/May 2026 SPLE CPALE Program Taiwan_rev3.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Accountancy-SPLE.pdf",
+   "id": "cpa-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Chemical Engineers (SPLE)",
+   "key": "chemical-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30",
+    "2026-05-31"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SPLE Chem Engr Program May 2026 Singapore and Taiwan_rev.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-ChemicalEngineering-SPLE.pdf",
+   "id": "chemical-engineers-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Civil Engineers (SPLE)",
+   "key": "civil-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Hong Kong",
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SPLE Exam Program May 2026 (Civil Engineer).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-CivilEngineering-SPLE.pdf",
+   "id": "civil-engineers-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Customs Broker (SPLE)",
+   "key": "customs-brokers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Hong Kong",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SPLE Program of the CuBLE 2026 in HK and Taiwan.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-CustomsBroker-SPLE.pdf",
+   "id": "customs-brokers-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Electronics Engineers (SPLE)",
+   "key": "electronics-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SPLE Exam Program May 2026 ECE_rev.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-ElectronicsEngineering-SPLE.pdf",
+   "id": "electronics-engineers-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Electronics Technicians (SPLE)",
+   "key": "electronics-technicians",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-31"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SPLE Exam Program May 2026 ECE_rev.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-ElectronicsTechnician-SPLE.pdf",
+   "id": "electronics-technicians-sple-2026-05-31"
+  },
+  {
+   "seq": null,
+   "name": "Environmental Planners (SPLE)",
+   "key": "environmental-planners",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Singapore"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SPLE Exam Program May 2026 (EnPLE)_rev.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-EnvironmentalPlanning-SPLE.pdf",
+   "id": "environmental-planners-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Food Technologist (SPLE)",
+   "key": "food-technologists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/sple exam program may 2026 (food tech) updated.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-FoodTechnology-SPLE.pdf",
+   "id": "food-technologists-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Master Plumbers (SPLE)",
+   "key": "master-plumbers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/May 2026 SPLE-MP Singapore and Taiwan_rev2.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-MasterPlumbing-SPLE.pdf",
+   "id": "master-plumbers-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Mechanical Engineers (SPLE)",
+   "key": "mechanical-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30",
+    "2026-05-31"
+   ],
+   "centers": [
+    "Hong Kong",
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Exam Program May 2026 MELE CPM SPLE HongKong Singapore Taiwan.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-MechanicalEngineering-SPLE.pdf",
+   "id": "mechanical-engineers-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Certified Plant Mechanics (SPLE)",
+   "key": "plant-mechanics",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30",
+    "2026-05-31"
+   ],
+   "centers": [
+    "Hong Kong",
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Exam Program May 2026 MELE CPM SPLE HongKong Singapore Taiwan.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-CertifiedPlantMechanic-SPLE.pdf",
+   "id": "plant-mechanics-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Midwives (SPLE)",
+   "key": "midwives",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Hong Kong",
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Board Program SPLE Midwifery May 2026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Midwifery-SPLE.pdf",
+   "id": "midwives-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Nurses (SPLE)",
+   "key": "nurses",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Hong Kong",
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Exam Progam May 2026 SPLE (Nursing).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Nursing-SPLE.pdf",
+   "id": "nurses-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Agriculturists (SPLE)",
+   "key": "agriculturists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30",
+    "2026-05-31"
+   ],
+   "centers": [
+    "Hong Kong",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/sple exam program may 2026 (AgLE)_2.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Agriculture-SPLE.pdf",
+   "id": "agriculturists-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Professional Teachers (SPLE)",
+   "key": "teachers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-31"
+   ],
+   "centers": [
+    "Hong Kong",
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/May 2026 LEPT SPLE Program_rev2.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-ProfessionalTeachers-SPLE.pdf",
+   "id": "teachers-sple-2026-05-31"
+  },
+  {
+   "seq": null,
+   "name": "Psychologists (SPLE)",
+   "key": "psychologists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Hong Kong",
+    "Singapore"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Exam Program SPLE May 2026 Psychology and Psychomet.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Psychology-SPLE.pdf",
+   "id": "psychologists-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Psychometricians (SPLE)",
+   "key": "psychometricians",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Hong Kong",
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Exam Program SPLE May 2026 Psychology and Psychomet.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Psychometrician-SPLE.pdf",
+   "id": "psychometricians-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Radiologic Technologists (SPLE)",
+   "key": "radiologic-technologists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SPLE Exam Program RTLE in Singapore and Taiwan (RadTech)_rev.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-RadiologicTechnology-SPLE.pdf",
+   "id": "radiologic-technologists-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "X-Ray Technologists (SPLE)",
+   "key": "x-ray-technologists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Hong Kong"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SPLE Exam Program XTLE in HongKong (XrayTech)_rev.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-X-RayTechnology-SPLE.pdf",
+   "id": "x-ray-technologists-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Registered Electrical Engineers (SPLE)",
+   "key": "electrical-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SPLE REE RME PROGRAM May 2026 - Singapore and Taiwan_rev.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-RegisteredElectricalEngineer-SPLE.pdf",
+   "id": "electrical-engineers-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Registered Master Electricians (SPLE)",
+   "key": "master-electricians",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-31"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SPLE REE RME PROGRAM May 2026 - Singapore and Taiwan_rev.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-RegisteredMasterElectrician-SPLE.pdf",
+   "id": "master-electricians-sple-2026-05-31"
+  },
+  {
+   "seq": null,
+   "name": "Chemical Technician (SPLE)",
+   "key": "chemical-technicians",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-31"
+   ],
+   "centers": [
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/May 2026 SPLE-Chemical Technician Taiwan.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-ChemicalTechnician-SPLE.pdf",
+   "id": "chemical-technicians-sple-2026-05-31"
+  },
+  {
+   "seq": null,
+   "name": "Respiratory Therapists (SPLE)",
+   "key": "respiratory-therapists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Hong Kong"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Board Program SPLE Respiratory May 2026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-RespiratoryTherapy-SPLE.pdf",
+   "id": "respiratory-therapists-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Social Workers (SPLE)",
+   "key": "social-workers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30",
+    "2026-05-31"
+   ],
+   "centers": [
+    "Hong Kong"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/2026 SPLE SWLE Revised Program.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-SocialWorkers-SPLE.pdf",
+   "id": "social-workers-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Real Estate Appraisers (SPLE)",
+   "key": "real-estate-appraisers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-31"
+   ],
+   "centers": [
+    "Singapore"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SPLE program REA 2026 at singapore.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-RealEstateAppraisers-SPLE.pdf",
+   "id": "real-estate-appraisers-sple-2026-05-31"
+  },
+  {
+   "seq": null,
+   "name": "Veterinary Medicine (SPLE)",
+   "key": "veterinarians",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30",
+    "2026-05-31"
+   ],
+   "centers": [
+    "Singapore",
+    "Hong Kong"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/042026 sple exam program singapore (vet med).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-VeterinaryMedicine-SPLE.pdf",
+   "id": "veterinarians-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Sanitary Engineer (SPLE)",
+   "key": "sanitary-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30",
+    "2026-05-31"
+   ],
+   "centers": [
+    "Singapore"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SELE PROGRAM MAY SPLE 2026-1-11.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-SanitaryEngineering-SPLE.pdf",
+   "id": "sanitary-engineers-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Physical Therapists (SPLE)",
+   "key": "physical-therapists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30"
+   ],
+   "centers": [
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/sple exam program May 2026 (pt).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-PhysicalTherapy-SPLE.pdf",
+   "id": "physical-therapists-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Criminologists (SPLE)",
+   "key": "criminologists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30",
+    "2026-05-31"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/May 2026 Crim sple program of exam (sg and taiwan).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Criminology-SPLE.pdf",
+   "id": "criminologists-sple-2026-05-29"
+  },
+  {
+   "seq": null,
+   "name": "Aeronautical Engineers (SPLE)",
+   "key": "aeronautical-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2026-05-29",
+    "2026-05-30",
+    "2026-05-31"
+   ],
+   "centers": [
+    "Hong Kong"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/sple exam program May 2026 (aero engg).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-AeronauticalEngineering-SPLE.pdf",
+   "id": "aeronautical-engineers-sple-2026-05-29"
+  },
+  {
+   "seq": "29",
+   "name": "Physical Therapists",
+   "key": "physical-therapists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-06-02",
+    "2026-06-03"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Rosales"
+   ],
+   "opens": "2026-03-04",
+   "deadline": "2026-05-04",
+   "results": "2026-06-05",
+   "notices": [
+    {
+     "text": "Reso no.2191 - Removing Pampanga and Tuguegarao",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2191%20Removing%20The%20Cities%20Of%20Pampanga%20And%20Tuguegarao%20As%20Testing%20Centers%20For%20The%20June%202026%20Physical%20Therapis%20%281%29.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program June 2026 ptle (pt).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-PhysicalTherapy.pdf",
+   "id": "physical-therapists-2026-06-02"
+  },
+  {
+   "seq": "30",
+   "name": "Occupational Therapists (CBLE)",
+   "key": "occupational-therapists",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-06-04"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao",
+    "Legazpi",
+    "Pampanga"
+   ],
+   "opens": "2026-03-06",
+   "deadline": "2026-05-05",
+   "results": "2026-06-08",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program June 2026 otle (ot).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-OccupationalTherapy.pdf",
+   "id": "occupational-therapists-2026-06-04"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-06-08",
+    "2026-06-09",
+    "2026-06-10",
+    "2026-06-11",
+    "2026-06-12"
+   ],
+   "centers": [
+    "Lucena"
+   ],
+   "opens": "2026-05-18",
+   "deadline": "2026-06-01",
+   "results": "2026-08-12",
+   "notices": [
+    {
+     "text": "Resolution No. 2192 s. 2026 - Approving the Additional Days for the Professional Mechanical Engineers Technical Evaluation in Lucena in June 2026 and Baguio in September and October 2026",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2192 Approving The Additional Days For The PME Technical Evaluation In Lucena.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-06-08"
+  },
+  {
+   "seq": "31",
+   "name": "Architects",
+   "key": "architects",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-06-08",
+    "2026-06-10"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-03-10",
+   "deadline": "2026-05-11",
+   "results": "2026-06-16",
+   "notices": [
+    {
+     "text": "Resolution No. 2199 s. 2026 - Cancellation of the Licensure Examination for Architects in Davao City on 08 and 10 2026 and Rescheduling the same to 22 and 24 June 2026",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2199 Cancellation for Architects in Davao City and Rescheduling the Same to 22 & 24 June 2026.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Program for June 2026 LEA(Architect)_rev.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Architecture.pdf",
+   "id": "architects-2026-06-08"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-06-15",
+    "2026-06-16",
+    "2026-06-17"
+   ],
+   "centers": [
+    "Calapan"
+   ],
+   "opens": "2026-05-25",
+   "deadline": "2026-06-08",
+   "results": "2026-08-12",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-06-15"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electronics Engineers (Oral Examination)",
+   "key": "professional-electronics-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-06-15"
+   ],
+   "centers": [
+    "Baguio"
+   ],
+   "opens": "2026-05-20",
+   "deadline": "2026-06-03",
+   "results": "2026-10-23",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-electronics-engineers-oral-2026-06-15"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-06-24",
+    "2026-06-25",
+    "2026-06-26"
+   ],
+   "centers": [
+    "Palawan"
+   ],
+   "opens": "2026-06-03",
+   "deadline": "2026-06-17",
+   "results": "2026-08-12",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-06-24"
+  },
+  {
+   "seq": "32",
+   "name": "Interior Designers",
+   "key": "interior-designers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-07-01",
+    "2026-07-02",
+    "2026-07-03"
+   ],
+   "centers": [
+    "NCR",
+    "Cebu",
+    "Davao",
+    "Rosales"
+   ],
+   "opens": "2026-03-31",
+   "deadline": "2026-06-01",
+   "results": "2026-07-22",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/LEID Exam Program July 2026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-InteriorDesign.pdf",
+   "id": "interior-designers-2026-07-01"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-07-06",
+    "2026-07-07",
+    "2026-07-08"
+   ],
+   "centers": [
+    "Pagadian"
+   ],
+   "opens": "2026-06-15",
+   "deadline": "2026-06-29",
+   "results": "2026-08-12",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-07-06"
+  },
+  {
+   "seq": "33",
+   "name": "Real Estate Appraisers",
+   "key": "real-estate-appraisers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-07-07"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Tacloban",
+    "Tuguegarao"
+   ],
+   "opens": "2026-04-08",
+   "deadline": "2026-06-08",
+   "results": "2026-07-09",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/REA exam program 2026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-RealEstateAppraisers.pdf",
+   "id": "real-estate-appraisers-2026-07-07"
+  },
+  {
+   "seq": "34",
+   "name": "Landscape Architects (CBLE)",
+   "key": "landscape-architects",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-07-14",
+    "2026-07-15"
+   ],
+   "orig_days": [
+    "2026-07-08",
+    "2026-07-09"
+   ],
+   "centers": [
+    "NCR",
+    "Cebu"
+   ],
+   "opens": "2026-04-08",
+   "deadline": "2026-06-08",
+   "results": "2026-07-14",
+   "notices": [
+    {
+     "text": "Resolution No. 2209 s.2026 - Rescheduling the Landscape Architects Licensure Examination on 14 and 15 July 2026 and Scheduling the Release thereof on 16 July 2026",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2209 Rescheduling The Landscape Architects Licensure Examination On 14 And 15 July 2026_.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/2026 Revised program of the BLELA-070726_R.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-LandscapeArchitecture.pdf",
+   "id": "landscape-architects-2026-07-08"
+  },
+  {
+   "seq": "35",
+   "name": "Master Plumbers",
+   "key": "master-plumbers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-07-11",
+    "2026-07-12"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao"
+   ],
+   "opens": "2026-04-13",
+   "deadline": "2026-06-11",
+   "results": "2026-07-15",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/DRAFT OF THE MPLE PROGRAM FOR JULY 2026 final edits.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-MasterPlumbing.pdf",
+   "id": "master-plumbers-2026-07-11"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-07-15",
+    "2026-07-16",
+    "2026-07-17"
+   ],
+   "centers": [
+    "Koronadal"
+   ],
+   "opens": "2026-06-24",
+   "deadline": "2026-07-08",
+   "results": "2026-08-12",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-07-15"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electronics Engineers (Oral Examination)",
+   "key": "professional-electronics-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-07-16",
+    "2026-07-17"
+   ],
+   "centers": [
+    "Cagayan de Oro"
+   ],
+   "opens": "2026-06-25",
+   "deadline": "2026-07-09",
+   "results": "2026-10-23",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-electronics-engineers-oral-2026-07-16"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electronics Engineers (Oral Examination)",
+   "key": "professional-electronics-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-07-23",
+    "2026-07-24"
+   ],
+   "centers": [
+    "Singapore"
+   ],
+   "opens": "2026-06-10",
+   "deadline": "2026-07-10",
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/2026-2189 Scheduling Professional Electronics Engineers Oral Examination In Singapore On 23 And 24 July 2026.pdf",
+   "id": "professional-electronics-engineers-oral-2026-07-23"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-07-21",
+    "2026-07-22",
+    "2026-07-23",
+    "2026-07-24"
+   ],
+   "orig_days": [
+    "2026-07-22",
+    "2026-07-23",
+    "2026-07-24"
+   ],
+   "centers": [
+    "Rosales"
+   ],
+   "opens": "2026-07-01",
+   "deadline": "2026-07-15",
+   "results": "2026-08-12",
+   "notices": [
+    {
+     "text": "Resolution No. 2221 s. 2026 - Approving One Additional Day for the July 2026 Professional Mechanical Technical Evaluation in Rosales",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2221 Approving One Addl Day Prof Mech Engr Tech Eval In Rosales July 2026.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-07-22"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-07-27",
+    "2026-07-28",
+    "2026-07-29",
+    "2026-07-30"
+   ],
+   "centers": [
+    "Baguio"
+   ],
+   "opens": "2026-07-06",
+   "deadline": "2026-07-20",
+   "results": "2026-08-12",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-07-27"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electronics Engineers (Oral Examination)",
+   "key": "professional-electronics-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-07-30",
+    "2026-07-31"
+   ],
+   "centers": [
+    "Koronadal"
+   ],
+   "opens": "2026-07-09",
+   "deadline": "2026-07-23",
+   "results": "2026-10-23",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-electronics-engineers-oral-2026-07-30"
+  },
+  {
+   "seq": "36",
+   "name": "Criminologists",
+   "key": "criminologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-08-01",
+    "2026-08-02",
+    "2026-08-03"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Mati",
+    "Palawan",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Antique",
+    "Bacolod",
+    "Bayambang",
+    "Bohol",
+    "Cauayan",
+    "Dumaguete",
+    "Ilocos Norte",
+    "Ilocos Sur",
+    "Kidapawan",
+    "Lipa (Batangas)",
+    "Naga City",
+    "Nueva Vizcaya",
+    "Santiago City",
+    "Sablayan (Occidental Mindoro)"
+   ],
+   "opens": "2026-04-17",
+   "deadline": "2026-06-17",
+   "results": "2026-09-04",
+   "notices": [
+    {
+     "text": "Resolution No. 2173 s. 2026 - Designating Mati City as an Additional Testing Center for the August 2026 Licensure Examination for Criminologists",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2173 Designating Mati City as an Additional Testing Center for the August 2026 Licensure Examination for Crim.pdf"
+    },
+    {
+     "text": "Resolution No. 2197 s. 2026 - Designating Santiago City as an Additional Testing Center for the August 2026 Licensure Examination for Criminologists",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2197 Designating Santiago City Additional Testing Center August 2026 Licensure Examination Crim.pdf"
+    },
+    {
+     "text": "Resolution No. 2211 s. 2026 - Designating Naga City as an Additional Testing Center for the August 2026 Licensure Examination for Criminologist",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026_2211 Designating Naga City as an Additional Testing Center for the August 2026 for Crim.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Crim Program of Exam August 2026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Criminology.pdf",
+   "id": "criminologists-2026-08-01"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electrical Engineers (Oral Examination)",
+   "key": "professional-electrical-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-08-03",
+    "2026-08-04",
+    "2026-08-05"
+   ],
+   "centers": [
+    "Cagayan de Oro"
+   ],
+   "opens": "2026-07-13",
+   "deadline": "2026-07-27",
+   "results": "2026-09-10",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-electrical-engineers-oral-2026-08-03"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-08-04",
+    "2026-08-05",
+    "2026-08-06"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-07-14",
+   "deadline": "2026-07-28",
+   "results": "2026-08-12",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-08-04"
+  },
+  {
+   "seq": "37",
+   "name": "Mechanical Engineers",
+   "key": "mechanical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-08-07",
+    "2026-08-08",
+    "2026-08-09"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-05-08",
+   "deadline": "2026-07-08",
+   "results": "2026-08-12",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program aug 2026 mele signed.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-MechanicalEngineering.pdf",
+   "id": "mechanical-engineers-2026-08-07"
+  },
+  {
+   "seq": "38",
+   "name": "Certified Plant Mechanics (CBLE)",
+   "key": "plant-mechanics",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-08-07",
+    "2026-08-08",
+    "2026-08-09"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga"
+   ],
+   "opens": "2026-05-08",
+   "deadline": "2026-07-08",
+   "results": "2026-08-12",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/rev exam program aug 2026 cpm signed 080326.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-CertifiedPlantMechanic.pdf",
+   "id": "plant-mechanics-2026-08-07"
+  },
+  {
+   "seq": "39",
+   "name": "Professional Food Technologists (CBLE)",
+   "key": "food-technologists",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-08-12",
+    "2026-08-13"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tuguegarao"
+   ],
+   "opens": "2026-05-14",
+   "deadline": "2026-07-13",
+   "results": "2026-08-17",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program august 2026 (food tech).pdf",
+   "id": "food-technologists-2026-08-12"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electronics Engineers (Oral Examination)",
+   "key": "professional-electronics-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-08-13",
+    "2026-08-14"
+   ],
+   "centers": [
+    "Cebu"
+   ],
+   "opens": "2026-07-23",
+   "deadline": "2026-08-06",
+   "results": "2026-10-23",
+   "notices": [
+    {
+     "text": "Resolution No. 2234 s. 2026 - Cancellation of the August 2026 Professional Electronics Engineers Oral Examination in Cebu",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2234 Cancellation of the August 2026 Professional Electronics Engineers Oral Examination in Cebu.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-electronics-engineers-oral-2026-08-13"
+  },
+  {
+   "seq": "40",
+   "name": "Medical Technologists",
+   "key": "medical-technologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-08-15",
+    "2026-08-16"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-05-15",
+   "deadline": "2026-07-17",
+   "results": "2026-08-19",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/August 2026 MLTE Program.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-MedicalTechnology.pdf",
+   "id": "medical-technologists-2026-08-15"
+  },
+  {
+   "seq": "41",
+   "name": "Guidance Counselors (CBLE)",
+   "key": "guidance-counselors",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-08-17",
+    "2026-08-18"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Koronadal",
+    "Lucena",
+    "Rosales",
+    "Tuguegarao"
+   ],
+   "opens": "2026-05-19",
+   "deadline": "2026-07-20",
+   "results": "2026-08-24",
+   "notices": [
+    {
+     "text": "Resolution No. 2235 s. 2026 - Cancelling the Second Day of the Guidance Counselors",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2235 Cancelling the Second Day of the Guidance Counselors.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/gc EXAM PROGRAM 2026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-GuidnaceCounseling.pdf",
+   "id": "guidance-counselors-2026-08-17"
+  },
+  {
+   "seq": "42",
+   "name": "Psychologists (CBLE)",
+   "key": "psychologists",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-09-01",
+    "2026-09-02"
+   ],
+   "orig_days": [
+    "2026-08-19",
+    "2026-08-20"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tuguegarao"
+   ],
+   "opens": "2026-05-21",
+   "deadline": "2026-07-20",
+   "results": "2026-08-27",
+   "notices": [
+    {
+     "text": "Resolution No. 2242 s.2026 - Cancellation of the Psychologists Licensure Examination in Pampanga on September 01 and 02, 2026 and Rescheduling the Same to September 17 and 18, 2026",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2242 Cancellation Of The Psychologists LE In Pampanga On September.pdf"
+    },
+    {
+     "text": "Resolution No. 2236 s.2026 - Cancellation of the Psychologists Licensure Examination on August 19 and 20, 2026 and Rescheduling the Same to September 1 and 2, 2026",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2236-CancellationPsychologistsLicensureExamination.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Revised program psych Sept 2026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Psychology.pdf",
+   "id": "psychologists-2026-08-19"
+  },
+  {
+   "seq": "43",
+   "name": "Psychometricians",
+   "key": "psychometricians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-09-01",
+    "2026-09-02"
+   ],
+   "orig_days": [
+    "2026-08-19",
+    "2026-08-20"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-05-06",
+   "deadline": "2026-07-06",
+   "results": "2026-08-27",
+   "notices": [
+    {
+     "text": "Resolution No. 2243 s.2026 - Cancellation of the Psychometricians Licensure Examination in Pampanga on September 01 and 02, 2026 and Rescheduling the Same to September 17 and 18, 2026",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2243 Cancellation Of The Psychometricians LE In Pampanga On September.pdf"
+    },
+    {
+     "text": "Resolution No. 2237 s.2026 - Cancellation of the Psychometricians Licensure Examination on August 19 and 20, 2026 and Rescheduling the Same to September 1 and 2, 2026",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2237-CancellationPsychometriciansLicensureExamination.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Revised program psych Sept 2026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Psychometrician.pdf",
+   "id": "psychometricians-2026-08-19"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-08-24",
+    "2026-08-25",
+    "2026-08-26"
+   ],
+   "centers": [
+    "Iloilo"
+   ],
+   "opens": "2026-08-03",
+   "deadline": "2026-08-17",
+   "results": "2026-12-17",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-08-24"
+  },
+  {
+   "seq": "44",
+   "name": "Sanitary Engineers (CBLE)",
+   "key": "sanitary-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-08-24",
+    "2026-08-25",
+    "2026-08-26"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Rosales",
+    "Tuguegarao PRC"
+   ],
+   "opens": "2026-05-26",
+   "deadline": "2026-07-27",
+   "results": "2026-08-28",
+   "notices": [
+    {
+     "text": "Resolution No. 2238 s. 2026 - Removing Pampanga as Testing Center for the August 2026 Sanitary Engineers Licensure Examination"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program AUGUST 2026 (san engg).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-SanitaryEngineering.pdf",
+   "id": "sanitary-engineers-2026-08-24"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electronics Engineers (Oral Examination)",
+   "key": "professional-electronics-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-08-27",
+    "2026-08-28"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-08-06",
+   "deadline": "2026-08-20",
+   "results": "2026-10-23",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-electronics-engineers-oral-2026-08-27"
+  },
+  {
+   "seq": "45",
+   "name": "Nurses",
+   "key": "nurses",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-08-29",
+    "2026-08-30"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Cabanatuan",
+    "Cauayan",
+    "Dumaguete (Negros Oriental)",
+    "Ilocos Sur",
+    "Laguna",
+    "Lipa (Batangas)",
+    "Tagbilaran (Bohol)",
+    "Urdaneta (Pangasinan)"
+   ],
+   "opens": "2026-05-15",
+   "deadline": "2026-07-15",
+   "results": "2026-09-18",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam progam aug 2026 nle (nursing) signed.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Nursing.pdf",
+   "id": "nurses-2026-08-29"
+  },
+  {
+   "seq": "46",
+   "name": "Foreign Medical Professionals (CBLE)",
+   "key": "foreign-medical-professionals",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-09-01",
+    "2026-09-02"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-06-01",
+   "deadline": "2026-08-03",
+   "results": "2026-09-03",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/September 2026 QA-FMP.pdf",
+   "id": "foreign-medical-professionals-2026-09-01"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-09-01",
+    "2026-09-02",
+    "2026-09-03"
+   ],
+   "centers": [
+    "Davao"
+   ],
+   "opens": "2026-08-11",
+   "deadline": "2026-08-25",
+   "results": "2026-12-17",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-09-01"
+  },
+  {
+   "seq": "47",
+   "name": "Librarians (CBLE)",
+   "key": "librarians",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-09-03",
+    "2026-09-04"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao"
+   ],
+   "opens": "2026-06-05",
+   "deadline": "2026-08-04",
+   "results": "2026-09-08",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/PROGRAM 2026 LLE Computer-Based.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Librarians.pdf",
+   "id": "librarians-2026-09-03"
+  },
+  {
+   "seq": "48",
+   "name": "Registered Electrical Engineers",
+   "key": "electrical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-09-05",
+    "2026-09-06"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-06-05",
+   "deadline": "2026-08-06",
+   "results": "2026-09-10",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program september 2026 (electrical).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-RegisteredElectricalEngineer.pdf",
+   "id": "electrical-engineers-2026-09-05"
+  },
+  {
+   "seq": "49",
+   "name": "Registered Master Electricians",
+   "key": "master-electricians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-09-07"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-06-05",
+   "deadline": "2026-08-06",
+   "results": "2026-09-10",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program september 2026 (electrical).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-RegisteredMasterElectrician.pdf",
+   "id": "master-electricians-2026-09-07"
+  },
+  {
+   "seq": "50",
+   "name": "Real Estate Consultants (Written)",
+   "key": "real-estate-consultants",
+   "phase": "Written",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-09-08"
+   ],
+   "centers": [
+    "NCR",
+    "Cagayan de Oro",
+    "Cebu PRC"
+   ],
+   "opens": "2026-06-10",
+   "deadline": "2026-08-10",
+   "results": "2026-10-09",
+   "notices": [
+    {
+     "text": "Resolution No. 2243(A) s. 2026 - Removing Davao as Testing Center for the September 2026 Real Estate Consultants Licensure Examination"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/RECONSULTANTS real estates.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-RealEstateConsultants.pdf",
+   "id": "real-estate-consultants-written-2026-09-08"
+  },
+  {
+   "seq": "51",
+   "name": "Social Workers",
+   "key": "social-workers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-09-09",
+    "2026-09-10",
+    "2026-09-11"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-06-11",
+   "deadline": "2026-08-12",
+   "results": "2026-09-16",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SWLE Program Sept 2026 with Memo 2020-57.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-SocialWorkers.pdf",
+   "id": "social-workers-2026-09-09"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-09-14",
+    "2026-09-15",
+    "2026-09-16",
+    "2026-09-17",
+    "2026-09-18"
+   ],
+   "centers": [
+    "Cebu"
+   ],
+   "opens": "2026-08-24",
+   "deadline": "2026-09-07",
+   "results": "2026-12-17",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-09-14"
+  },
+  {
+   "seq": "52",
+   "name": "Professional Teachers",
+   "key": "teachers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-09-20"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Antique",
+    "Bacolod",
+    "Batanes",
+    "Bayambang",
+    "Bohol",
+    "Catarman",
+    "Cauayan",
+    "Digos",
+    "Dumaguete",
+    "General Santos",
+    "Ilocos Norte",
+    "Ilocos Sur",
+    "Kidapawan",
+    "Laguna",
+    "Lipa (Batangas)",
+    "Marinduque",
+    "Mati",
+    "Nueva Vizcaya",
+    "Oroquieta (Misamis Occidental)",
+    "Romblon",
+    "Roxas",
+    "San Jose (Occidental Mindoro)",
+    "Tagum",
+    "Valencia",
+    "Santiago",
+    "Municipality of Balangkayan",
+    "Eastern Samar"
+   ],
+   "opens": "2026-05-22",
+   "deadline": "2026-07-23",
+   "results": "2026-11-27",
+   "notices": [
+    {
+     "text": "Resolution No. 2174 s. 2026 - Designating Roxas City as an Additional Testing Center for the September 2026 Licensure Examination for Professional Teacher",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2174 Designating Roxas City as an Additional Testing Center for the Sept 2026 Licensure Examination Prof Teacher.pdf"
+    },
+    {
+     "text": "Resolution No. 2196 s. 2026 - Designating the Municipality of Balangkayan, Eastern Samar as an Additional Testing Center for the September 2026 Licensure Examination for Professional Teachers",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2196 Designating Balangkayan, Eastern Samar As An Additional Testing Center For Prof Teacher.pdf"
+    },
+    {
+     "text": "Resolution No. 2198 s. 2026 - Designating Santiago City as an Additional Testing Center for the September 2026 Licensure Examination for Professional Teachers",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2196 Designating Balangkayan, Eastern Samar As An Additional Testing Center For Prof Teacher.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/SEptember 2026 LEPT Program final.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-ProfessionalTeachers.pdf",
+   "id": "teachers-2026-09-20"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electrical Engineers (Oral Examination)",
+   "key": "professional-electrical-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23"
+   ],
+   "centers": [
+    "Davao"
+   ],
+   "opens": "2026-08-24",
+   "deadline": "2026-09-14",
+   "results": "2026-12-15",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-electrical-engineers-oral-2026-09-21"
+  },
+  {
+   "seq": "53",
+   "name": "Geodetic Engineers (CBLE)",
+   "key": "geodetic-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-09-23",
+    "2026-09-24"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cebu",
+    "Davao",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao"
+   ],
+   "opens": "2026-06-25",
+   "deadline": "2026-08-27",
+   "results": "2026-09-28",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program September 2026 geodetic.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-GeodeticEngineering.pdf",
+   "id": "geodetic-engineers-2026-09-23"
+  },
+  {
+   "seq": "54",
+   "name": "Civil Engineers",
+   "key": "civil-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-09-26",
+    "2026-09-27"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Ilocos Sur"
+   ],
+   "opens": "2026-06-11",
+   "deadline": "2026-08-12",
+   "results": "2026-10-02",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program Sept 2026 (CE).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-CivilEngineering.pdf",
+   "id": "civil-engineers-2026-09-26"
+  },
+  {
+   "seq": "55",
+   "name": "Ocular Pharmacologists (CBLE)",
+   "key": "ocular-pharmacologists",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-09-28"
+   ],
+   "centers": [
+    "NCR",
+    "Cebu",
+    "Davao"
+   ],
+   "opens": "2026-06-30",
+   "deadline": "2026-08-31",
+   "results": "2026-10-15",
+   "notices": [
+    {
+     "text": "Resolution No. 2175 - Designating Cebu City as an Additional Testing Center for the September 2026 Ocular Pharmacologists Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2175 Designating Cebu City As An Additional Testing Center For The September 2026 Ocular Pharmacologists.pdf"
+    }
+   ],
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-OcularPharmacology.pdf",
+   "id": "ocular-pharmacologists-2026-09-28"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-01"
+   ],
+   "centers": [
+    "Baguio"
+   ],
+   "opens": "2026-09-07",
+   "deadline": "2026-09-22",
+   "results": "2026-12-17",
+   "notices": [
+    {
+     "text": "Resolution No. 2192 - Approving the Additional Days for the Professional Mechanical Engineers Technical Evaluation in Lucena in June 2026 and Baguio in September and October 2026",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2175 Designating Cebu City As An Additional Testing Center For The September 2026 Ocular Pharmacologists.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-09-29"
+  },
+  {
+   "seq": "56",
+   "name": "Optometrists (Written-CBLE)",
+   "key": "optometrists",
+   "phase": "Written",
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-09-28",
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "centers": [
+    "NCR",
+    "Cebu",
+    "Davao"
+   ],
+   "opens": "2026-06-30",
+   "deadline": "2026-08-31",
+   "results": "2026-10-15",
+   "notices": [
+    {
+     "text": "Resolution No. 2176 - Designating Cebu City as an Additional Testing Center for the September 2026 Optometrists Licensure Examination (Written Phase)",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2176 Designating Cebu City As An Additional Testing Center For The September 2026 Optometrists Licensure.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Exam Program September 2026 Optometrists Licensure Examination.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Optometry.pdf",
+   "id": "optometrists-written-2026-09-28"
+  },
+  {
+   "seq": "57",
+   "name": "Fisheries Professionals",
+   "key": "fisheries-professionals",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-10-01",
+    "2026-10-02"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao"
+   ],
+   "opens": "2026-07-03",
+   "deadline": "2026-09-01",
+   "results": "2026-10-06",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/REVISED ExamProgram-Fisheries-Oct2026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Fisheries.pdf",
+   "id": "fisheries-professionals-2026-10-01"
+  },
+  {
+   "seq": "58",
+   "name": "Physicians",
+   "key": "physicians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-07-03",
+   "deadline": "2026-09-03",
+   "results": "2026-10-16",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/October 2026 PLE Program of Exam.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Medicine.pdf",
+   "id": "physicians-2026-10-03"
+  },
+  {
+   "seq": "59",
+   "name": "Real Estate Consultants (Revalida)",
+   "key": "real-estate-consultants",
+   "phase": "Revalida",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-06-10",
+   "deadline": "2026-08-10",
+   "results": "2026-10-09",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/RECONSULTANTS real estates.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-RealEstateConsultants.pdf",
+   "id": "real-estate-consultants-revalida-2026-10-05"
+  },
+  {
+   "seq": "60",
+   "name": "Optometrists (Practical)",
+   "key": "optometrists",
+   "phase": "Practical",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-12"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-06-30",
+   "deadline": "2026-08-31",
+   "results": "2026-10-15",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Exam Program September 2026 Optometrists Licensure Examination.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Optometry.pdf",
+   "id": "optometrists-practical-2026-10-05"
+  },
+  {
+   "seq": "61",
+   "name": "Naval Architects (CBLE)",
+   "key": "naval-architects",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07"
+   ],
+   "centers": [
+    "NCR",
+    "Cebu"
+   ],
+   "opens": "2026-07-07",
+   "deadline": "2026-09-07",
+   "results": "2026-10-12",
+   "notices": [
+    {
+     "text": "Resolution No. 2177 - Designating Cebu City as an Additional Testing Center for the October 2026 Naval Architects Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2177 Designating Cebu City As An Additional Testing Center For The October 2026 Naval Architects.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Oct 2026 NALE Program.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-NavalArchitect.pdf",
+   "id": "naval-architects-2026-10-05"
+  },
+  {
+   "seq": "62",
+   "name": "Professional Foresters",
+   "key": "foresters",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-10-08",
+    "2026-10-09"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao"
+   ],
+   "opens": "2026-07-10",
+   "deadline": "2026-09-08",
+   "results": "2026-10-13",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Oct.  2026 FLE program (FORESTERS)_Rev.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Foresters.pdf",
+   "id": "foresters-2026-10-08"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electronics Engineer Oral Examination",
+   "key": "professional-electronics-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-12"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [
+    {
+     "text": "Reso no. 2026-2251",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2251 Additional Schedule For The Professional Electronics Engineers Oral Examination In The National.pdf"
+    }
+   ],
+   "id": "professional-electronics-engineers-oral-2026-10-08"
+  },
+  {
+   "seq": "63",
+   "name": "Chemical Technicians",
+   "key": "chemical-technicians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-10-12"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-07-16",
+   "deadline": "2026-09-14",
+   "results": "2026-10-19",
+   "notices": [],
+   "program": "https:///www.prc.gov.ph/sites/default/files/ExamProgram-ChemTech-Oct2026-WithAttachements.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-ChemicalTechnician.pdf",
+   "id": "chemical-technicians-2026-10-12"
+  },
+  {
+   "seq": "64",
+   "name": "Chemists (CBLE)",
+   "key": "chemists",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-10-13",
+    "2026-10-14"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao"
+   ],
+   "opens": "2026-07-14",
+   "deadline": "2026-09-14",
+   "results": "2026-10-19",
+   "notices": [],
+   "program": "https:///www.prc.gov.ph/sites/default/files/ExamProgram-Chemist-Oct2026-WithAttachements.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Chemistry.pdf",
+   "id": "chemists-2026-10-13"
+  },
+  {
+   "seq": "65",
+   "name": "Pharmacists",
+   "key": "pharmacists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-10-15",
+    "2026-10-16"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-07-31",
+   "deadline": "2026-09-29",
+   "results": "2026-10-21",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/October 2026 Pharmacists LEx board program.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/Documentary Requirements pharmacist reso 28 2026.pdf",
+   "id": "pharmacists-2026-10-15"
+  },
+  {
+   "seq": "66",
+   "name": "Electronics Engineers",
+   "key": "electronics-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-10-17",
+    "2026-10-18"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-07-17",
+   "deadline": "2026-09-17",
+   "results": "2026-10-23",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/BECE exam program Oct 2026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-ElectronicsEngineering.pdf",
+   "id": "electronics-engineers-2026-10-17"
+  },
+  {
+   "seq": "67",
+   "name": "Electronics Technicians",
+   "key": "electronics-technicians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-10-19"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-07-17",
+   "deadline": "2026-09-17",
+   "results": "2026-10-23",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/BECE exam program Oct 2026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-ElectronicsTechnician.pdf",
+   "id": "electronics-technicians-2026-10-19"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-10-19",
+    "2026-10-20",
+    "2026-10-21"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-09-28",
+   "deadline": "2026-10-12",
+   "results": "2026-12-17",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-10-19"
+  },
+  {
+   "seq": "68",
+   "name": "Metallurgical Engineers (CBLE)",
+   "key": "metallurgical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-10-20",
+    "2026-10-21",
+    "2026-10-22"
+   ],
+   "centers": [
+    "NCR",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Lucena",
+    "Pampanga"
+   ],
+   "opens": "2026-07-22",
+   "deadline": "2026-09-21",
+   "results": "2026-10-26",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Oct 2026 MetELE program with memo 2020-57.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-MetallurgicalEngineering.pdf",
+   "id": "metallurgical-engineers-2026-10-20"
+  },
+  {
+   "seq": "69",
+   "name": "Mining Engineers (CBLE)",
+   "key": "mining-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-10-20",
+    "2026-10-21",
+    "2026-10-22"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Koronadal",
+    "Lucena",
+    "Legazpi",
+    "Tuguegarao"
+   ],
+   "opens": "2026-07-22",
+   "deadline": "2026-09-21",
+   "results": "2026-10-26",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Oct 2026 MinELE Program with Attached Memo 2020-57.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-MiningEngineering.pdf",
+   "id": "mining-engineers-2026-10-20"
+  },
+  {
+   "seq": "70",
+   "name": "Certified Public Accountants",
+   "key": "cpa",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-10-24",
+    "2026-10-25",
+    "2026-10-26"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-07-10",
+   "deadline": "2026-09-09",
+   "results": "2026-11-03",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/October 2026 LECPA Program.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Accountancy.pdf",
+   "id": "cpa-2026-10-24"
+  },
+  {
+   "seq": "71",
+   "name": "Veterinarians (CBLE)",
+   "key": "veterinarians",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-11-04",
+    "2026-11-05",
+    "2026-11-06"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tuguegarao"
+   ],
+   "opens": "2026-08-06",
+   "deadline": "2026-10-05",
+   "results": "2026-11-10",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Examination program VetMed NOV2026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-VeterinaryMedicine.pdf",
+   "id": "veterinarians-2026-11-04"
+  },
+  {
+   "seq": "72",
+   "name": "Midwives",
+   "key": "midwives",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-11-07",
+    "2026-11-08"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Calapan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-08-07",
+   "deadline": "2026-10-08",
+   "results": "2026-11-11",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Midwifery Exam Program November 2026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Midwifery.pdf",
+   "id": "midwives-2026-11-07"
+  },
+  {
+   "seq": "73",
+   "name": "Aeronautical Engineers (CBLE)",
+   "key": "aeronautical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11"
+   ],
+   "centers": [
+    "NCR",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales"
+   ],
+   "opens": "2026-08-11",
+   "deadline": "2026-10-12",
+   "results": "2026-11-13",
+   "notices": [
+    {
+     "text": "Resolution No. 2178 - Designating Cebu City as an Additional Testing Center for the November 2026 Aeronautical Engineers Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2178 Designating Cebu City As An Additional Testing Center For The November 2026 Aeronautical Engineers.pdf"
+    }
+   ],
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-AeronauticalEngineering.pdf",
+   "id": "aeronautical-engineers-2026-11-09"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11"
+   ],
+   "centers": [
+    "Butuan"
+   ],
+   "opens": "2026-10-16",
+   "deadline": "2026-10-30",
+   "results": "2026-12-17",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-11-09"
+  },
+  {
+   "seq": "74",
+   "name": "Nutritionist-Dietitians (CBLE)",
+   "key": "nutritionist-dietitians",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-11-12",
+    "2026-11-13"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tuguegarao"
+   ],
+   "opens": "2026-08-14",
+   "deadline": "2026-10-13",
+   "results": "2026-11-17",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/080326 exam program nov 2026 nutri.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-NutritionDietetics.pdf",
+   "id": "nutritionist-dietitians-2026-11-12"
+  },
+  {
+   "seq": "75",
+   "name": "Chemical Engineers (CBLE)",
+   "key": "chemical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-11-14",
+    "2026-11-15",
+    "2026-11-16"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tuguegarao"
+   ],
+   "opens": "2026-08-14",
+   "deadline": "2026-10-15",
+   "results": "2026-11-18",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/CHELE program_november_202026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-ChemicalEngineering.pdf",
+   "id": "chemical-engineers-2026-11-14"
+  },
+  {
+   "seq": "76",
+   "name": "Customs Brokers",
+   "key": "customs-brokers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-11-17",
+    "2026-11-18"
+   ],
+   "centers": [
+    "NCR",
+    "Butuan",
+    "Cebu",
+    "Lucena",
+    "Davao",
+    "Koronadal"
+   ],
+   "opens": "2026-08-19",
+   "deadline": "2026-10-19",
+   "results": "2026-11-23",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/PROGRAM 2026 CBLE Nov Customs Broker.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-CustomsBroker.pdf",
+   "id": "customs-brokers-2026-11-17"
+  },
+  {
+   "seq": "77",
+   "name": "Agricultural and Biosystems Engineers",
+   "key": "agricultural-biosystems-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-11-19",
+    "2026-11-20"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao"
+   ],
+   "opens": "2026-08-21",
+   "deadline": "2026-10-20",
+   "results": "2026-11-24",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program nov 2026 (abe).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-AgriculturalBiosystemsEngineering.pdf",
+   "id": "agricultural-biosystems-engineers-2026-11-19"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electronics Engineers (Oral Examination)",
+   "key": "professional-electronics-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-11-19",
+    "2026-11-20"
+   ],
+   "centers": [
+    "Davao"
+   ],
+   "opens": "2026-10-29",
+   "deadline": "2026-11-12",
+   "results": "2026-12-11",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-electronics-engineers-oral-2026-11-19"
+  },
+  {
+   "seq": "78",
+   "name": "Dentists (Written)",
+   "key": "dentists",
+   "phase": "Written",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-11-22",
+    "2026-11-23",
+    "2026-11-24"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao"
+   ],
+   "opens": "2026-08-24",
+   "deadline": "2026-10-23",
+   "results": "2026-12-14",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/November 2026 DLE Written Phase (dent).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Dentistry-Written.pdf",
+   "id": "dentists-written-2026-11-22"
+  },
+  {
+   "seq": "79",
+   "name": "Geologists (CBLE)",
+   "key": "geologists",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-11-25",
+    "2026-11-26",
+    "2026-11-27"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-08-27",
+   "deadline": "2026-10-26",
+   "results": "2026-12-02",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program November 2026 GLE (geology).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Geology.pdf",
+   "id": "geologists-2026-11-25"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-11-25",
+    "2026-11-26",
+    "2026-11-27"
+   ],
+   "centers": [
+    "Tacloban"
+   ],
+   "opens": "2026-11-04",
+   "deadline": "2026-11-18",
+   "results": "2026-12-17",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-11-25"
+  },
+  {
+   "seq": "80",
+   "name": "Dentists (Practical)",
+   "key": "dentists",
+   "phase": "Practical",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-11-28",
+    "2026-11-29",
+    "2026-11-30",
+    "2026-12-01",
+    "2026-12-02",
+    "2026-12-03",
+    "2026-12-04",
+    "2026-12-05"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-08-24",
+   "deadline": "2026-10-23",
+   "results": "2026-12-14",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Nov 2026 DLE Practical Phase Program.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Dentistry-Practical.pdf",
+   "id": "dentists-practical-2026-11-28"
+  },
+  {
+   "seq": "81",
+   "name": "Speech-Language Pathologists (CBLE)",
+   "key": "speech-language-pathologists",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-11-29",
+    "2026-11-30"
+   ],
+   "centers": [
+    "NCR",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Lucena",
+    "Pampanga"
+   ],
+   "opens": "2026-08-24",
+   "deadline": "2026-10-20",
+   "results": "2026-12-03",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Nov 2026 exam program (SLP).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Speech-LanguagePathologists.pdf",
+   "id": "speech-language-pathologists-2026-11-29"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-11-30",
+    "2026-12-01",
+    "2026-12-02"
+   ],
+   "centers": [
+    "Cagayan de Oro",
+    "Cebu"
+   ],
+   "opens": "2026-11-09",
+   "deadline": "2026-11-23",
+   "results": "2026-12-17",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-11-30"
+  },
+  {
+   "seq": "82",
+   "name": "Agriculturists",
+   "key": "agriculturists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-12-01",
+    "2026-12-02",
+    "2026-12-03"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-09-02",
+   "deadline": "2026-11-03",
+   "results": "2026-12-10",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/AgLE Program December 2026.pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Agriculture.pdf",
+   "id": "agriculturists-2026-12-01"
+  },
+  {
+   "seq": "83",
+   "name": "Occupational Therapists (CBLE)",
+   "key": "occupational-therapists",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-12-04"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao",
+    "Legazpi",
+    "Pampanga"
+   ],
+   "opens": "2026-09-04",
+   "deadline": "2026-11-04",
+   "results": "2026-12-07",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program dec 2026 (ot).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-OccupationalTherapy.pdf",
+   "id": "occupational-therapists-2026-12-04"
+  },
+  {
+   "seq": "84",
+   "name": "Physical Therapists",
+   "key": "physical-therapists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-12-05",
+    "2026-12-06"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tuguegarao"
+   ],
+   "opens": "2026-09-04",
+   "deadline": "2026-11-04",
+   "results": "2026-12-09",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program dec 2026 (pt).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-PhysicalTherapy.pdf",
+   "id": "physical-therapists-2026-12-05"
+  },
+  {
+   "seq": "85",
+   "name": "Dental Technologists (Written-CBLE)",
+   "key": "dental-technologists",
+   "phase": "Written",
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-12-07"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-09-08",
+   "deadline": "2026-11-09",
+   "results": "2026-12-14",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/December 2026 DTLE Program (dentech).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-DentalTechnology-Written.pdf",
+   "id": "dental-technologists-written-2026-12-07"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-12-07",
+    "2026-12-08",
+    "2026-12-09"
+   ],
+   "centers": [
+    "Cebu"
+   ],
+   "opens": "2026-11-13",
+   "deadline": "2026-11-27",
+   "results": "2026-12-17",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-12-07"
+  },
+  {
+   "seq": "86",
+   "name": "Dental Technologists (Practical)",
+   "key": "dental-technologists",
+   "phase": "Practical",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-12-08",
+    "2026-12-09"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-09-08",
+   "deadline": "2026-11-09",
+   "results": "2026-12-14",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/December 2026 DTLE Program (dentech).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-DentalTechnology-Practical.pdf",
+   "id": "dental-technologists-practical-2026-12-08"
+  },
+  {
+   "seq": null,
+   "name": "Professional Electrical Engineers (Oral Examination)",
+   "key": "professional-electrical-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-12-09",
+    "2026-12-10",
+    "2026-12-11"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-11-18",
+   "deadline": "2026-12-02",
+   "results": "2026-12-15",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-electrical-engineers-oral-2026-12-09"
+  },
+  {
+   "seq": "87",
+   "name": "Radiologic Technologists",
+   "key": "radiologic-technologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-12-10",
+    "2026-12-11"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2026-09-11",
+   "deadline": "2026-11-10",
+   "results": "2026-12-16",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/092126 exam program rtle dec 2026 (radtech) (1).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/List of Requirements for Radiologic Technology.pdf",
+   "id": "radiologic-technologists-2026-12-10"
+  },
+  {
+   "seq": "88",
+   "name": "X-Ray Technologists (CBLE)",
+   "key": "x-ray-technologists",
+   "phase": null,
+   "variant": null,
+   "cble": true,
+   "days": [
+    "2026-12-10",
+    "2026-12-11"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Palawan",
+    "Tuguegarao"
+   ],
+   "opens": "2026-09-11",
+   "deadline": "2026-11-10",
+   "results": "2026-12-16",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/092126 exam program xtle dec 2026 (radtech) (1).pdf",
+   "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/List of Requirements for X-ray Technology.pdf",
+   "id": "x-ray-technologists-2026-12-10"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-12-14",
+    "2026-12-15",
+    "2026-12-16"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2026-11-23",
+   "deadline": "2026-12-07",
+   "results": "2026-12-17",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Reso 2026-2163 Scheduling The Technical Evaluation For PME, Oral Examination For EE, ECE.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-12-14"
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+{
+  "_about": "Manual corrections applied by pipeline/build.py on top of what prc.py read. Key = sitting id (see data/prc/<year>.json). Use sparingly, e.g. {\"real-estate-brokers-2025-09-03\": {\"cancelled\": true}} when a cancellation is only described in a notice.",
+  "sittings": {}
+}

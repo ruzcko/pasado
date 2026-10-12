@@ -1,0 +1,4317 @@
+{
+ "year": 2025,
+ "source": "https://www.prc.gov.ph/2025-schedule-examination",
+ "updated_at": "2026-10-12T01:25:30Z",
+ "hash": "3756822963105df2",
+ "count": 152,
+ "unknown_names": [],
+ "rows": [
+  {
+   "seq": "1",
+   "name": "Real Estate Consultants (Revalida)",
+   "key": "real-estate-consultants",
+   "phase": "Revalida",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-01-13",
+    "2025-01-14",
+    "2025-01-15"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2024-09-04",
+   "deadline": "2024-11-04",
+   "results": "2025-01-17",
+   "notices": [],
+   "id": "real-estate-consultants-revalida-2025-01-13"
+  },
+  {
+   "seq": "2",
+   "name": "Architects",
+   "key": "architects",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-01-21",
+    "2025-01-23"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2024-11-20",
+   "deadline": "2024-12-23",
+   "results": "2025-01-28",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/11252024 exam program january 2025 (archi).pdf",
+   "id": "architects-2025-01-21"
+  },
+  {
+   "seq": "3",
+   "name": "Criminologists",
+   "key": "criminologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-02-05",
+    "2025-02-06",
+    "2025-02-07"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Palawan",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Bacolod",
+    "Bayambang",
+    "Bohol",
+    "Catarman",
+    "Cauayan",
+    "Dumaguete",
+    "Ilocos Norte",
+    "Ilocos Sur",
+    "Kidapawan",
+    "Oroquieta",
+    "Romblon",
+    "Valencia",
+    "Naga"
+   ],
+   "opens": "2024-11-20",
+   "deadline": "2024-12-26",
+   "results": "2025-03-07",
+   "notices": [
+    {
+     "text": "Resolution No. 1943 s.2025 - Designating Naga City as an Additional Testing Center for the February 2025 Licensure Examination for Criminologists",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-1943 Designating Naga City As An Additional Testing Center For The February 2025 Licensure Examination For (1).pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Program of Exam February 2025 (crim).pdf",
+   "id": "criminologists-2025-02-05"
+  },
+  {
+   "seq": "4",
+   "name": "Respiratory Therapists",
+   "key": "respiratory-therapists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-02-11",
+    "2025-02-12"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao",
+    "Pagadian",
+    "Zamboanga"
+   ],
+   "opens": "2024-11-20",
+   "deadline": "2025-01-13",
+   "results": "2025-02-14",
+   "notices": [
+    {
+     "text": "Resolution No. 1941 s.2025 - Designating Zamboanga as Additional Testing Venue, and Conduct of Computer-Based Licensure Examination (CBLE) Modality in the National Capital Region, Cebu, Davao and Pagadian and Conventional Paper-and-Pencil Modality in Baguio and Zamboanga for the February 2025 Respiratory Therapists Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-1941  Designating Zamboanga As Additional Testing Venue, And Conduct Of (CBLE).pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/011424 exam program (respiratory)_rev.pdf",
+   "id": "respiratory-therapists-2025-02-11"
+  },
+  {
+   "seq": "5",
+   "name": "Mechanical Engineers",
+   "key": "mechanical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-02-17",
+    "2025-02-18",
+    "2025-02-19"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Zamboanga"
+   ],
+   "opens": "2024-11-20",
+   "deadline": "2025-01-17",
+   "results": "2025-02-24",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program feb 2025 mele.pdf",
+   "id": "mechanical-engineers-2025-02-17"
+  },
+  {
+   "seq": "6",
+   "name": "Certified Plant Mechanics*",
+   "key": "plant-mechanics",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-02-17",
+    "2025-02-18",
+    "2025-02-19"
+   ],
+   "centers": [
+    "NCR",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Rosales"
+   ],
+   "opens": "2024-11-20",
+   "deadline": "2025-01-07",
+   "results": "2025-02-24",
+   "notices": [
+    {
+     "text": "Resolution No. 1955 s.2025- Removing Pampanga as Testing Center",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-1955 Removing Pampanga As Testing Center For The February 2025 Certified Plant Mechanics Licensure Examina (1).pdf"
+    },
+    {
+     "text": "Resolution No. 1959 s.2025 - Removing Tacloban as a Testing Venue",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-1955 Removing Pampanga As Testing Center For The February 2025 Certified Plant Mechanics Licensure Examina (1).pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program feb 2025 cpm.pdf",
+   "id": "plant-mechanics-2025-02-17"
+  },
+  {
+   "seq": "7",
+   "name": "Master Plumbers",
+   "key": "master-plumbers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-02-20",
+    "2025-02-21"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Rosales",
+    "Tacloban"
+   ],
+   "opens": "2024-11-20",
+   "deadline": "2025-01-13",
+   "results": "2025-02-27",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/112924-FEBRUARY 2025 MPLE PROGRAM_Master Plumbers.pdf",
+   "id": "master-plumbers-2025-02-20"
+  },
+  {
+   "seq": "8",
+   "name": "Sanitary Engineers*",
+   "key": "sanitary-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-02-26",
+    "2025-02-27",
+    "2025-02-28"
+   ],
+   "centers": [
+    "NCR",
+    "Davao",
+    "Rosales"
+   ],
+   "opens": "2024-11-20",
+   "deadline": "2025-01-20",
+   "results": "2025-03-03",
+   "notices": [
+    {
+     "text": "Resolution No. 1960 s. 2025 - Removing Cagayan De Oro as a Testing Center for the February 2025 Sanitary Engineers Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-1960 Removing Cagayan De Oro As A Testing Center For The February 2025 Sanitary Engineers Licensure Examin (1).pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program FEBRUARY 2025 (san engg).pdf",
+   "id": "sanitary-engineers-2025-02-26"
+  },
+  {
+   "seq": "9",
+   "name": "Professional Teachers",
+   "key": "teachers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-03-23"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Bacolod",
+    "Bayambang",
+    "Bohol",
+    "Catanduanes",
+    "Cauayan",
+    "Digos",
+    "Dumaguete",
+    "General Santos",
+    "Ilocos Norte",
+    "Ilocos Sur",
+    "Kidapawan",
+    "Laguna",
+    "Maasin (Southern Leyte)",
+    "Masbate",
+    "Mati",
+    "Occidental Mindoro",
+    "Oroquieta",
+    "Romblon",
+    "Tagum",
+    "Valencia"
+   ],
+   "opens": "2024-11-20",
+   "deadline": "2025-01-15",
+   "results": "2025-05-23",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/March  2025 lept exam program (prof teachers)revised March 2025.pdf",
+   "id": "teachers-2025-03-23"
+  },
+  {
+   "seq": "10",
+   "name": "Medical Technologists",
+   "key": "medical-technologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-03-26",
+    "2025-03-27"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2024-12-27",
+   "deadline": "2025-02-26",
+   "results": "2025-04-02",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/revised March 2025 mtle exam program (med tech).pdf",
+   "id": "medical-technologists-2025-03-26"
+  },
+  {
+   "seq": "11",
+   "name": "Physicians",
+   "key": "physicians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-03-30",
+    "2025-03-31",
+    "2025-04-06",
+    "2025-04-07"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2024-12-16",
+   "deadline": "2025-02-14",
+   "results": "2025-04-14",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/March-April 2025 PLE Program (med) Physicians.pdf",
+   "id": "physicians-2025-03-30"
+  },
+  {
+   "seq": "12",
+   "name": "Electronics Engineers",
+   "key": "electronics-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-04-02",
+    "2025-04-03"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-01-02",
+   "deadline": "2025-03-03",
+   "results": "2025-04-11",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program april 2025 (ece) .pdf",
+   "id": "electronics-engineers-2025-04-02"
+  },
+  {
+   "seq": "13",
+   "name": "Electronics Technicians",
+   "key": "electronics-technicians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-04-04"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-01-03",
+   "deadline": "2025-03-04",
+   "results": "2025-04-11",
+   "notices": [],
+   "id": "electronics-technicians-2025-04-04"
+  },
+  {
+   "seq": "14",
+   "name": "Pharmacists",
+   "key": "pharmacists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-04-10",
+    "2025-04-11"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-01-09",
+   "deadline": "2025-03-10",
+   "results": "2025-04-15",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/021725 April 2025 exam program (pharmacy).pdf",
+   "id": "pharmacists-2025-04-10"
+  },
+  {
+   "seq": "15",
+   "name": "Midwives",
+   "key": "midwives",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-04-14",
+    "2025-04-15"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-01-03",
+   "deadline": "2025-03-03",
+   "results": "2025-04-22",
+   "notices": [
+    {
+     "text": "Resolution No. 1986 s.2025 - Removing Pampanga as a Testing Center for the April 2025 Midwives Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-1986 Removing Pampanga As A Testing Center For The April 2025 Midwives Licensure Examination.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Board of Midwifery program 04-2025.pdf",
+   "id": "midwives-2025-04-14"
+  },
+  {
+   "seq": "16",
+   "name": "Real Estate Brokers",
+   "key": "real-estate-brokers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-04-22"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Tacloban"
+   ],
+   "opens": "2025-01-23",
+   "deadline": "2025-03-24",
+   "results": "2025-04-24",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/041025 EXAM PROGRAM REAL ESTATE BROKERS_Rev1.pdf",
+   "id": "real-estate-brokers-2025-04-22"
+  },
+  {
+   "seq": "17",
+   "name": "Registered Electrical Engineers",
+   "key": "electrical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-04-23",
+    "2025-04-24"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-01-16",
+   "deadline": "2025-03-17",
+   "results": "2025-04-30",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/program APRIL 2025 eele (electrical engg) 632024.pdf",
+   "id": "electrical-engineers-2025-04-23"
+  },
+  {
+   "seq": "18",
+   "name": "Registered Master Electricians",
+   "key": "master-electricians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-04-25"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-01-02",
+   "deadline": "2025-03-03",
+   "results": "2025-04-30",
+   "notices": [
+    {
+     "text": "Resolution No. 1981 s.2025- Removing Calapan as a Testing Center for the April 2025 Registered Master Electricians Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-1981 Removing Calapan as A Testing Center for The April 2025 Registered Master Electricians Licensure Exam (1).pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/program APRIL 2025 eele (electrical engg) 632024.pdf",
+   "id": "master-electricians-2025-04-25"
+  },
+  {
+   "seq": "19",
+   "name": "Civil Engineers",
+   "key": "civil-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-04-28",
+    "2025-04-29"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Ilocos Sur"
+   ],
+   "opens": "2024-12-11",
+   "deadline": "2025-02-11",
+   "results": "2025-05-06",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program april 2025 (civil engg).pdf",
+   "id": "civil-engineers-2025-04-28"
+  },
+  {
+   "seq": "20",
+   "name": "Nurses",
+   "key": "nurses",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-05-05",
+    "2025-05-06"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Ilocos Sur"
+   ],
+   "opens": "2025-01-21",
+   "deadline": "2025-03-21",
+   "results": "2025-05-14",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam progam MAY 2025 nle (nursing) signed.pdf",
+   "id": "nurses-2025-05-05"
+  },
+  {
+   "seq": "21",
+   "name": "Dentists (Written)",
+   "key": "dentists",
+   "phase": "Written",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-05-07",
+    "2025-05-08",
+    "2025-05-09"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao"
+   ],
+   "opens": "2025-02-06",
+   "deadline": "2025-04-07",
+   "results": "2025-05-26",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Program for May 2025 DLE (dent).pdf",
+   "id": "dentists-written-2025-05-07"
+  },
+  {
+   "seq": "22",
+   "name": "Dentists (Practical)",
+   "key": "dentists",
+   "phase": "Practical",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-06-01",
+    "2025-06-02",
+    "2025-06-03",
+    "2025-06-04",
+    "2025-06-05",
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "orig_days": [
+    "2025-05-13",
+    "2025-05-14",
+    "2025-05-15",
+    "2025-05-16",
+    "2025-05-17",
+    "2025-05-18",
+    "2025-05-19",
+    "2025-05-20"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2025-02-06",
+   "deadline": "2025-04-07",
+   "results": "2025-05-26",
+   "notices": [
+    {
+     "text": "Resolution No. 1951 s.2025 - Rescheduling the May 2025 Licensure Examination for Dentists - Practical Phase from May 13-20, 2025 to June 01-08, 2025",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-1951 Rescheduling The May 2025 Licensure Examination For Dentists Practical Phase From May 13-20, 2025 To (1).pdf"
+    }
+   ],
+   "id": "dentists-practical-2025-05-13"
+  },
+  {
+   "seq": null,
+   "name": "Speech-Language Pathologists",
+   "key": "speech-language-pathologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-05-18",
+    "2025-05-19"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/031225 may 2025 exam program (slp).pdf",
+   "id": "speech-language-pathologists-2025-05-18"
+  },
+  {
+   "seq": "23",
+   "name": "Chemical Engineers",
+   "key": "chemical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-05-21",
+    "2025-05-22",
+    "2025-05-23"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Rosales"
+   ],
+   "opens": "2025-02-20",
+   "deadline": "2025-04-21",
+   "results": "2025-05-27",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/revised_CHELE program_20MAY_202025_Rev.pdf",
+   "id": "chemical-engineers-2025-05-21"
+  },
+  {
+   "seq": "24",
+   "name": "Certified Public Accountants",
+   "key": "cpa",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-05-25",
+    "2025-05-26",
+    "2025-05-27"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-02-13",
+   "deadline": "2025-04-14",
+   "results": "2025-06-03",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/May 2025 CPALE Program final_rev.pdf",
+   "id": "cpa-2025-05-25"
+  },
+  {
+   "seq": "25",
+   "name": "Dental Hygienists (Written)*",
+   "key": "dental-hygienists",
+   "phase": "Written",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-05-29"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2025-02-28",
+   "deadline": "2025-04-29",
+   "results": "2025-06-02",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032525 exam program may 2025 dental hygienists (dent).pdf",
+   "id": "dental-hygienists-written-2025-05-29"
+  },
+  {
+   "seq": "26",
+   "name": "Dental Hygienists (Practical)",
+   "key": "dental-hygienists",
+   "phase": "Practical",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-05-30"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2025-02-28",
+   "deadline": "2025-04-29",
+   "results": "2025-06-02",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032525 exam program may 2025 dental hygienists (dent).pdf",
+   "id": "dental-hygienists-practical-2025-05-30"
+  },
+  {
+   "seq": "27",
+   "name": "Dentists (Practical)",
+   "key": "dentists",
+   "phase": "Practical",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-06-03",
+    "2025-06-04",
+    "2025-06-05",
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/revised June 2025 DLE practical phase (dent)_Rev1.pdf",
+   "id": "dentists-practical-2025-06-03"
+  },
+  {
+   "seq": "27",
+   "name": "Occupational Therapists",
+   "key": "occupational-therapists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-06-01",
+    "2025-06-02"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Pampanga",
+    "Rosales"
+   ],
+   "opens": "2025-03-03",
+   "deadline": "2025-05-02",
+   "results": "2025-06-04",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program June 2025 otle (ot).pdf",
+   "id": "occupational-therapists-2025-06-01"
+  },
+  {
+   "seq": "28",
+   "name": "Physical Therapists",
+   "key": "physical-therapists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-06-05",
+    "2025-06-06"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales"
+   ],
+   "opens": "2025-03-06",
+   "deadline": "2025-05-05",
+   "results": "2025-06-10",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program June 2025 ptle (pt).pdf",
+   "id": "physical-therapists-2025-06-05"
+  },
+  {
+   "seq": "29",
+   "name": "Architects",
+   "key": "architects",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-06-11",
+    "2025-06-13"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-03-13",
+   "deadline": "2025-04-04",
+   "results": "2025-06-18",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/04112025 exam program june 2025 (archi).pdf",
+   "id": "architects-2025-06-11"
+  },
+  {
+   "seq": null,
+   "name": "Aeronautical Engineers (SPLE)",
+   "key": "aeronautical-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/sple exam program june 2025 middle east (aero engg).pdf",
+   "id": "aeronautical-engineers-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Aeronautical Engineers (SPLE)",
+   "key": "aeronautical-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/sple exam program june 2025 singapore taiwan (aero engg).pdf",
+   "id": "aeronautical-engineers-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Architects (SPLE)",
+   "key": "architects",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Singapore"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032625 exam program june 2025 sple singapore (architecture).pdf",
+   "id": "architects-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Architects (SPLE)",
+   "key": "architects",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032625 exam program june 2025 sple middle east countries (archi).pdf",
+   "id": "architects-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Certified Public Accountants (SPLE)",
+   "key": "cpa",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SPLE June 2025 CPALE Program in Middle East final.pdf",
+   "id": "cpa-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Certified Public Accountants (SPLE)",
+   "key": "cpa",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/June 2025 CPALE Program in sINGAPORE final.pdf",
+   "id": "cpa-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Chemical Engineers (SPLE)",
+   "key": "chemical-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "centers": [],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program june 2025 sple (chem engg).pdf",
+   "id": "chemical-engineers-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Civil Engineers (SPLE)",
+   "key": "civil-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/sple exam program june 2025 middle east (civil engg).pdf",
+   "id": "civil-engineers-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Civil Engineers (SPLE)",
+   "key": "civil-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/sple singapore exam program june 2025 singapore taiwan (civil engg).pdf",
+   "id": "civil-engineers-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Customs Brokers (SPLE)",
+   "key": "customs-brokers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/031925 sple program middle east (customs).pdf",
+   "id": "customs-brokers-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Electronics Engineers (SPLE)",
+   "key": "electronics-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/sple exam program june 2025 middle east (ece)_signed.pdf",
+   "id": "electronics-engineers-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Electronics Technicians (SPLE)",
+   "key": "electronics-technicians",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-08"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/sple exam program june 2025 middle east (ece)_signed.pdf",
+   "id": "electronics-technicians-sple-2025-06-08"
+  },
+  {
+   "seq": null,
+   "name": "Electronics Engineers (SPLE)",
+   "key": "electronics-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/sple exam program june 2025 singapore taiwan (ece)_signed.pdf",
+   "id": "electronics-engineers-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Electronics Technicians (SPLE)",
+   "key": "electronics-technicians",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-08"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/sple exam program june 2025 singapore taiwan (ece)_signed.pdf",
+   "id": "electronics-technicians-sple-2025-06-08-2"
+  },
+  {
+   "seq": null,
+   "name": "Environmental Planners (SPLE)",
+   "key": "environmental-planners",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032625 exam program 2025 sple (envi planning) middle east countries.pdf",
+   "id": "environmental-planners-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Environmental Planners (SPLE)",
+   "key": "environmental-planners",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Singapore"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032625 exam program 2025 sple (envi planning) singapore.pdf",
+   "id": "environmental-planners-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Geodetic Engineering (SPLE)",
+   "key": "geodetic-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032825 sple exam program (geodetic).doc f (1).pdf",
+   "id": "geodetic-engineers-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Geodetic Engineering (SPLE)",
+   "key": "geodetic-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Singapore"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032825 sple exam program singapore geodetic.pdf",
+   "id": "geodetic-engineers-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Master Plumbers (SPLE)",
+   "key": "master-plumbers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/031925 sple middle east (mp)-esigned.pdf",
+   "id": "master-plumbers-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Master Plumbers (SPLE)",
+   "key": "master-plumbers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032125 sple singapore and taiwan (mp)-esigned.pdf",
+   "id": "master-plumbers-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Mechanical Engineers (SPLE)",
+   "key": "mechanical-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "centers": [],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program june 2025 mele cpm sple signed.pdf",
+   "id": "mechanical-engineers-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Certified Plant Mechanics (SPLE)",
+   "key": "plant-mechanics",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "centers": [],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program june 2025 mele cpm sple signed.pdf",
+   "id": "plant-mechanics-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Mechanical Engineers (SPLE)",
+   "key": "mechanical-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program june 2025 mele cpm sple singapore taiwan signed.pdf",
+   "id": "mechanical-engineers-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Certified Plant Mechanics (SPLE)",
+   "key": "plant-mechanics",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program june 2025 mele cpm sple singapore taiwan signed.pdf",
+   "id": "plant-mechanics-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Medical Technologists (SPLE)",
+   "key": "medical-technologists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Singapore"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032125 june 2025 singapore exam program (med tech).pdf",
+   "id": "medical-technologists-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Medical Technologists (SPLE)",
+   "key": "medical-technologists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032125 june 2025 sple exam program (med tech) (1).pdf",
+   "id": "medical-technologists-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Midwifery (SPLE)",
+   "key": "midwives",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032025 sple exam program middle east (midwifery).pdf",
+   "id": "midwives-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Midwifery (SPLE)",
+   "key": "midwives",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Singapore"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SPLE MIDWIFERY PROGRAM 2025 - SINGAPORE.pdf",
+   "id": "midwives-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Nurses (SPLE)",
+   "key": "nurses",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam progam june  2025 sple (nursing).pdf",
+   "id": "nurses-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Nurses (SPLE)",
+   "key": "nurses",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam progam june  2025 sple (nursing) singapore taiwan.pdf",
+   "id": "nurses-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Pharmacists (SPLE)",
+   "key": "pharmacists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/040825 sple 2025 exam program in middle east (pharmacy).pdf",
+   "id": "pharmacists-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Pharmacists (SPLE)",
+   "key": "pharmacists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/040825 sple 2025 exam program in taiwan (pharmacy).pdf",
+   "id": "pharmacists-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Physical Therapists (SPLE)",
+   "key": "physical-therapists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/sple exam program june 2025 middle east (pt).pdf",
+   "id": "physical-therapists-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Physical Therapists (SPLE)",
+   "key": "physical-therapists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/sple exam program june 2025 singapore taiwan (pt).pdf",
+   "id": "physical-therapists-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Radiologic Technologists (SPLE)",
+   "key": "radiologic-technologists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032525 sple exam program rtle in middle east (rad tech).pdf",
+   "id": "radiologic-technologists-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Radiologic Technologists (SPLE)",
+   "key": "radiologic-technologists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032525 sple exam program rtle in singapore and taiwan (rad tech).pdf",
+   "id": "radiologic-technologists-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "X-Ray Technologists (SPLE)",
+   "key": "x-ray-technologists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032525 sple exam program xtle in middle east (rad tech).pdf",
+   "id": "x-ray-technologists-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Real Estate Appraisers (SPLE)",
+   "key": "real-estate-appraisers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-08"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032625 exam program sple appraisers at middle east (1) (1).pdf",
+   "id": "real-estate-appraisers-sple-2025-06-08"
+  },
+  {
+   "seq": null,
+   "name": "Real Estate Appraisers (SPLE)",
+   "key": "real-estate-appraisers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-08"
+   ],
+   "centers": [
+    "Singapore"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032625 exam program sple appraisers singapore  (1).pdf",
+   "id": "real-estate-appraisers-sple-2025-06-08-2"
+  },
+  {
+   "seq": null,
+   "name": "Real Estate Brokers (SPLE)",
+   "key": "real-estate-brokers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-08"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032625 exam program sple reb middle east.pdf",
+   "id": "real-estate-brokers-sple-2025-06-08"
+  },
+  {
+   "seq": null,
+   "name": "Real Estate Brokers (SPLE)",
+   "key": "real-estate-brokers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-08"
+   ],
+   "centers": [
+    "Singapore"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032625 exam program sple reb singapore.pdf",
+   "id": "real-estate-brokers-sple-2025-06-08-2"
+  },
+  {
+   "seq": null,
+   "name": "Registered Electrical Engineers (SPLE)",
+   "key": "electrical-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032825 sple exam program 2025 (electrical engg).pdf",
+   "id": "electrical-engineers-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Registered Master Electricians (SPLE)",
+   "key": "master-electricians",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-08"
+   ],
+   "centers": [],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032825 sple exam program 2025 (electrical engg).pdf",
+   "id": "master-electricians-sple-2025-06-08"
+  },
+  {
+   "seq": null,
+   "name": "Registered Electrical Engineers (SPLE)",
+   "key": "electrical-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032825 sple exam program 2025 (electrical engg)Sg and twn.pdf",
+   "id": "electrical-engineers-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Registered Master Electricians (SPLE)",
+   "key": "master-electricians",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-08"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032825 sple exam program 2025 (electrical engg)Sg and twn.pdf",
+   "id": "master-electricians-sple-2025-06-08-2"
+  },
+  {
+   "seq": null,
+   "name": "Respiratory Therapy (SPLE)",
+   "key": "respiratory-therapists",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SPLE RESPI PROGRAM June 2025.pdf",
+   "id": "respiratory-therapists-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Psychometricians (SPLE)",
+   "key": "psychometricians",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032625 exam program sple psychomet middle east (1).pdf",
+   "id": "psychometricians-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Psychometricians (SPLE)",
+   "key": "psychometricians",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032625 exam program sple psychomet singapore and taiwan (2).pdf",
+   "id": "psychometricians-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Sanitary Engineers (SPLE)",
+   "key": "sanitary-engineers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "centers": [],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/SPLE exam program JUNE  2025 (san engg) 52024.pdf",
+   "id": "sanitary-engineers-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Social Workers (SPLE)",
+   "key": "social-workers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/2025 SPLE SWLE Revised Program Middle East.pdf",
+   "id": "social-workers-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Social Workers (SPLE)",
+   "key": "social-workers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/2025 SPLE SWLE Program Singapore and Taiwan.pdf",
+   "id": "social-workers-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Veterinary Medicine (SPLE)",
+   "key": "veterinarians",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032025 sple exam program middle east (vet med).pdf",
+   "id": "veterinarians-sple-2025-06-06"
+  },
+  {
+   "seq": null,
+   "name": "Veterinary Medicine (SPLE)",
+   "key": "veterinarians",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-06",
+    "2025-06-07",
+    "2025-06-08"
+   ],
+   "centers": [
+    "Singapore"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/032025 sple exam program singapore (vet med).pdf",
+   "id": "veterinarians-sple-2025-06-06-2"
+  },
+  {
+   "seq": null,
+   "name": "Chemical Technician (SPLE)",
+   "key": "chemical-technicians",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-08"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/040225 sple mid east (chem tech).final .pdf",
+   "id": "chemical-technicians-sple-2025-06-08"
+  },
+  {
+   "seq": null,
+   "name": "Chemical Technician (SPLE)",
+   "key": "chemical-technicians",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-08"
+   ],
+   "centers": [
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/040225 sple taiwan (chem tech) final.pdf",
+   "id": "chemical-technicians-sple-2025-06-08-2"
+  },
+  {
+   "seq": null,
+   "name": "Professional Teachers (SPLE)",
+   "key": "teachers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-08"
+   ],
+   "centers": [
+    "Middle East"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/June 2025 SPLE Middles east Prof Teacher.pdf",
+   "id": "teachers-sple-2025-06-08"
+  },
+  {
+   "seq": null,
+   "name": "Professional Teachers (SPLE)",
+   "key": "teachers",
+   "phase": null,
+   "variant": "sple",
+   "cble": false,
+   "days": [
+    "2025-06-08"
+   ],
+   "centers": [
+    "Singapore",
+    "Taiwan"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/June 2025 SPLE Teachers Singapore.pdf",
+   "id": "teachers-sple-2025-06-08-2"
+  },
+  {
+   "seq": "30",
+   "name": "Interior Designers",
+   "key": "interior-designers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-07-01",
+    "2025-07-02",
+    "2025-07-03"
+   ],
+   "centers": [
+    "NCR",
+    "Cebu",
+    "Davao"
+   ],
+   "opens": "2025-04-03",
+   "deadline": "2025-05-30",
+   "results": "2025-07-23",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/04302025 exam program july 2025 leid (int des).pdf",
+   "id": "interior-designers-2025-07-01"
+  },
+  {
+   "seq": "31",
+   "name": "Master Plumbers",
+   "key": "master-plumbers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-07-12",
+    "2025-07-13"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Rosales",
+    "Tacloban"
+   ],
+   "opens": "2025-03-25",
+   "deadline": "2025-05-27",
+   "results": "2025-07-16",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/042125- 2025 MPLE PROGRAM-final.pdf",
+   "id": "master-plumbers-2025-07-12"
+  },
+  {
+   "seq": "32",
+   "name": "Landscape Architects*",
+   "key": "landscape-architects",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-11-27",
+    "2025-11-28",
+    "2025-11-29"
+   ],
+   "orig_days": [
+    "2025-07-17",
+    "2025-07-18"
+   ],
+   "centers": [
+    "NCR",
+    "Cebu"
+   ],
+   "opens": "2025-04-18",
+   "deadline": "2025-06-17",
+   "results": "2025-07-22",
+   "notices": [
+    {
+     "text": "Resolution No. 2025 s.2025 - Rescheduling the July 2025 Landscape Architects Licensure Examination from July 17-18, 2025 to November 27-29, 2025",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2024 Rescheduling The July 2025 Landscape Architects.pdf"
+    },
+    {
+     "text": "Resolution No. 2127 s.2025 - Cancellation of November 2025 Landscape Architects CBLE",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2127 Cancellation of the November 2025 Landscape Architects Computer-Based Licensure Examination.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Program of the Landscape Architect Licensure Examination November 2025.pdf",
+   "cancelled": true,
+   "id": "landscape-architects-2025-07-17"
+  },
+  {
+   "seq": "33",
+   "name": "Real Estate Appraisers",
+   "key": "real-estate-appraisers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-07-22"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Tacloban"
+   ],
+   "opens": "2025-04-24",
+   "deadline": "2025-06-23",
+   "results": "2025-07-25",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/051525 EXAM PROGRAM REA 2025.pdf",
+   "id": "real-estate-appraisers-2025-07-22"
+  },
+  {
+   "seq": "34",
+   "name": "Environmental Planners",
+   "key": "environmental-planners",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-07-24",
+    "2025-07-25"
+   ],
+   "centers": [
+    "NCR",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Rosales"
+   ],
+   "opens": "2025-03-14",
+   "deadline": "2025-05-16",
+   "results": "2025-07-29",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/052825 exam program july 2025 (envi planning).pdf",
+   "id": "environmental-planners-2025-07-24"
+  },
+  {
+   "seq": "35",
+   "name": "Criminologists",
+   "key": "criminologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-08-01",
+    "2025-08-02",
+    "2025-08-03"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Palawan",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Bacolod",
+    "Bayambang",
+    "Bohol",
+    "Catarman",
+    "Cauayan",
+    "Dumaguete",
+    "Ilocos Norte",
+    "Ilocos Sur",
+    "Kidapawan"
+   ],
+   "opens": "2025-03-26",
+   "deadline": "2025-05-27",
+   "results": "2025-09-16",
+   "notices": [
+    {
+     "text": "Resolution No. 2055 s.2025- Removing Oroquieta, Romblon and Valencia as Testing Centers for the August 2025 Licensure Examination for Criminologists",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2055 Removing Oroquieta, Romblon And Valencia As Testing Centers.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Revised Program of Exam August 2025 (lec)_July282025.pdf",
+   "id": "criminologists-2025-08-01"
+  },
+  {
+   "seq": "36",
+   "name": "Guidance Counselors",
+   "key": "guidance-counselors",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-08-06",
+    "2025-08-07"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Lucena",
+    "Rosales"
+   ],
+   "opens": "2025-04-01",
+   "deadline": "2025-05-30",
+   "results": "2025-08-11",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/060325 exam program guidance and counseling 2025.pdf",
+   "id": "guidance-counselors-2025-08-06"
+  },
+  {
+   "seq": "37",
+   "name": "Mechanical Engineers",
+   "key": "mechanical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-08-09",
+    "2025-08-10",
+    "2025-08-11"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Zamboanga"
+   ],
+   "opens": "2025-05-08",
+   "deadline": "2025-07-09",
+   "results": "2025-08-15",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program august 2025 mele.pdf",
+   "id": "mechanical-engineers-2025-08-09"
+  },
+  {
+   "seq": "38",
+   "name": "Certified Plant Mechanics*",
+   "key": "plant-mechanics",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-08-09",
+    "2025-08-10",
+    "2025-08-11"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian"
+   ],
+   "opens": "2025-04-30",
+   "deadline": "2025-06-30",
+   "results": "2025-08-15",
+   "notices": [
+    {
+     "text": "Resolution No. 2047 s.2025- Removing Rosales, Pampanga and Tacloban as Testing Centers for the August 2025 Certified Plant Mechanics Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2047 Removing Rosales, Pampanga And Tacloban As Testing Centers For The CPM.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program aug 2025 cpm.pdf",
+   "id": "plant-mechanics-2025-08-09"
+  },
+  {
+   "seq": "39",
+   "name": "Medical Technologists",
+   "key": "medical-technologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-08-12",
+    "2025-08-13"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-05-15",
+   "deadline": "2025-07-14",
+   "results": "2025-08-20",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/revised August 2025 mtle exam program (med tech).pdf",
+   "id": "medical-technologists-2025-08-12"
+  },
+  {
+   "seq": "40",
+   "name": "Food Technologists",
+   "key": "food-technologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-08-14",
+    "2025-08-15"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Rosales"
+   ],
+   "opens": "2025-05-15",
+   "deadline": "2025-07-14",
+   "results": "2025-08-19",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program august 2025 ftle (food tech).pdf",
+   "id": "food-technologists-2025-08-14"
+  },
+  {
+   "seq": "41",
+   "name": "Registered Electrical Engineers",
+   "key": "electrical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-08-18",
+    "2025-08-19"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-05-12",
+   "deadline": "2025-07-11",
+   "results": "2025-08-28",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/REVISED program AUGUST 2025 eele (electrical engg) REE RME.pdf",
+   "id": "electrical-engineers-2025-08-18"
+  },
+  {
+   "seq": "42",
+   "name": "Registered Master Electricians",
+   "key": "master-electricians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-08-20"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-05-02",
+   "deadline": "2025-07-01",
+   "results": "2025-08-28",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/REVISED program AUGUST 2025 eele (electrical engg) REE RME.pdf",
+   "id": "master-electricians-2025-08-20"
+  },
+  {
+   "seq": null,
+   "name": "Environmental Planners",
+   "key": "environmental-planners",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-08-21",
+    "2025-08-22"
+   ],
+   "centers": [],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/080825 revised exam program august 2025 (envi planning).pdf",
+   "id": "environmental-planners-2025-08-21"
+  },
+  {
+   "seq": "43",
+   "name": "Sanitary Engineers",
+   "key": "sanitary-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-08-27",
+    "2025-08-28",
+    "2025-08-29"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Rosales"
+   ],
+   "opens": "2025-05-08",
+   "deadline": "2025-07-08",
+   "results": "2025-09-01",
+   "notices": [
+    {
+     "text": "Resolution No. 2064 s.2025- Removing Davao as a Testing Center for the August 2025 Sanitary Engineers Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2064 Removing Davao As A Testing Center For The August 2025 SELE.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program AUGUST  2025 (san engg) (1).pdf",
+   "id": "sanitary-engineers-2025-08-27"
+  },
+  {
+   "seq": "44",
+   "name": "Qualifying Assessment for Foreign Medical Professionals*",
+   "key": "foreign-medical-professionals",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-09-01",
+    "2025-09-02"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2025-06-02",
+   "deadline": "2025-08-01",
+   "results": "2025-09-04",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/September 2025 QUALIFYING ASSESSMENT for FMP Progam.pdf",
+   "id": "foreign-medical-professionals-2025-09-01"
+  },
+  {
+   "seq": "45",
+   "name": "Real Estate Brokers",
+   "key": "real-estate-brokers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-09-03"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Davao",
+    "Koronadal"
+   ],
+   "opens": "2025-06-04",
+   "deadline": "2025-08-04",
+   "results": "2025-09-05",
+   "notices": [
+    {
+     "text": "Resolution No. 1983 s.2025- Cancelling the September 2025 Real Estate Brokers Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-1983 Cancelling The September 2025 Real Estate Brokers Licensure Examination (1).pdf"
+    }
+   ],
+   "id": "real-estate-brokers-2025-09-03"
+  },
+  {
+   "seq": "46",
+   "name": "Librarians*",
+   "key": "librarians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-09-04",
+    "2025-09-05"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao"
+   ],
+   "opens": "2025-06-05",
+   "deadline": "2025-08-04",
+   "results": "2025-09-08",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/PROGRAM 2025 LLE Computer-Based.pdf",
+   "id": "librarians-2025-09-04"
+  },
+  {
+   "seq": "47",
+   "name": "Social Workers",
+   "key": "social-workers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-09-08",
+    "2025-09-09",
+    "2025-09-10"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-06-11",
+   "deadline": "2025-08-11",
+   "results": "2025-08-20",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/revised exam program sept 2025 SWLE.pdf",
+   "id": "social-workers-2025-09-08"
+  },
+  {
+   "seq": "48",
+   "name": "Professional Teachers",
+   "key": "teachers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-09-21"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Antique",
+    "Bacolod",
+    "Batanes",
+    "Bayambang",
+    "Bohol",
+    "Catanduanes",
+    "Catarman",
+    "Cauayan",
+    "Digos",
+    "Dumaguete",
+    "General Santos",
+    "Ilocos Norte",
+    "Ilocos Sur",
+    "Kidapawan",
+    "Laguna",
+    "Marinduque",
+    "Masbate",
+    "Mati",
+    "Occidental Mindoro",
+    "Oroquieta",
+    "Romblon",
+    "Tagum",
+    "Valencia",
+    "Nueva Vizcaya"
+   ],
+   "opens": "2025-06-23",
+   "deadline": "2025-08-11",
+   "results": "2025-12-05",
+   "notices": [
+    {
+     "text": "Resolution No.2032 s.2025- Rescheduling the filing of applications for the September 2025 LEPT",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2032 Rescheduling The Opening Of The Application Period For The September2025LET.pdf"
+    },
+    {
+     "text": "Reso 2103 s. 2025 Cancellation and Reschedule of LEPT",
+     "url": "https://www.prc.gov.ph/sites/default/files/RESO 2103 CANCELLATION OF THE SEPTEMBER 2025 LEPT.pdf"
+    },
+    {
+     "text": "Resolution No. 2063 s.2025 - Designating Nueva Vizcaya as an Additional Testing Center for the September 2025 LEPT",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2063 Designating Nueva Vizcaya As An Additional Testing Center.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Sept   2025 lept exam program (prof teachers)final.pdf",
+   "id": "teachers-2025-09-21"
+  },
+  {
+   "seq": "49",
+   "name": "Psychologists*",
+   "key": "psychologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-09-24",
+    "2025-09-25"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Palawan",
+    "Tuguegarao"
+   ],
+   "opens": "2025-06-19",
+   "deadline": "2025-08-18",
+   "results": "2025-09-29",
+   "notices": [
+    {
+     "text": "Resolution No. 2070 s.2025 - Designating Tuguegarao and Palawan as Additional Testing Centers for the September 2025 Psychologists Computer-Based Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2070 Designating Tuguegarao And Palawan As Additional Testing Centers For The Sept2025 Psychologists.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/090825  exam program psychology 2025.pdf",
+   "id": "psychologists-2025-09-24"
+  },
+  {
+   "seq": "50",
+   "name": "Psychometricians",
+   "key": "psychometricians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-09-24",
+    "2025-09-25"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-06-26",
+   "deadline": "2025-08-25",
+   "results": "2025-10-02",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/090825  exam program psychology 2025.pdf",
+   "id": "psychometricians-2025-09-24"
+  },
+  {
+   "seq": "51",
+   "name": "Civil Engineers",
+   "key": "civil-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-09-27",
+    "2025-09-28"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Ilocos Sur"
+   ],
+   "opens": "2025-06-13",
+   "deadline": "2025-08-15",
+   "results": "2025-10-06",
+   "notices": [
+    {
+     "text": "Reso 2099 s. 2025 Cancellation and Reschedule of Civil Engineers Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/RESO 2099 CANCELLATION OF THE SEPTEMBER 2025 CIVIL ENGR.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Exam Program Sept 2025 (civil engg).pdf",
+   "cancelled": true,
+   "moved_to": [
+    "2025-11-22",
+    "2025-11-23"
+   ],
+   "id": "civil-engineers-2025-09-27"
+  },
+  {
+   "seq": "52",
+   "name": "Geodetic Engineers",
+   "key": "geodetic-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-09-29",
+    "2025-09-30"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Rosales",
+    "Tuguegarao"
+   ],
+   "opens": "2025-06-30",
+   "deadline": "2025-08-29",
+   "results": "2025-10-03",
+   "notices": [
+    {
+     "text": "Resolution No. 2077 s.2025 - Removing Butuan and Tacloban as Testing Centers and Conducting Full Computer-Based Modality in the National Capital Region, Baguio, Cebu, Davao, Legazpi, Lucena, Pagadian, Rosales and Tuguegarao in the September 2025 Geodetic Engineers Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2077 Removing Butuan and Tacloban as Testing Centers and Conducting Full Computer-Based Modality.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Program for GELE September 2025  (Geodetic Engg).pdf",
+   "id": "geodetic-engineers-2025-09-29"
+  },
+  {
+   "seq": "53",
+   "name": "Ocular Pharmacologists*",
+   "key": "ocular-pharmacologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-10-01"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2025-07-03",
+   "deadline": "2025-09-01",
+   "results": "2025-10-14",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/072525 exam program october 2025 ole (opto).pdf",
+   "id": "ocular-pharmacologists-2025-10-01"
+  },
+  {
+   "seq": "54",
+   "name": "Optometrists (Written)*",
+   "key": "optometrists",
+   "phase": "Written",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-10-01",
+    "2025-10-02",
+    "2025-10-03"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2025-07-03",
+   "deadline": "2025-09-01",
+   "results": "2025-10-14",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/072525 exam program october 2025 ole (opto).pdf",
+   "id": "optometrists-written-2025-10-01"
+  },
+  {
+   "seq": "55",
+   "name": "Physicians",
+   "key": "physicians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-10-04",
+    "2025-10-05",
+    "2025-10-11",
+    "2025-10-12"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-05-22",
+   "deadline": "2025-07-22",
+   "results": "2025-10-16",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/October 2025 PLE Program (med) Physicians.pdf",
+   "id": "physicians-2025-10-04"
+  },
+  {
+   "seq": "56",
+   "name": "Naval Architects*",
+   "key": "naval-architects",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-10-06",
+    "2025-10-07",
+    "2025-10-08"
+   ],
+   "centers": [
+    "NCR",
+    "Pampanga",
+    "Cagayan de Oro"
+   ],
+   "opens": "2025-07-10",
+   "deadline": "2025-09-08",
+   "results": "2025-10-10",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/080825 program NALE For October 6-8 2025.pdf",
+   "id": "naval-architects-2025-10-06"
+  },
+  {
+   "seq": "57",
+   "name": "Optometrists (Practical)",
+   "key": "optometrists",
+   "phase": "Practical",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-10-06",
+    "2025-10-07",
+    "2025-10-08",
+    "2025-10-09",
+    "2025-10-10",
+    "2025-10-13"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2025-07-03",
+   "deadline": "2025-09-01",
+   "results": "2025-10-14",
+   "notices": [
+    {
+     "text": "Resolution No. 2087 s. 2025 - Additional Examination Days For The October 2025 Optometrists Licensure Examination (Practical Phase)",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2087%20Additional%20Examination%20Days%20For%20The%20October%202025%20Optometrists%20Licensure%20Examination%20%28Practical%20Phase%29.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/072525 exam program october 2025 ole (opto).pdf",
+   "id": "optometrists-practical-2025-10-06"
+  },
+  {
+   "seq": "58",
+   "name": "Fisheries Professionals",
+   "key": "fisheries-professionals",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-10-09",
+    "2025-10-10"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao"
+   ],
+   "opens": "2025-07-11",
+   "deadline": "2025-09-09",
+   "results": "2025-10-15",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/070825-Fisheries Prof. Licensure Program -with PRC Logo (1).pdf",
+   "id": "fisheries-professionals-2025-10-09"
+  },
+  {
+   "seq": "59",
+   "name": "Chemists*",
+   "key": "chemists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-10-13",
+    "2025-10-14"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Zamboanga"
+   ],
+   "opens": "2025-07-17",
+   "deadline": "2025-09-15",
+   "results": "2025-10-22",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/070825 Exam program oct 2025 cle (chem)-final.pdf",
+   "id": "chemists-2025-10-13"
+  },
+  {
+   "seq": "60",
+   "name": "Chemical Technicians",
+   "key": "chemical-technicians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-10-15"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Zamboanga"
+   ],
+   "opens": "2025-06-06",
+   "deadline": "2025-08-08",
+   "results": "2025-10-22",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/070825 exam program oct 2025 ctle (chem tech)- final.pdf",
+   "id": "chemical-technicians-2025-10-15"
+  },
+  {
+   "seq": "61",
+   "name": "Professional Foresters",
+   "key": "foresters",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-10-16",
+    "2025-10-17"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao"
+   ],
+   "opens": "2025-07-21",
+   "deadline": "2025-09-19",
+   "results": "2025-10-21",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/072825 exam program Oct. 2024 FLE PER TOS-with logo forester_Rev.pdf",
+   "id": "foresters-2025-10-16"
+  },
+  {
+   "seq": "62",
+   "name": "Electronics Engineers",
+   "key": "electronics-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-10-18",
+    "2025-10-19"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-07-24",
+   "deadline": "2025-09-22",
+   "results": "2025-10-24",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program oct 2025 (ece)_sgd.pdf",
+   "id": "electronics-engineers-2025-10-18"
+  },
+  {
+   "seq": "63",
+   "name": "Electronics Technicians",
+   "key": "electronics-technicians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-10-20"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-07-25",
+   "deadline": "2025-09-22",
+   "results": "2025-10-24",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program oct 2025 (ece)_sgd.pdf",
+   "id": "electronics-technicians-2025-10-20"
+  },
+  {
+   "seq": "64",
+   "name": "Metallurgical Engineers*",
+   "key": "metallurgical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-10-21",
+    "2025-10-22",
+    "2025-10-23"
+   ],
+   "centers": [
+    "NCR",
+    "Cagayan de Oro",
+    "Davao",
+    "Lucena",
+    "Palawan",
+    "Pampanga"
+   ],
+   "opens": "2025-07-24",
+   "deadline": "2025-09-22",
+   "results": "2025-10-27",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/revised OCTOBER 2025 METALLURGICAL ENGG BOARD PROGRAM.pdf",
+   "id": "metallurgical-engineers-2025-10-21"
+  },
+  {
+   "seq": "65",
+   "name": "Mining Engineers*",
+   "key": "mining-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-10-21",
+    "2025-10-22",
+    "2025-10-23"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Lucena",
+    "Legazpi",
+    "Rosales"
+   ],
+   "opens": "2025-07-24",
+   "deadline": "2025-09-22",
+   "results": "2025-10-27",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/OCT 2025 MINING ENGINEERING PROGRAM.pdf",
+   "id": "mining-engineers-2025-10-21"
+  },
+  {
+   "seq": "66",
+   "name": "Certified Public Accountants",
+   "key": "cpa",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-10-24",
+    "2025-10-25",
+    "2025-10-26"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-07-15",
+   "deadline": "2025-09-15",
+   "results": "2025-11-04",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/October 2025 CPALE Program.pdf",
+   "id": "cpa-2025-10-24"
+  },
+  {
+   "seq": "67",
+   "name": "Veterinarians*",
+   "key": "veterinarians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-10-27",
+    "2025-10-28",
+    "2025-10-29"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tuguegarao"
+   ],
+   "opens": "2025-07-31",
+   "deadline": "2025-09-29",
+   "results": "2025-11-03",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/October 2025 exam program (vet med).pdf",
+   "id": "veterinarians-2025-10-27"
+  },
+  {
+   "seq": "68",
+   "name": "Nurses",
+   "key": "nurses",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-11-04",
+    "2025-11-05"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Cabanatuan",
+    "Ilocos Sur"
+   ],
+   "opens": "2025-07-21",
+   "deadline": "2025-09-22",
+   "results": "2025-11-26",
+   "notices": [
+    {
+     "text": "Resolution No. 2119 s.2025- Cancellation of NLE in Cebu, Ilo & Tac and Reschedule on Nov 6 and 7",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2119 Cancellation of the Nurses Licensure Examination.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam progam Nov 2025 nle (nursing) revised 102325.pdf",
+   "id": "nurses-2025-11-04"
+  },
+  {
+   "seq": "69",
+   "name": "Nutritionists-Dietitians*",
+   "key": "nutritionist-dietitians",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-11-06",
+    "2025-11-07"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tuguegarao"
+   ],
+   "opens": "2025-08-07",
+   "deadline": "2025-10-06",
+   "results": "2025-11-11",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/081425 exam program november 2025 (nutri).pdf",
+   "id": "nutritionist-dietitians-2025-11-06"
+  },
+  {
+   "seq": "70",
+   "name": "Midwives",
+   "key": "midwives",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-11-08",
+    "2025-11-09"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-07-22",
+   "deadline": "2025-09-23",
+   "results": "2025-11-12",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Exam Program -Midwifery Nov 2025_rev.pdf",
+   "id": "midwives-2025-11-08"
+  },
+  {
+   "seq": "71",
+   "name": "Agriculturists",
+   "key": "agriculturists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-11-10",
+    "2025-11-11",
+    "2025-11-12"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-08-11",
+   "deadline": "2025-10-10",
+   "results": "2025-11-19",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/PROGRAM EXAM Agriculture November 2025.pdf",
+   "id": "agriculturists-2025-11-10"
+  },
+  {
+   "seq": "72",
+   "name": "Speech-Language Pathologists*",
+   "key": "speech-language-pathologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-11-13",
+    "2025-11-14"
+   ],
+   "centers": [
+    "NCR",
+    "Pampanga",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Lucena"
+   ],
+   "opens": "2025-08-14",
+   "deadline": "2025-10-13",
+   "results": "2025-11-17",
+   "notices": [
+    {
+     "text": "Reso no. 2025-2115 - Designating Cebu as additional Testing Center for November 2025",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2115%20Designating%20Cebu%20As%20Additional%20Testing%20Center%20For%20The.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Nov 2025 Exam Program Speech Language Path (SLP) with Memo 57_Rev.pdf",
+   "id": "speech-language-pathologists-2025-11-13"
+  },
+  {
+   "seq": "73",
+   "name": "Pharmacists",
+   "key": "pharmacists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-11-15",
+    "2025-11-16"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-07-25",
+   "deadline": "2025-09-24",
+   "results": "2025-11-21",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/091924 nov 2024 exam program (Pharmacy).pdf",
+   "id": "pharmacists-2025-11-15"
+  },
+  {
+   "seq": "74",
+   "name": "Customs Brokers",
+   "key": "customs-brokers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-11-17",
+    "2025-11-18"
+   ],
+   "centers": [
+    "NCR",
+    "Cebu",
+    "Lucena",
+    "Davao"
+   ],
+   "opens": "2025-08-18",
+   "deadline": "2025-10-17",
+   "results": "2025-11-20",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/CustomsBrokerExamProgram-CBLE-Nov2025.pdf",
+   "id": "customs-brokers-2025-11-17"
+  },
+  {
+   "seq": null,
+   "name": "Agriculturists (Rescheduled)",
+   "key": "agriculturists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-11-19",
+    "2025-11-20",
+    "2025-11-21"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/111725 resched nov 2025 exam program (agri).pdf",
+   "id": "agriculturists-2025-11-19"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers Oral Examination/Technical Evaluation",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [],
+   "centers": [
+    "Japan",
+    "Qatar"
+   ],
+   "opens": "2025-10-13",
+   "deadline": "2025-11-13",
+   "results": null,
+   "notices": [
+    {
+     "text": "Resolution No. 32 s.2025- Scheduling the Face-to-Face Oral Examination for Professional Mechanical Engineers in Japan and Qatar",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-32 Face to Face Oral Examination for PME.pdf"
+    },
+    {
+     "text": "Resolution No. 38 s.2025- Extending the Schedule of the Face-to-Face Oral Examination for Professional Mechanical Engineers in Japan from November 19-20, 2025 to November 19-22, 2025",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-38 Extending the Schedule of f2f Oral Exam for PME in Japan.pdf"
+    }
+   ],
+   "id": "professional-mechanical-engineers-technical-evaluation-x"
+  },
+  {
+   "seq": "75",
+   "name": "Chemical Engineers*",
+   "key": "chemical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-11-19",
+    "2025-11-20",
+    "2025-11-21"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Palawan",
+    "Pampanga",
+    "Rosales"
+   ],
+   "opens": "2025-08-21",
+   "deadline": "2025-10-20",
+   "results": "2025-11-25",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/revised che  exam program NOVEMBER  2025 (1) (1).pdf",
+   "id": "chemical-engineers-2025-11-19"
+  },
+  {
+   "seq": null,
+   "name": "Civil Engineers",
+   "key": "civil-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-11-22",
+    "2025-11-23"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Calapan",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Pagadian",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga",
+    "Ilocos Sur"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [
+    {
+     "text": "Reso no. 2099 s. 2025 Reschedule of Civil Engineers Licensure Exam",
+     "url": "https://www.prc.gov.ph/sites/default/files/RESO%202099%20CANCELLATION%20OF%20THE%20SEPTEMBER%202025%20CIVIL%20ENGR_0.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Exam Program Nov 2025 (Civil Engg).pdf",
+   "id": "civil-engineers-2025-11-22"
+  },
+  {
+   "seq": "76",
+   "name": "Geologists*",
+   "key": "geologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-11-24",
+    "2025-11-25",
+    "2025-11-26"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program Nov 2025 GLE (geology) (1).pdf",
+   "id": "geologists-2025-11-24"
+  },
+  {
+   "seq": null,
+   "name": "Real Estate Appraisers",
+   "key": "real-estate-appraisers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-11-23"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan De Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Tacloban"
+   ],
+   "opens": "2025-09-08",
+   "deadline": "2025-10-23",
+   "results": "2025-11-26",
+   "notices": [
+    {
+     "text": "Resolution No. 2069 s.2025 - Additional Schedule for the Conduct of the Real Estate Appraisers Licensure Examination on November 23, 2025 in the National Capital Region, Baguio, Butuan, Cagayan De Oro, Cebu, Davao, Iloilo, Legazpi, Lucena and Tacloban as Testing Centers",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2069 Additional Schedule For The Conduct Of The REALE On Nov 23 2025.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/091625 exam program Real Estate Appraisers November 23, 2025.pdf",
+   "id": "real-estate-appraisers-2025-11-23"
+  },
+  {
+   "seq": "77",
+   "name": "Dentists (Written)",
+   "key": "dentists",
+   "phase": "Written",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-11-24",
+    "2025-11-25",
+    "2025-11-26"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao"
+   ],
+   "opens": "2025-08-22",
+   "deadline": "2025-10-23",
+   "results": "2025-12-15",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Nov 2025 DLE Program of Exam Written.pdf",
+   "id": "dentists-written-2025-11-24"
+  },
+  {
+   "seq": null,
+   "name": "Professional Teachers",
+   "key": "teachers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-11-30"
+   ],
+   "centers": [
+    "Baguio",
+    "Rosales",
+    "Tuguegarao"
+   ],
+   "opens": null,
+   "deadline": null,
+   "results": "2025-12-19",
+   "notices": [
+    {
+     "text": "Reso No. 2103 s. 2025 - Cancellation and Rescheduling of LEPT",
+     "url": "https://www.prc.gov.ph/sites/default/files/RESO%202103%20CANCELLATION%20OF%20THE%20SEPTEMBER%202025%20LEPT_0.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Nov  2025 lept exam program (prof teachers)final.pdf",
+   "id": "teachers-2025-11-30"
+  },
+  {
+   "seq": "78",
+   "name": "Occupational Therapists*",
+   "key": "occupational-therapists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-12-02"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Pampanga",
+    "Rosales"
+   ],
+   "opens": "2025-09-04",
+   "deadline": "2025-11-03",
+   "results": "2025-12-04",
+   "notices": [
+    {
+     "text": "Resolution No. 2124 s.2025 - Conducting Occupational Therapists Computer-Based Licensure Examination on December 02, 2025",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2124 Conducting Occupational Therapists Computer-Based.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/Exam Program Dec 2025 Occupational Therapy_revised.pdf",
+   "id": "occupational-therapists-2025-12-02"
+  },
+  {
+   "seq": "79",
+   "name": "Dentists (Practical)",
+   "key": "dentists",
+   "phase": "Practical",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-12-01",
+    "2025-12-02",
+    "2025-12-03",
+    "2025-12-04",
+    "2025-12-05",
+    "2025-12-06"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2025-08-22",
+   "deadline": "2025-10-23",
+   "results": "2025-12-15",
+   "notices": [
+    {
+     "text": "Resolution No. 2130 s.2025- Removing Cebu, Davao, and Lucena as Testing Centers for the December 2025 Dentists Licensure Examination - Practical Phase",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2130 Removing Cebu, Davao, And Lucena As Testing Centers Dentist Practical.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/revised December 2025 DLE practical phase (dentists).pdf",
+   "id": "dentists-practical-2025-12-01"
+  },
+  {
+   "seq": "80",
+   "name": "Real Estate Consultants (Written)",
+   "key": "real-estate-consultants",
+   "phase": "Written",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-12-03"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2025-08-21",
+   "deadline": "2025-10-21",
+   "results": null,
+   "results_note": "To be announced.",
+   "notices": [
+    {
+     "text": "Reso No. 2131(s. 2025) - Removing Cagayan De Oro As Testing Center For The December 2025 Real Estate Consultants Licensure Examination - Written Phase",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2131 Removing Cagayan De Oro As Testing Center For The December 2025 (1).pdf"
+    },
+    {
+     "text": "Reso No. 2132(s. 2025) - Removing Davao As Testing Center For The December 2025 Real Estate Consultants Licensure Examination - Written Phase",
+     "url": "https://www.prc.gov.ph/sites/default/files/2025-2132 Removing Davao As Testing Center For The December 2025.pdf"
+    }
+   ],
+   "program": "https://www.prc.gov.ph/sites/default/files/101625  EXAM PROGRAM REAL ESTATE CONSULTANT 2025.pdf",
+   "id": "real-estate-consultants-written-2025-12-03"
+  },
+  {
+   "seq": "81",
+   "name": "Agricultural and Biosystems Engineers",
+   "key": "agricultural-biosystems-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-12-04",
+    "2025-12-05"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao"
+   ],
+   "opens": "2025-08-05",
+   "deadline": "2025-10-22",
+   "results": "2025-12-11",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/AGRI BIO exam program dec 4 5 2025.pdf",
+   "id": "agricultural-biosystems-engineers-2025-12-04"
+  },
+  {
+   "seq": "82",
+   "name": "Physical Therapist",
+   "key": "physical-therapists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-12-06",
+    "2025-12-07"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales"
+   ],
+   "opens": "2025-09-05",
+   "deadline": "2025-11-06",
+   "results": "2025-12-10",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program December 6 7 2025 ptle (pt).pdf",
+   "id": "physical-therapists-2025-12-06"
+  },
+  {
+   "seq": "83",
+   "name": "Aeronautical Engineers*",
+   "key": "aeronautical-engineers",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-12-08",
+    "2025-12-09",
+    "2025-12-10"
+   ],
+   "centers": [
+    "NCR",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales"
+   ],
+   "opens": "2025-09-11",
+   "deadline": "2025-11-10",
+   "results": "2025-12-11",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/Exam program DEC 2025 (aero)_revised.pdf",
+   "id": "aeronautical-engineers-2025-12-08"
+  },
+  {
+   "seq": "84",
+   "name": "Radiologic Technologists",
+   "key": "radiologic-technologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-12-11",
+    "2025-12-12"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Butuan",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Legazpi",
+    "Lucena",
+    "Pampanga",
+    "Rosales",
+    "Tacloban",
+    "Tuguegarao",
+    "Zamboanga"
+   ],
+   "opens": "2025-09-12",
+   "deadline": "2025-11-11",
+   "results": "2025-12-17",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/101425 Exam Program Dec 2025 RTLE (Rad Tech).pdf",
+   "id": "radiologic-technologists-2025-12-11"
+  },
+  {
+   "seq": "85",
+   "name": "X-Ray Technologists*",
+   "key": "x-ray-technologists",
+   "phase": null,
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-12-11",
+    "2025-12-12"
+   ],
+   "centers": [
+    "NCR",
+    "Baguio",
+    "Cagayan de Oro",
+    "Cebu",
+    "Davao",
+    "Iloilo",
+    "Koronadal",
+    "Legazpi",
+    "Lucena",
+    "Palawan",
+    "Pampanga",
+    "Rosales",
+    "Tuguegarao"
+   ],
+   "opens": "2025-09-12",
+   "deadline": "2025-11-11",
+   "results": "2025-12-17",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/101425 Exam Program Dec 2025 XTLE (Rad Tech).pdf",
+   "id": "x-ray-technologists-2025-12-11"
+  },
+  {
+   "seq": "86",
+   "name": "Dental Technologists (Written)*",
+   "key": "dental-technologists",
+   "phase": "Written",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-12-15"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2025-09-18",
+   "deadline": "2025-11-17",
+   "results": "2025-12-18",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/December 2025 DENTAL TECHNOLOGISTS PROGRAM OF EXAM_Rev.pdf",
+   "id": "dental-technologists-written-2025-12-15"
+  },
+  {
+   "seq": "87",
+   "name": "Dental Technologists (Practical)",
+   "key": "dental-technologists",
+   "phase": "Practical",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2025-12-16",
+    "2025-12-17"
+   ],
+   "centers": [
+    "NCR"
+   ],
+   "opens": "2025-09-18",
+   "deadline": "2025-11-17",
+   "results": "2025-12-18",
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/December 2025 DENTAL TECHNOLOGISTS PROGRAM OF EXAM_Rev.pdf",
+   "id": "dental-technologists-practical-2025-12-16"
+  }
+ ]
+}

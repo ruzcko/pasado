@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pasado · PRC board exam countdowns</title>
+  <meta name="description" content="Countdowns to every PRC board exam in the Philippines: application deadlines, exam days and results dates, straight from PRC's schedule. No ads.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pasado">
+  <meta property="og:title" content="Pasado · PRC board exam countdowns">
+  <meta property="og:description" content="Countdowns to every PRC board exam: application deadlines, exam days and results dates. No ads.">
+  <meta property="og:url" content="https://pasado.ruzcko.dev/">
+  <meta property="og:image" content="https://pasado.ruzcko.dev/og">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pasado · PRC board exam countdowns">
+  <meta name="twitter:description" content="Countdowns to every PRC board exam: application deadlines, exam days and results dates. No ads.">
+  <meta name="twitter:image" content="https://pasado.ruzcko.dev/og">
+  <meta name="theme-color" content="#0c1120" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f5f0e6" media="(prefers-color-scheme: light)">
+  <link rel="preload" href="/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="canonical" href="https://pasado.ruzcko.dev/">
+  <script>
+    // Apply a saved theme before first paint, so the page doesn't flash.
+    try { const t = JSON.parse(localStorage.getItem("pasado:v1") || "{}").theme; if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (_) {}
+  </script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="/" aria-label="Pasado, home">
+        <svg class="logo" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="none" stroke="currentColor" stroke-width="2.6"/><circle cx="16" cy="16" r="8" fill="var(--red)"/></svg>
+        <span class="wordmark">pasado</span>
+      </a>
+      <span class="tagline">PRC board exam countdowns</span>
+      <div class="top-right">
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Theme"></button>
+        <button class="icon-btn" id="aboutBtn" type="button" aria-haspopup="dialog" aria-label="About Pasado"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 9v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="6.3" r="1.1" fill="currentColor"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="listbar" id="listbar" hidden></div>
+      <section class="hero" id="hero" aria-live="polite"><p class="hero-loading">Loading the schedule…</p></section>
+      <p class="est-banner" id="estBanner" hidden></p>
+    </div>
+
+    <div class="toolbar-wrap" id="toolbar">
+      <div class="wrap toolbar">
+        <div class="tb-row">
+          <label class="search">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m13.5 13.5 3.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input id="q" type="search" placeholder="Find your exam: nursing, LET, CPA…" autocomplete="off" aria-label="Find an exam">
+          </label>
+          <div class="seg" id="focus" role="radiogroup" aria-label="Count down to">
+            <button type="button" role="radio" data-focus="exam">Exam day</button>
+            <button type="button" role="radio" data-focus="deadline">Apply by</button>
+            <button type="button" role="radio" data-focus="results">Results</button>
+          </div>
+        </div>
+        <div class="chips" id="chips" role="group" aria-label="Filter"></div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <section aria-label="Exams" id="list"></section>
+    </div>
+  </main>
+
+  <footer class="wrap foot">
+    <p class="foot-src" id="footSrc"></p>
+    <p>Not affiliated with the Professional Regulation Commission. Dates come from PRC's published schedule and can change, so confirm on <a href="https://www.prc.gov.ph/exam-schedules-menu" target="_blank" rel="noopener">prc.gov.ph</a> before you apply.</p>
+    <p>Made by <a href="https://ruzcko.com">ruzcko</a> · <a href="/credits.html">Credits</a> · No ads, no tracking.</p>
+  </footer>
+
+  <dialog id="aboutdlg" class="sheet" aria-labelledby="aboutTitle">
+    <div class="sd-head"><h2 id="aboutTitle">About Pasado</h2><button class="sd-x" type="button" data-close aria-label="Close">×</button></div>
+    <div class="sheet-body">
+      <p><b>Every PRC board exam, counting down.</b> Find your exam, star it, and share the countdown with your batchmates.</p>
+      <p><b>Where the dates come from.</b> PRC's yearly <a href="https://www.prc.gov.ph/exam-schedules-menu" target="_blank" rel="noopener">Schedule of Examinations</a>, read once a day. Reschedules and resolutions PRC adds to that page show up here as notices.</p>
+      <p><b>Estimated dates.</b> Until PRC publishes next year's schedule, those sittings are projected from this year's (same weekday, a year later) and marked <span class="badge est">Estimated</span>. They're for planning only and never go into calendar feeds.</p>
+      <p><b>Times.</b> Everything is Philippine time. Exam and results countdowns run to the start of the day; "apply by" runs to the end of the last filing day.</p>
+      <p><b>Your list</b> (★) stays on this device. Share it with a link; nothing is sent anywhere.</p>
+      <p class="muted">Not affiliated with PRC. Always confirm dates and requirements on <a href="https://www.prc.gov.ph" target="_blank" rel="noopener">prc.gov.ph</a> and apply through <a href="https://online.prc.gov.ph" target="_blank" rel="noopener">LERIS</a>.</p>
+    </div>
+  </dialog>
+
+  <dialog id="sharedlg" class="sheet sharedlg" aria-labelledby="sdTitle">
+    <div class="sd-head"><h2 id="sdTitle">Share card</h2><button id="sdClose" class="sd-x" type="button" aria-label="Close">×</button></div>
+    <div class="sd-preview"><img id="sdImg" alt="Preview of the share card"></div>
+    <div class="sd-controls">
+      <div class="seg small" id="sdFormats" role="radiogroup" aria-label="Card format">
+        <button type="button" role="radio" data-format="story">Story</button>
+        <button type="button" role="radio" data-format="square">Square</button>
+        <button type="button" role="radio" data-format="wide">Wide</button>
+      </div>
+      <div class="sd-themes" id="sdThemes" role="radiogroup" aria-label="Card theme"></div>
+    </div>
+    <div class="sd-actions">
+      <button id="sdShare" class="btn primary" type="button">Share</button>
+      <button id="sdSave" class="btn" type="button">Download</button>
+      <button id="sdCopy" class="btn" type="button">Copy link</button>
+    </div>
+    <p class="sd-note">The countdown is today's snapshot, so the card shows the date too.</p>
+  </dialog>
+
+  <script src="/share.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

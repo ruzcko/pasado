@@ -1,0 +1,13 @@
+{
+ "checked_at": "2026-10-12T01:25:37Z",
+ "years": {
+  "2026": {
+   "checked_at": "2026-10-12T01:25:37Z",
+   "published": true
+  },
+  "2027": {
+   "checked_at": "2026-10-12T01:25:37Z",
+   "published": false
+  }
+ }
+}
