@@ -231,6 +231,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .notices { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
 .notices li { font-size: 13.5px; background: color-mix(in srgb, var(--red) 7%, var(--surface)); border: 1px solid color-mix(in srgb, var(--red) 25%, var(--line)); border-radius: 10px; padding: 8px 10px; }
 .est-note { margin: 12px 0 0; font-size: 13px; color: var(--warm); background: color-mix(in srgb, var(--gold) 12%, var(--surface)); border-radius: 10px; padding: 8px 10px; }
+.info-note { margin: 12px 0 0; font-size: 13px; color: var(--blue); background: color-mix(in srgb, var(--blue) 10%, var(--surface)); border-radius: 10px; padding: 8px 10px; }
 .cancel-note { margin: 12px 0 0; font-size: 13px; color: var(--red); font-weight: 600; }
 .others { margin: 0; padding: 0; list-style: none; font-size: 14px; }
 .others li { padding: 2px 0; }

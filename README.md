@@ -1,6 +1,6 @@
 # Pasado
 
-Countdowns to every PRC board exam in the Philippines: when applications open, the last day
+Countdowns to every PRC board exam in the Philippines, plus the Bar and the Civil Service Exam: when applications open, the last day
 to apply, exam days and the target results date. Pick your exam, share the countdown, add it
 to your calendar. No ads, no tracking.
 
@@ -24,6 +24,10 @@ Reschedules, cancellations and added testing centers are pasted into the cells a
   a category, and the title passers earn (RN, CPA, LPT, Engr.…) for share cards.
   A new exam PRC adds still shows up (under "Other") until it's added here.
 - `data/overrides.json` holds manual corrections, by sitting id. Use sparingly.
+- `data/other_exams.json` holds exams outside PRC, entered by hand: the **Bar exam** (Supreme
+  Court Bar Bulletins) and the **Civil Service Exam** (CSC exam announcements). Each agency
+  publishes only a few dates a year, so a scraper isn't worth it. Every sitting cites its
+  source document; add next year's sitting when the agency announces it.
 - `pipeline/build.py` (no network) turns the snapshots into `site/data/exams.json`,
   one calendar feed per exam (`site/cal/<key>.ics`, plus `<key>-sple.ics` for exams abroad)
   and the sitemap. Until PRC publishes next year's schedule, next year's sittings are

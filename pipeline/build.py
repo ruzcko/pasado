@@ -96,6 +96,7 @@ def last_date(s):
 
 def build():
     catalog = load(DATA / "exams.json")
+    others = load(DATA / "other_exams.json", {"agencies": {}, "categories": {}, "exams": []})
     status = load(DATA / "status.json", {"years": {}})
     overrides = load(DATA / "overrides.json", {}).get("sittings", {})
     years = {}
@@ -107,7 +108,7 @@ def build():
 
     today = datetime.now(MANILA).date()
     cutoff = (today - timedelta(days=KEEP_PAST_DAYS)).isoformat()
-    exams = {e["key"]: {k: v for k, v in e.items() if k != "names"} | {"sittings": []} for e in catalog["exams"]}
+    exams = {e["key"]: {k: v for k, v in e.items() if k != "names"} | {"agency": "prc", "sittings": []} for e in catalog["exams"]}
     latest = max(years)
 
     for year, snap in sorted(years.items()):
@@ -118,7 +119,7 @@ def build():
             s.update(overrides.get(s["id"], {}))
             if row["key"] not in exams:  # a new exam PRC added that the catalog doesn't know yet
                 exams[row["key"]] = {"key": row["key"], "name": re.sub(r"\s*\(.*", "", row["name"]).strip(" *"),
-                                     "short": [], "category": "other", "sittings": []}
+                                     "short": [], "category": "other", "agency": "prc", "sittings": []}
             exams[row["key"]]["sittings"].append(s)
 
     # Next year's schedule isn't out: estimate it from the latest published year.
@@ -128,6 +129,11 @@ def build():
         for ex in exams.values():
             for s in [x for x in ex["sittings"] if x["year"] == latest and not x.get("cancelled")]:
                 ex["sittings"].append(estimate(s))
+
+    # Exams outside PRC (Bar, Civil Service Exam): announced by hand in data/other_exams.json, never estimated.
+    for o in others["exams"]:
+        exams[o["key"]] = {k: v for k, v in o.items() if k != "sittings"} | {
+            "sittings": [{"centers": [], **x} for x in o["sittings"]]}
 
     out = []
     for ex in exams.values():
@@ -143,13 +149,14 @@ def build():
         "checked_at": checked,
         "years": {str(y): {"source": s["source"], "updated_at": s.get("updated_at")} for y, s in sorted(years.items())},
         "next_year": {"year": next_year, "published": bool(published_next)},
-        "categories": catalog["categories"] | {"other": "Other"},
+        "categories": catalog["categories"] | others["categories"] | {"other": "Other"},
+        "agencies": others["agencies"],
         "exams": out,
     }
     (SITE / "data").mkdir(parents=True, exist_ok=True)
     (SITE / "data" / "exams.json").write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")),
                                               encoding="utf-8", newline="\n")
-    write_feeds(out)
+    write_feeds(out, others["agencies"])
     write_sitemap(out)
     stamp_assets()
     n = sum(len(e["sittings"]) for e in out)
@@ -186,6 +193,8 @@ def day_event(uid, start, end, summary, desc, stamp, url):
 
 
 def label(ex, s):
+    if ex.get("label"):
+        return ex["label"] + (f" ({s['phase']})" if s.get("phase") else "")
     bits = [ex["name"]]
     if s.get("phase"):
         bits.append(f"({s['phase']})")
@@ -194,12 +203,14 @@ def label(ex, s):
     return " ".join(bits) + " board exam"
 
 
-def feed(ex, sittings, name, stamp):
+def feed(ex, sittings, name, stamp, agency):
     url = f"https://{HOST}/{ex['key']}"
     lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//ruzcko//pasado//EN", "CALSCALE:GREGORIAN",
              "METHOD:PUBLISH", f"X-WR-CALNAME:{ics_escape(name)}", "X-WR-TIMEZONE:Asia/Manila",
              "X-PUBLISHED-TTL:PT12H", "REFRESH-INTERVAL;VALUE=DURATION:PT12H"]
-    note = "\n\nFrom PRC's published schedule. Always confirm on prc.gov.ph."
+    prc = ex.get("agency", "prc") == "prc"
+    note = ("\n\nFrom PRC's published schedule. Always confirm on prc.gov.ph." if prc
+            else f"\n\nFrom the {agency.get('full', 'agency')}'s announcement. Always confirm on {agency.get('site', 'the official site')}.")
     for s in sittings:
         if s.get("est") or s.get("cancelled"):
             continue
@@ -207,7 +218,7 @@ def feed(ex, sittings, name, stamp):
         where = ", ".join(s["centers"])
         if s.get("opens"):
             lines += day_event(f"{s['id']}-opens", s["opens"], s["opens"], f"Applications open · {what}",
-                               f"Applications for the {what} open (LERIS, online.prc.gov.ph).{note}", stamp, url)
+                               f"Applications for the {what} open{' (LERIS, online.prc.gov.ph)' if prc else ''}.{(' ' + s['deadline_note']) if s.get('deadline_note') else ''}{note}", stamp, url)
         if s.get("deadline"):
             lines += day_event(f"{s['id']}-deadline", s["deadline"], s["deadline"], f"Last day to apply · {what}",
                                f"Deadline to file applications for the {what}.{note}", stamp, url)
@@ -215,12 +226,12 @@ def feed(ex, sittings, name, stamp):
                            f"Exam days: {', '.join(s['days'])}.\nTesting centers: {where}.{note}", stamp, url)
         if s.get("results"):
             lines += day_event(f"{s['id']}-results", s["results"], s["results"], f"Results (target) · {what}",
-                               f"PRC's target date to release results.{note}", stamp, url)
+                               f"{'PRC' if prc else agency.get('name', 'The agency')}'s target date to release results.{note}", stamp, url)
     lines.append("END:VCALENDAR")
     return "\r\n".join(fold(x) for x in lines) + "\r\n"
 
 
-def write_feeds(exams):
+def write_feeds(exams, agencies):
     cal = SITE / "cal"
     cal.mkdir(parents=True, exist_ok=True)
     for old in cal.glob("*.ics"):
@@ -230,9 +241,10 @@ def write_feeds(exams):
         local = [s for s in ex["sittings"] if s.get("variant") != "sple"]
         abroad = [s for s in ex["sittings"] if s.get("variant") == "sple"]
         if local:
-            (cal / f"{ex['key']}.ics").write_text(feed(ex, local, f"{ex['name']} board exam", stamp), encoding="utf-8", newline="")
+            name = ex.get("label") or f"{ex['name']} board exam"
+            (cal / f"{ex['key']}.ics").write_text(feed(ex, local, name, stamp, agencies.get(ex.get("agency"), {})), encoding="utf-8", newline="")
         if abroad:
-            (cal / f"{ex['key']}-sple.ics").write_text(feed(ex, abroad, f"{ex['name']} board exam (SPLE, abroad)", stamp),
+            (cal / f"{ex['key']}-sple.ics").write_text(feed(ex, abroad, f"{ex['name']} board exam (SPLE, abroad)", stamp, {}),
                                                        encoding="utf-8", newline="")
 
 

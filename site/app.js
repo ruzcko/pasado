@@ -4,7 +4,7 @@ const STORE = "pasado:v1";
 const HOST = "pasado.ruzcko.dev";
 const TZ = "Asia/Manila";
 const DAY = 86400000;
-const POPULAR = ["nurses", "teachers", "cpa", "civil-engineers", "criminologists", "medical-technologists", "psychometricians", "electrical-engineers"];
+const POPULAR = ["nurses", "teachers", "cpa", "bar", "cse", "civil-engineers", "criminologists", "medical-technologists", "psychometricians", "electrical-engineers"];
 const FOCUS = {
   exam: { label: "Exam", long: "Exam day", unit: "to the exam" },
   deadline: { label: "Apply by", long: "Last day to apply", unit: "to apply" },
@@ -139,7 +139,7 @@ function matches(ex) {
 }
 function matchesQuery(ex) {
   if (!state.q) return true;
-  const hay = [ex.name, ex.key, ...(ex.short || []), ex.title || "", DATA.categories[ex.category] || "", ex.note || ""].join(" ").toLowerCase();
+  const hay = [ex.name, ex.key, ...(ex.short || []), ...(ex.aliases || []), agencyOf(ex).name || "", ex.title || "", DATA.categories[ex.category] || "", ex.note || ""].join(" ").toLowerCase();
   return state.q.toLowerCase().split(/\s+/).every((w) => hay.includes(w) || hay.includes(w.replace(/ing$/, "")));
 }
 function rowsFor(filter = matches) {
@@ -155,6 +155,9 @@ function rowsFor(filter = matches) {
   return { rows, none };
 }
 const code = (ex) => (ex.short && ex.short[0]) || "";
+const isPrc = (ex) => (ex.agency || "prc") === "prc";
+const agencyOf = (ex) => (DATA.agencies || {})[ex.agency || "prc"] || {};
+const examLabel = (ex) => ex.label || `${ex.name} board exam`;
 
 // ---- countdown text ----
 function parts(ms) {
@@ -248,7 +251,7 @@ function renderHero() {
     ${switcher(ex.key)}
     <div class="eyebrow">${mine ? `<span class="star-mark">★</span>` : ""}<span>${esc(eyebrow)} · ${esc(focusLabel)}</span></div>
     <h1><button type="button" data-open="${esc(ex.key)}">${esc(ex.name)}</button></h1>
-    <p class="sub">${esc([code(ex) && code(ex) + " board exam", variant].filter(Boolean).join(" · ") || "Board exam")}${s.est ? ` · <span class="badge est">Estimated</span>` : ""}</p>
+    <p class="sub">${esc([ex.label || (code(ex) && code(ex) + " board exam"), isPrc(ex) ? "" : agencyOf(ex).name, variant].filter(Boolean).join(" · ") || "Board exam")}${s.est ? ` · <span class="badge est">Estimated</span>` : ""}</p>
     ${clock}
     <p class="when">${esc(whenText)}<small>${s.est ? `Projected from ${s.est_from}. PRC hasn't published ${s.year} dates yet.` : "Philippine time"}</small></p>
     <ul class="steps">${stepsHtml(s, state.focus, now)}</ul>
@@ -275,7 +278,7 @@ function renderPicker(hero) {
   const next = rowsFor((ex) => true).rows.find((r) => !r.s.est && !r.ongoing && dayDiff(r.day) > 0);
   const picks = POPULAR.map((k) => EXAMS.get(k)).filter(Boolean);
   hero.innerHTML = `
-    <div class="eyebrow"><span>PRC board exams · ${esc(String(new Date().getFullYear()))}–${esc(String(new Date().getFullYear() + 1))}</span></div>
+    <div class="eyebrow"><span>Board exams, the Bar &amp; the CSE · ${esc(String(new Date().getFullYear()))}–${esc(String(new Date().getFullYear() + 1))}</span></div>
     <h1>${state.replacing ? `Change from ${esc(EXAMS.get(state.replacing)?.name || "")} to…` : state.picking ? "Add another exam" : "Which board exam are you taking?"}</h1>
     <p class="sub">${state.picking ? "Tap one below, or find yours in the list and tap its ☆." : "Pick yours for a countdown to the exam, the last day to apply and results day. Or find it in the list below."}</p>
     <div class="hero-actions picks">${picks.map((ex) => `<button class="pill${state.starred.has(ex.key) ? " on" : ""}" type="button" data-pick="${esc(ex.key)}">${esc(code(ex) ? `${ex.name.replace("Certified Public Accountants", "CPA").replace("Professional Teachers", "Teachers")} · ${code(ex)}` : ex.name)}</button>`).join("")}
@@ -297,9 +300,10 @@ function rowHtml(p) {
   ].join("");
   const whenText = state.focus === "exam" ? (s.est ? "around " + fMonth.format(noon(s.days[0])) : withWeekdays(s.days, { year: !sameYear(s.days[0]) })) : fmtOne(p.day, s.est);
   const tags = [];
-  if (state.focus !== "deadline" && s.deadline && !s.est) {
-    const n = dayDiff(s.deadline);
+  if (state.focus !== "deadline" && !s.est && (s.deadline || s.opens)) {
+    const n = s.deadline ? dayDiff(s.deadline) : -1;
     if (s.opens && dayDiff(s.opens) > 0) tags.push(`<span class="tag opens">Applications open ${esc(fDayShort.format(noon(s.opens)))}</span>`);
+    else if (!s.deadline) tags.push(`<span class="tag apply">Applications open · until slots fill</span>`);
     else if (n >= 0) tags.push(`<span class="tag apply">Apply by ${esc(fDayShort.format(noon(s.deadline)))} · ${n === 0 ? "today" : n === 1 ? "1 day left" : `${n} days left`}</span>`);
   }
   if (state.focus !== "exam" && !s.est) tags.push(`<span class="tag">Exam ${esc(fmtDays(s.days, { year: false }))}</span>`);
@@ -333,6 +337,7 @@ function details(p) {
     return `<li class="${done ? "past" : ""}${m.k === state.focus ? " is-target" : ""}" style="--c:var(--m-${m.k})"><i></i><span><b>${esc(m.label)}</b><span class="d">${esc(when)}</span></span><span class="left">${esc(left)}</span></li>`;
   }).join("");
   const moved = s.orig_days ? `<p class="cancel-note">Moved from ${esc(fmtDays(s.orig_days))}.</p>` : "";
+  const info = s.deadline_note ? `<p class="info-note">${esc(s.deadline_note)}</p>` : "";
   const est = s.est ? `<p class="est-note">PRC hasn't published the ${s.year} schedule yet. These dates are projected from ${s.est_from} (same weekday, a year later), so plan with them but don't book anything yet.</p>` : "";
   const notices = (s.notices || []).length ? `<div class="block"><h3>PRC notices</h3><ul class="notices">${s.notices.map((n) => `<li>${n.url ? `<a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.text)}</a>` : esc(n.text)}</li>`).join("")}</ul></div>` : "";
   const centers = s.centers.length ? `<div class="block"><h3>Testing centers${s.est ? ` (${s.est_from})` : ""}</h3><p>${esc(s.centers.join(", "))}</p></div>` : "";
@@ -340,14 +345,16 @@ function details(p) {
   const otherList = others.length ? `<div class="block"><h3>Other sittings</h3><ul class="others">${others.slice(0, 8).map((x) => `<li>${esc(x.est ? "~" + fMonth.format(noon(x.days[0])) : fmtDays(x.days))}${x.phase ? ` · ${esc(x.phase)}` : ""}${x.variant === "sple" ? ` · SPLE (${esc(x.centers.join(", "))})` : ""}${x.est ? ` <span class="badge est">Estimated</span>` : ""}</li>`).join("")}${others.length > 8 ? `<li class="muted">+${others.length - 8} more</li>` : ""}</ul></div>` : "";
   const year = DATA.years[String(s.year)];
   const links = [
-    !s.est && s.deadline && dayDiff(s.deadline) >= 0 ? `<a class="ql primary" href="https://online.prc.gov.ph/" target="_blank" rel="noopener">Apply on LERIS ↗</a>` : "",
+    isPrc(ex) && !s.est && s.deadline && dayDiff(s.deadline) >= 0 ? `<a class="ql primary" href="https://online.prc.gov.ph/" target="_blank" rel="noopener">Apply on LERIS ↗</a>` : "",
+    ...(s.links || []).map((l) => `<a class="ql" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`),
+    s.source ? `<a class="ql" href="${esc(s.source.url)}" target="_blank" rel="noopener">${esc(s.source.label)} ↗</a>` : "",
     s.program ? `<a class="ql" href="${esc(s.program)}" target="_blank" rel="noopener">Exam program ↗</a>` : "",
     s.requirements ? `<a class="ql" href="${esc(s.requirements)}" target="_blank" rel="noopener">Requirements ↗</a>` : "",
-    year ? `<a class="ql" href="${esc(year.source)}" target="_blank" rel="noopener">PRC ${s.year} schedule ↗</a>` : `<a class="ql" href="https://www.prc.gov.ph/exam-schedules-menu" target="_blank" rel="noopener">PRC schedules ↗</a>`,
+    s.source ? "" : year ? `<a class="ql" href="${esc(year.source)}" target="_blank" rel="noopener">PRC ${s.year} schedule ↗</a>` : `<a class="ql" href="https://www.prc.gov.ph/exam-schedules-menu" target="_blank" rel="noopener">PRC schedules ↗</a>`,
     s.est ? "" : calMenu(ex, s, "ql"),
     `<button class="ql" type="button" data-copylink="${esc(ex.key)}">Copy link</button>`,
   ].join("");
-  return `<div class="details">${est}${moved}<ul class="timeline">${tl}</ul>${notices}${centers}${otherList}<div class="links">${links}</div></div>`;
+  return `<div class="details">${est}${moved}${info}<ul class="timeline">${tl}</ul>${notices}${centers}${otherList}<div class="links">${links}</div></div>`;
 }
 
 function calMenu(ex, s, cls) {
@@ -359,7 +366,7 @@ function calMenu(ex, s, cls) {
     <div class="menu">
       <a href="https://calendar.google.com/calendar/r?cid=${encodeURIComponent(webcal)}" target="_blank" rel="noopener">Google Calendar</a>
       <a href="${esc(webcal)}">Apple Calendar</a>
-      <a href="https://outlook.live.com/calendar/0/addfromweb?url=${encodeURIComponent(https)}&name=${encodeURIComponent(ex.name + " board exam")}" target="_blank" rel="noopener">Outlook</a>
+      <a href="https://outlook.live.com/calendar/0/addfromweb?url=${encodeURIComponent(https)}&name=${encodeURIComponent(examLabel(ex))}" target="_blank" rel="noopener">Outlook</a>
       <a href="${esc(https)}" download>Download .ics</a>
       <a href="#" data-copy="${esc(https)}">Copy feed link</a>
     </div></details>`;
@@ -425,7 +432,7 @@ function renderFoot() {
     return h < 1 ? "less than an hour ago" : h < 48 ? `${Math.round(h)} hours ago` : `${Math.round(h / 24)} days ago`;
   };
   const years = Object.entries(DATA.years).filter(([y]) => Number(y) >= new Date().getFullYear()).map(([y, v]) => `<a href="${esc(v.source)}" target="_blank" rel="noopener">${y}</a>`);
-  $("footSrc").innerHTML = `From PRC's ${years.join(" and ")} Schedule of Examinations · checked ${esc(ago(DATA.checked_at))}.`;
+  $("footSrc").innerHTML = `Dates from PRC's ${years.join(" and ")} Schedule of Examinations (checked ${esc(ago(DATA.checked_at))}), the Supreme Court's Bar Bulletins and the CSC's exam announcements.`;
 }
 
 function render() {

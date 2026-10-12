@@ -1,0 +1,76 @@
+{
+  "_about": "Exams outside PRC's table, kept by hand: each agency announces a handful of dates a year. Every sitting cites the official document it came from. Dates are Philippine time, YYYY-MM-DD. `deadline_note` explains a missing deadline (e.g. CSE filing closes when slots run out). Add next year's sitting when the agency publishes it; past sittings drop off the site on their own.",
+  "agencies": {
+    "prc": { "name": "PRC", "full": "Professional Regulation Commission", "site": "https://www.prc.gov.ph/exam-schedules-menu", "apply": { "label": "Apply on LERIS", "url": "https://online.prc.gov.ph/" } },
+    "sc": { "name": "Supreme Court", "full": "Supreme Court of the Philippines", "site": "https://sc.judiciary.gov.ph/bar-2027/" },
+    "csc": { "name": "CSC", "full": "Civil Service Commission", "site": "https://csc.gov.ph/examination-advisories" }
+  },
+  "categories": {
+    "law": "Law",
+    "government": "Government"
+  },
+  "exams": [
+    {
+      "key": "bar",
+      "name": "Bar Exam",
+      "label": "Bar exam",
+      "short": [],
+      "aliases": ["bar", "law", "lawyer", "attorney", "atty", "bar exams", "pbe"],
+      "title": "Atty.",
+      "category": "law",
+      "agency": "sc",
+      "sittings": [
+        {
+          "id": "bar-2027",
+          "year": 2027,
+          "days": ["2027-09-05", "2027-09-08", "2027-09-12"],
+          "opens": null,
+          "deadline": null,
+          "deadline_note": "Filing dates come in a later Bar Bulletin.",
+          "results": null,
+          "centers": ["Local testing centers nationwide"],
+          "source": { "label": "Bar Bulletin No. 1-2027", "url": "https://sc.judiciary.gov.ph/wp-content/uploads/2026/09/2027PBE_BB1.pdf" },
+          "links": [{ "label": "Bar 2027 microsite", "url": "https://sc.judiciary.gov.ph/bar-2027/" }]
+        }
+      ]
+    },
+    {
+      "key": "cse",
+      "name": "Civil Service Exam",
+      "label": "Civil Service Exam",
+      "short": ["CSE"],
+      "aliases": ["civil service", "cse-ppt", "professional", "subprofessional", "sub-professional", "eligibility", "csc"],
+      "category": "government",
+      "agency": "csc",
+      "note": "Professional and Subprofessional levels, pen and paper test",
+      "sittings": [
+        {
+          "id": "cse-2027-03-14",
+          "year": 2027,
+          "phase": "Professional & Subprofessional",
+          "days": ["2027-03-14"],
+          "opens": "2026-11-02",
+          "deadline": null,
+          "deadline_note": "No fixed deadline: filing stays open until the 350,000 slots are filled, so apply early.",
+          "results": "2027-05-11",
+          "centers": ["CSC regional and field offices nationwide"],
+          "source": { "label": "CSC Exam Announcement No. 05, s. 2026", "url": "https://csc.gov.ph/phocadownload/userupload/erpo/announcements/2026/ExamAnn_2026_05_Exam%20Calendar%20via%20PPT%20for%20CY%202027%20orig%20signed.pdf" },
+          "links": [{ "label": "CSC exam announcements", "url": "https://csc.gov.ph/examination-advisories" }]
+        },
+        {
+          "id": "cse-2027-08-08",
+          "year": 2027,
+          "phase": "Professional & Subprofessional",
+          "days": ["2027-08-08"],
+          "opens": "2027-05-10",
+          "deadline": null,
+          "deadline_note": "No fixed deadline: filing stays open until the 350,000 slots are filled, so apply early.",
+          "results": "2027-10-05",
+          "centers": ["CSC regional and field offices nationwide"],
+          "source": { "label": "CSC Exam Announcement No. 05, s. 2026", "url": "https://csc.gov.ph/phocadownload/userupload/erpo/announcements/2026/ExamAnn_2026_05_Exam%20Calendar%20via%20PPT%20for%20CY%202027%20orig%20signed.pdf" },
+          "links": [{ "label": "CSC exam announcements", "url": "https://csc.gov.ph/examination-advisories" }]
+        }
+      ]
+    }
+  ]
+}

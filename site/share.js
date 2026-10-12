@@ -76,7 +76,7 @@ function cardCount(p, focus) {
   return [String(n), `${n === 1 ? "day" : "days"} ${UNIT[focus]}`];
 }
 function cardEyebrow(ex, s, focus) {
-  const what = { exam: "Board exam", deadline: "Last day to apply", results: "Results day (target)" }[focus];
+  const what = { exam: ex.label || "Board exam", deadline: "Last day to apply", results: "Results day (target)" }[focus];
   return [code(ex), s.phase, s.variant === "sple" ? "SPLE" : "", what].filter(Boolean).join(" · ");
 }
 function cardWhen(p, focus) {
@@ -285,14 +285,14 @@ function shareExam(key) {
   if (!p) { focus = "exam"; p = pick(ex, focus); }
   if (!p) return;
   const [num, unit] = cardCount(p, focus);
-  openShareCard("exam", { p, focus }, examUrl(key), `${ex.name} board exam: ${num} ${unit}. ${cheer(ex)}`, `${ex.name} countdown`);
+  openShareCard("exam", { p, focus }, examUrl(key), `${examLabel(ex)}: ${num} ${unit}. ${cheer(ex)}`, `${ex.name} countdown`);
 }
 
 function shareListCard() {
   const keys = state.shared || state.starred;
   const rows = [...keys].map((k) => EXAMS.get(k)).filter(Boolean).map((ex) => pick(ex)).filter(Boolean).sort((a, b) => a.t - b.t);
   if (!rows.length) return;
-  const title = state.shared ? "Board exams to watch" : "My board exams";
+  const title = state.shared ? "Exams to watch" : "My exams";
   openShareCard("list", { rows, title, focus: state.focus }, listUrl(keys), `${title}: ${rows.slice(0, 4).map((r) => r.ex.name).join(", ")}`, title);
 }
 

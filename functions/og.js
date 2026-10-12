@@ -63,7 +63,7 @@ function examSvg(p, now) {
   const { ex, s } = p;
   const [num, unit] = countdown(p, now);
   const leftW = 620;
-  const eyebrow = [code(ex), s.phase, "Board exam"].filter(Boolean).join(" · ").toUpperCase();
+  const eyebrow = [code(ex), s.phase, ex.label || "Board exam"].filter(Boolean).join(" · ").toUpperCase();
   const ts = fit(ex.name, leftW, 76, true, 40);
   const ns = fit(num, 420, 230, true, 110);
   let body = txt(X, 176, 22, 800, C.exam, eyebrow, 'letter-spacing="2"');
@@ -80,7 +80,7 @@ function examSvg(p, now) {
 
 function listSvg(rows, now) {
   const shown = rows.slice(0, 4);
-  let body = txt(X, 168, 56, 800, C.text, "Board exams to watch", 'letter-spacing="-2"');
+  let body = txt(X, 168, 56, 800, C.text, "Exams to watch", 'letter-spacing="-2"');
   shown.forEach((r, i) => {
     const y = 200 + i * 86;
     const [num, unit] = countdown(r, now);
@@ -96,9 +96,9 @@ function listSvg(rows, now) {
 }
 
 function homeSvg(next, now) {
-  let body = txt(X, 260, 84, 800, C.text, "Every PRC board exam,", 'letter-spacing="-3"') +
+  let body = txt(X, 260, 84, 800, C.text, "Every board exam,", 'letter-spacing="-3"') +
     txt(X, 356, 84, 800, C.num, "counting down.", 'letter-spacing="-3"') +
-    txt(X, 426, 30, 500, C.muted, "Apply-by dates, exam days and results. No ads.");
+    txt(X, 426, 30, 500, C.muted, "PRC boards, the Bar and the Civil Service Exam. No ads.");
   if (next) {
     const [num, unit] = countdown(next, now);
     body += txt(X, 520, 26, 700, C.text, `Next up: ${next.ex.name} · ${num} ${unit.replace(" to the exam", "")}`);
