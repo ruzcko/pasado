@@ -123,6 +123,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .steps .hot .r { color: var(--red); font-weight: 700; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .hero-actions .pill { background: var(--tile); border-color: var(--tile-line); color: var(--hero-fg); }
+.hero-actions .pill.on { background: var(--hero-fg); color: var(--hero-bg); border-color: var(--hero-fg); }
+.hero-actions .pill.ghost { background: transparent; }
+.switcher { display: flex; gap: 4px; flex-wrap: wrap; margin: -4px 40px 14px 0; }
+.switcher button { border: 1px solid var(--tile-line); background: transparent; color: var(--hero-muted); border-radius: 999px; height: 30px; min-width: 30px; padding: 0 12px; font-size: 13px; font-weight: 700; }
+.switcher button[aria-selected="true"] { background: var(--hero-fg); color: var(--hero-bg); border-color: var(--hero-fg); }
 @media (max-width: 560px) {
   .hero { padding: 18px 16px 16px; border-radius: 18px; }
   .clock { gap: 6px; }

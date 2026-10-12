@@ -23,6 +23,9 @@ const state = {
   theme: "auto",
   shared: null, // Set of exam keys from a shared ?my= link
   spot: null, // exam opened from a shared /<key> link: the hero shows it
+  heroKey: null, // which of my exams the hero counts down to
+  picking: false, // the hero is showing the exam picker
+  replacing: null, // "Change exam": the exam the next pick replaces
 };
 let DATA = null;
 let EXAMS = new Map();
@@ -36,12 +39,13 @@ function load() {
     if (typeof s.cat === "string") state.cat = s.cat;
     state.mine = !!s.mine;
     state.sple = !!s.sple;
+    if (typeof s.heroKey === "string") state.heroKey = s.heroKey;
     if (["light", "dark"].includes(s.theme)) state.theme = s.theme;
   } catch (_) { /* storage unavailable */ }
 }
 function save() {
   try {
-    localStorage.setItem(STORE, JSON.stringify({ focus: state.focus, starred: [...state.starred], cat: state.cat, mine: state.mine, sple: state.sple, theme: state.theme }));
+    localStorage.setItem(STORE, JSON.stringify({ focus: state.focus, starred: [...state.starred], cat: state.cat, mine: state.mine, sple: state.sple, theme: state.theme, heroKey: state.heroKey }));
   } catch (_) { /* storage unavailable */ }
 }
 
@@ -201,7 +205,9 @@ function applyTheme() {
 
 // ---- rendering: hero ----
 function heroPick() {
-  const keys = state.spot ? [state.spot] : state.shared ? [...state.shared] : [...state.starred];
+  if (state.picking) return null;
+  let keys = state.spot ? [state.spot] : state.shared ? [...state.shared] : [...state.starred];
+  if (!state.spot && !state.shared && state.starred.has(state.heroKey)) keys = [state.heroKey];
   if (!keys.length) return null;
   const rows = keys.map((k) => EXAMS.get(k)).filter(Boolean).map((ex) => pick(ex)).filter(Boolean).sort((a, b) => (a.s.est - b.s.est) || a.t - b.t);
   return rows[0] || null;
@@ -239,6 +245,7 @@ function renderHero() {
       : `<div class="clock" role="timer" aria-label="Time left">${unit(pr.d, "d", pr.d === 1 ? "day" : "days")}${unit(pr.h, "h", "hours")}${unit(pr.m, "m", "min")}${unit(pr.s, "s", "sec")}</div>`;
   const variant = [s.phase, s.variant === "sple" ? "SPLE abroad" : "", s.cble ? "computer-based" : ""].filter(Boolean).join(" · ");
   hero.innerHTML = `
+    ${switcher(ex.key)}
     <div class="eyebrow">${mine ? `<span class="star-mark">★</span>` : ""}<span>${esc(eyebrow)} · ${esc(focusLabel)}</span></div>
     <h1><button type="button" data-open="${esc(ex.key)}">${esc(ex.name)}</button></h1>
     <p class="sub">${esc([code(ex) && code(ex) + " board exam", variant].filter(Boolean).join(" · ") || "Board exam")}${s.est ? ` · <span class="badge est">Estimated</span>` : ""}</p>
@@ -246,15 +253,22 @@ function renderHero() {
     <p class="when">${esc(whenText)}<small>${s.est ? `Projected from ${s.est_from}. PRC hasn't published ${s.year} dates yet.` : "Philippine time"}</small></p>
     <ul class="steps">${stepsHtml(s, state.focus, now)}</ul>
     <div class="hero-actions">
-      ${mine ? "" : `<button class="pill" type="button" data-star="${esc(ex.key)}">☆ Make this my exam</button>`}
+      ${mine ? "" : `<button class="pill" type="button" data-pick="${esc(ex.key)}">☆ Make this my exam</button>`}
       <button class="pill" type="button" data-sharecard="${esc(ex.key)}">${SHARE_ICON} Share countdown</button>
       ${s.est ? "" : calMenu(ex, s, "pill")}
-      ${state.starred.size > 1 && !state.spot ? `<button class="pill" type="button" data-chip="mine">All ${state.starred.size} of my exams</button>` : ""}
-      ${state.spot ? `<button class="pill" type="button" data-unspot>Show all exams</button>` : ""}
+      ${mine && !state.spot ? `<button class="pill" type="button" data-change="${esc(ex.key)}">Change exam</button><button class="pill ghost" type="button" data-remove="${esc(ex.key)}">Remove</button>` : ""}
+      ${state.spot ? `<button class="pill" type="button" data-unspot>${state.starred.size ? "Back to my exams" : "Pick my own exam"}</button>` : ""}
     </div>`;
 }
 
-// No exam picked yet: ask which one, with the common ones one tap away.
+// With more than one exam picked, tabs at the top of the hero switch between them.
+function switcher(current) {
+  if (state.spot || state.shared || state.starred.size < 2) return "";
+  const mine = [...state.starred].map((k) => EXAMS.get(k)).filter(Boolean);
+  return `<div class="switcher" role="tablist" aria-label="My exams">${mine.map((ex) => `<button type="button" role="tab" data-hero="${esc(ex.key)}" aria-selected="${ex.key === current}">${esc(code(ex) || ex.name)}</button>`).join("")}<button type="button" data-change aria-label="Add another exam">+</button></div>`;
+}
+
+// No exam picked yet (or changing it): ask which one, with the common ones one tap away.
 function renderPicker(hero) {
   hero.className = "hero picker";
   delete hero.dataset.at;
@@ -262,9 +276,10 @@ function renderPicker(hero) {
   const picks = POPULAR.map((k) => EXAMS.get(k)).filter(Boolean);
   hero.innerHTML = `
     <div class="eyebrow"><span>PRC board exams · ${esc(String(new Date().getFullYear()))}–${esc(String(new Date().getFullYear() + 1))}</span></div>
-    <h1>Which board exam are you taking?</h1>
-    <p class="sub">Pick yours for a countdown to the exam, the last day to apply and results day. Or find it in the list below.</p>
-    <div class="hero-actions picks">${picks.map((ex) => `<button class="pill" type="button" data-star="${esc(ex.key)}">${esc(code(ex) ? `${ex.name.replace("Certified Public Accountants", "CPA").replace("Professional Teachers", "Teachers")} · ${code(ex)}` : ex.name)}</button>`).join("")}</div>
+    <h1>${state.replacing ? `Change from ${esc(EXAMS.get(state.replacing)?.name || "")} to…` : state.picking ? "Add another exam" : "Which board exam are you taking?"}</h1>
+    <p class="sub">${state.picking ? "Tap one below, or find yours in the list and tap its ☆." : "Pick yours for a countdown to the exam, the last day to apply and results day. Or find it in the list below."}</p>
+    <div class="hero-actions picks">${picks.map((ex) => `<button class="pill${state.starred.has(ex.key) ? " on" : ""}" type="button" data-pick="${esc(ex.key)}">${esc(code(ex) ? `${ex.name.replace("Certified Public Accountants", "CPA").replace("Professional Teachers", "Teachers")} · ${code(ex)}` : ex.name)}</button>`).join("")}
+      <button class="pill ghost" type="button" data-findexam>Other exam…</button>${state.picking ? `<button class="pill ghost" type="button" data-cancelpick>Cancel</button>` : ""}</div>
     ${next ? `<p class="when"><small>Next up: <b>${esc(next.ex.name)}</b>, ${esc(FOCUS[state.focus].long.toLowerCase())} ${esc(relDays(next.day, state.focus === "deadline"))} (${esc(fmtOne(next.day))})</small></p>` : ""}`;
 }
 
@@ -455,7 +470,8 @@ const examUrl = (key) => `${location.origin}/${encodeURIComponent(key)}`;
 const listUrl = (keys) => `${location.origin}/?my=${[...keys].map(encodeURIComponent).join(",")}`;
 
 function toggleStar(k) {
-  if (state.starred.has(k)) state.starred.delete(k); else state.starred.add(k);
+  if (state.starred.has(k)) { state.starred.delete(k); if (state.heroKey === k) state.heroKey = null; }
+  else { state.starred.add(k); state.heroKey = k; state.picking = false; }
   if (state.spot === k && state.starred.has(k)) state.spot = null;
   save();
   render();
@@ -515,6 +531,32 @@ function bind() {
     }
     const star = ev.target.closest("[data-star]");
     if (star) { toggleStar(star.dataset.star); return; }
+    const pk = ev.target.closest("[data-pick]");
+    if (pk) {
+      const k = pk.dataset.pick;
+      if (state.replacing && state.replacing !== k) state.starred.delete(state.replacing);
+      state.starred.add(k);
+      state.heroKey = k;
+      state.picking = false;
+      state.replacing = null;
+      if (state.spot) { state.spot = null; setUrl("/"); }
+      save(); render();
+      return;
+    }
+    const hk = ev.target.closest("[data-hero]");
+    if (hk) { state.heroKey = hk.dataset.hero; save(); renderHero(); return; }
+    const ch = ev.target.closest("[data-change]");
+    if (ch) { state.picking = true; state.replacing = ch.dataset.change || null; renderHero(); return; }
+    if (ev.target.closest("[data-cancelpick]")) { state.picking = false; state.replacing = null; renderHero(); return; }
+    const rm = ev.target.closest("[data-remove]");
+    if (rm) { toggleStar(rm.dataset.remove); return; }
+    if (ev.target.closest("[data-findexam]")) {
+      state.picking = false;
+      renderHero();
+      $("toolbar").scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => $("q").focus({ preventScroll: true }), 400);
+      return;
+    }
     const open = ev.target.closest("[data-open]");
     if (open) { openExam(open.dataset.open); return; }
     if (ev.target.closest("[data-unspot]")) { state.spot = null; setUrl("/"); render(); return; }
