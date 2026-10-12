@@ -278,8 +278,8 @@ function renderPicker(hero) {
   const next = rowsFor((ex) => true).rows.find((r) => !r.s.est && !r.ongoing && dayDiff(r.day) > 0);
   const picks = POPULAR.map((k) => EXAMS.get(k)).filter(Boolean);
   hero.innerHTML = `
-    <div class="eyebrow"><span>Board exams, the Bar &amp; the CSE · ${esc(String(new Date().getFullYear()))}–${esc(String(new Date().getFullYear() + 1))}</span></div>
-    <h1>${state.replacing ? `Change from ${esc(EXAMS.get(state.replacing)?.name || "")} to…` : state.picking ? "Add another exam" : "Which board exam are you taking?"}</h1>
+    <div class="eyebrow"><span>PRC boards, the Bar &amp; the CSE · ${esc(String(new Date().getFullYear()))}–${esc(String(new Date().getFullYear() + 1))}</span></div>
+    <h1>${state.replacing ? `Change from ${esc(EXAMS.get(state.replacing)?.name || "")} to…` : state.picking ? "Add another exam" : "Which exam are you taking?"}</h1>
     <p class="sub">${state.picking ? "Tap one below, or find yours in the list and tap its ☆." : "Pick yours for a countdown to the exam, the last day to apply and results day. Or find it in the list below."}</p>
     <div class="hero-actions picks">${picks.map((ex) => `<button class="pill${state.starred.has(ex.key) ? " on" : ""}" type="button" data-pick="${esc(ex.key)}">${esc(code(ex) ? `${ex.name.replace("Certified Public Accountants", "CPA").replace("Professional Teachers", "Teachers")} · ${code(ex)}` : ex.name)}</button>`).join("")}
       <button class="pill ghost" type="button" data-findexam>Other exam…</button>${state.picking ? `<button class="pill ghost" type="button" data-cancelpick>Cancel</button>` : ""}</div>

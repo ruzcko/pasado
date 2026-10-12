@@ -96,7 +96,7 @@ function listSvg(rows, now) {
 }
 
 function homeSvg(next, now) {
-  let body = txt(X, 260, 84, 800, C.text, "Every board exam,", 'letter-spacing="-3"') +
+  let body = txt(X, 260, 84, 800, C.text, "Your exam,", 'letter-spacing="-3"') +
     txt(X, 356, 84, 800, C.num, "counting down.", 'letter-spacing="-3"') +
     txt(X, 426, 30, 500, C.muted, "PRC boards, the Bar and the Civil Service Exam. No ads.");
   if (next) {

@@ -1,7 +1,7 @@
 {
-  "name": "Pasado · PRC board exam countdowns",
+  "name": "Pasado · Board exam, Bar & CSE countdowns",
   "short_name": "Pasado",
-  "description": "Countdowns to every PRC board exam: application deadlines, exam days and results.",
+  "description": "Countdowns to every PRC board exam, the Bar and the Civil Service Exam.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
