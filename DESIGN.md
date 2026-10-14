@@ -2,7 +2,7 @@
 
 The rules for how Pasado looks and sounds. Read this before you change `site/style.css`, `site/share.js` (share cards) or `functions/og.js` (link previews), and update it when a rule changes.
 
-The values below come from `site/style.css` as of 2026-10-14. Rows marked **Proposed** are not in the code yet.
+The values below come from `site/style.css` as of 2026-10-14 (second audit, same day). Rows marked **Proposed** are not in the code yet.
 
 **Contrast rule:** text needs at least **4.5:1** against its background (3:1 for text 24 px and up, or 19 px bold and up). Icons need **3:1**. Check both themes.
 
@@ -13,6 +13,7 @@ The values below come from `site/style.css` as of 2026-10-14. Rows marked **Prop
 - The red shaded bubble is the brand mark: the logo, the hero corner, and the share cards.
 - The flag colours (blue, gold, red) are **accents**. Use one at a time, never all three in one place.
 - Colour always means something (see milestone colours). Don't add colour for decoration.
+- **The cream page is on purpose.** A cream or off-white background is one of the looks AI tools fall back on, so the design lint warns about it. Here it *is* the concept: the page is the paper of an answer sheet, and the navy ink and red bubble only read as "exam form" on it. The `--bg` line in `style.css` is marked `design-lint: ok` with this reason. Don't add other cream surfaces just for warmth.
 
 ## 2. Colour
 
@@ -34,6 +35,9 @@ Design tokens are the CSS variables in `:root`. Always use a token, never a raw 
 | `--gold` | `#c98a00` | `#ffc53d` | Gold **backgrounds** and tints only: "My exams" chip, Estimated badge |
 | `--gold-ink` | `#ad7600` | `#ffc53d` | Gold as an **icon or text** colour: the pressed star, the "your exam" star |
 | `--warm` | `#8f5600` | `#ffb547` | Amber text: Estimated notes, "soon" counts. (Was `#b36b00`, 3.7:1.) |
+| `--bubble` | `#b82a28` | same | The shaded answer bubble in the hero corner. Same red in both themes, and the hero's own colour swaps don't touch it. |
+| `--on-gold` | `#1a1405` | same | Text on a gold fill: the pressed "My exams" chip (6.2:1 on `#c98a00`, 11.6:1 on `#ffc53d`) |
+| `--scrim` | `rgba(10, 14, 26, .5)` | same | The dimmed layer behind an open dialog |
 
 ### Hero
 
@@ -42,7 +46,7 @@ The hero is the one dark object on a light page. In dark mode it flips to a shee
 - **Light mode (navy hero):** the bright accents from the dark palette (`#ff6b5e`, `#85a9ff`, `#4cd18a`, `#8d94a8`).
 - **Dark mode (paper hero):** the deep accents from the light palette.
 
-The shaded bubble in the hero corner is always `#b82a28`.
+The shaded bubble in the hero corner is always `--bubble` (`#b82a28`).
 
 | Token | Light | Dark |
 |---|---|---|
@@ -64,7 +68,7 @@ Each milestone has one colour everywhere: hero steps, row swatches, timeline dot
 
 Urgency: `--hot` (red) for a deadline 14 days away or less, `--warm` (amber) for soon. "Estimated" dates use gold (`--gold` background, `--warm` text).
 
-Share cards (`CARD_THEMES` in `site/share.js`) and link previews (`COLORS` in `lib/exam.js`) keep their own palettes, which still use the older red `#c8302e`. They're images, so the difference doesn't affect readability.
+Share cards (`CARD_THEMES` in `site/share.js`) and link previews (`COLORS` in `lib/exam.js`) are drawn as images, so they can't use the CSS tokens. Their colours are listed with contrast ratios in section 6.
 
 ## 3. Type
 
@@ -107,28 +111,43 @@ Numbers that count down always use `font-variant-numeric: tabular-nums`, so the 
 
 | | Today | Proposed |
 |---|---|---|
-| Corner radius | 6, 8, 9, 10, 12, 14, 16, 18, 22, pill | **6** tags and code chips · **10** small controls · **14** tiles and inputs · **20** cards, hero and dialogs · **pill** for chips and pill buttons |
+| Corner radius | 6, 8, 9, 10, 12, 14, 16, 18, 22, pill | **6** tags and code chips · **8** buttons and tabs (`--radius-box`) · **14** tiles and inputs · **20** cards, hero and dialogs · **pill** for filter chips only |
 | Spacing | 2, 3, 4, 6, 8, 10, 12, 14, 16, 18, 22 | Steps of 4: **4, 8, 12, 16, 24, 32** |
 | Page width | 920 px max, 16 px side gutter | same |
 | Shadow | one soft shadow, `--shadow` | same; cards get border + shadow, never a heavy drop shadow |
+
+**Buttons are form boxes, not pills (chosen 2026-10-14).** Pill-shaped buttons (fully rounded ends, like a capsule) are another look AI tools default to. Pasado's buttons, the exam tabs in the hero and the card-theme picker use small 8 px corners (`--radius-box`), like the boxes on a printed exam form. **Filter chips stay pills** on purpose: filters are the one place round chips are expected, and the shape keeps "filter" visibly different from "action".
 
 ## 5. Components
 
 - **Hero:** the selected exam, its countdown tiles, 4 milestone steps and actions. The picker shows when no exam is picked.
 - **Countdown tile (`.unit`):** number on top, ALL-CAPS label under it.
 - **Row (`.row`):** countdown box on the left, name + code chip + "what's next" in the middle, star and share on the right. Tap to open the timeline.
-- **Pill (`.pill`, `.ql`):** secondary actions. `.ql.primary` / `.btn.primary` (ink fill) for one main action at a time.
-- **Chip (`.chip`):** filters. Pressed = ink fill; "My exams" pressed = gold.
+- **Button (`.pill`, `.ql`):** secondary actions, 8 px corners (the class names are older than the shape). `.ql.primary` / `.btn.primary` (ink fill) for one main action at a time.
+- **Chip (`.chip`):** filters, round ends. Pressed = ink fill; "My exams" pressed = gold with `--on-gold` text.
+- **Calendar menu (`.cal-menu`):** opens under its button, above everything else (`z-index: 10`, over the sticky toolbar). A small script in `app.js` shifts it left when it would run past the right edge of the screen.
 - **Segmented control (`.seg`):** Exam day / Apply by / Results.
 - **Tag and badge:** tag = a fact ("Exam 30 Nov"); badge = a status ("Estimated", "Moved").
 - **Sheet (`dialog.sheet`):** a bottom sheet on phones, a centred dialog on desktop.
-- **Icons:** hand-drawn inline SVG, 1.8–2 px strokes, round caps, `currentColor`. If you add more icons, take them from one pack (for example Tabler on Iconify) in the same stroke style. Don't mix styles.
+- **Icons (changed 2026-10-14):** **Tabler Icons** (MIT) from Iconify, unchanged: 24 px grid, 2 px round strokes, `currentColor`. They all live in `site/icons.js` (`ICON.search`, `ICON.star`, `ICON.starFilled`, `ICON.calendar`, `ICON.shareApple` / `ICON.shareDots`, `ICON.sun` / `moon` / `sunMoon`, `ICON.info`). Static slots in the HTML are `<span data-icon="…">`. Add new icons from Tabler only, and don't draw your own. The star is an icon, not the ☆ / ★ characters: outline = not picked (`--faint`), filled = picked (`--gold-ink`). The logo bubble is the brand mark, not an icon.
 
 ## 6. Share cards and link previews
 
 - Card themes in `site/share.js` (`CARD_THEMES`): **Papel** (paper), **Gabi** (night, default), **Araw** (sun), **Dagat** (sea). Each theme has its own colour for each milestone.
 - Story cards (1080 × 1920) keep text out of the top 14% and bottom 20%, and away from the lower-right corner, because Instagram and Facebook Stories put their buttons there.
-- The link preview image (`/og`, 1200 × 630) uses the same paper and ink.
+- The link preview image (`/og`, 1200 × 630) uses the Gabi colours (`COLORS` in `lib/exam.js`).
+- Every colour drawn as **text** on a card (the eyebrow line, the highlighted step's label, "as of" and the URL) needs 4.5:1 against **both** ends of the card's background gradient. The big number, the bubble and the step dots need 3:1. There is no `faint` on cards any more: it was only used for text and failed, so those lines use `muted`.
+
+Checked 2026-10-14 (lowest ratio of the two gradient ends):
+
+| Theme | text | muted | number | bubble | deadline | exam | results | opens (dot only) |
+|---|---|---|---|---|---|---|---|---|
+| Papel | 13.6 | 4.8 | 5.0 `#b82a28` | 5.0 `#b82a28` | 5.0 `#b82a28` | 5.5 | 4.6 `#187543` | 3.1 |
+| Gabi (and link previews) | 12.7 | 7.5 | 9.1 | 5.1 | 5.1 | 6.2 | 7.4 | 6.2 |
+| Araw | 9.3 | 4.7 | 7.1 | 3.1 `#b82a28` | 4.6 `#8d1e18` | 7.1 | 4.6 `#0c532d` | 3.4 |
+| Dagat | 7.2 | 4.7 | 5.5 | 5.3 | 4.6 `#ffb8ad` | 7.6 | 5.5 | 4.7 |
+
+Colours with a hex code in the table changed in this audit. Before: Papel used the old red `#c8302e` (4.3:1) and green `#1b844b` (3.8:1); Araw's red `#b3261e` (3.3:1), green `#0f6b3a` (3.3:1) and bubble `#c8302e` (2.7:1); Dagat's pink `#ff9a8a` (3.7:1); and every theme's `faint` text (2.3–3.3:1).
 
 ## 7. Voice
 
@@ -149,6 +168,8 @@ Most visitors are on phones. These rules came from an audit on 2026-10-14, which
 - A button can *look* smaller. The `::after` rule under "tap targets" in `style.css` gives the listed controls an invisible 44 px area centred on them. Add new small controls to that list.
 - Keep at least 44 px between the centres of neighbouring buttons, so their hit areas don't overlap. That's why icon buttons have 8 px gaps and the stacked star and share buttons on phones have 8 px between them.
 - The chip row scrolls, which clips anything outside it, so it has 6 px of padding above and below to fit the hit areas.
+- The home link (logo + "pasado") is a 44 px tall row (`.brand { min-height: 44px }`). It was 34 px.
+- Don't put `overflow: hidden` on a box that holds a menu. The hero had it, which cut the "Add to calendar" menu off at the hero's edge: only 14 px of it showed, and a tap on "Download .ics" landed on a filter chip underneath.
 
 ### Contrast fixes made on 2026-10-14
 
@@ -163,6 +184,21 @@ Most visitors are on phones. These rules came from an audit on 2026-10-14, which
 | Dark mode: tile labels on the paper hero (4.4:1) | `--hero-muted` `#525a6d` (5.1:1) |
 | Light mode: the hero's "Add to calendar" menu had cream text on a cream menu | `.hero .cal-menu .menu` uses the hero's own colours |
 
+### Fixes from the second audit (2026-10-14)
+
+| Problem | Fix |
+|---|---|
+| Raw colours outside the tokens: the bubble `#b82a28`, the text on the gold chip `#1a1405`, the dialog backdrop | New tokens `--bubble`, `--on-gold`, `--scrim` |
+| The ☆ / ★ stars were text characters, so they had to pass the text rule (4.5:1) and didn't (3.1–3.8:1) | They're Tabler icons now, measured as icons (3:1): outline 3.1:1 light / 3.8:1 dark, filled 3.8:1 |
+| Home link was 34 px tall | 44 px |
+| On phones, a row's "Add to calendar" menu ran 40 px past the right edge, so the whole page scrolled sideways | `app.js` shifts an open menu left to keep it on screen |
+| The hero's calendar menu was cut off by `overflow: hidden` on the hero (taps went to the chips underneath) | Removed `overflow: hidden`; menus sit above the sticky toolbar |
+| Share cards and link previews: 9 text colours under 4.5:1 | See the table in section 6 |
+
 ### How to check
 
-The 2026-10-14 audit ran a script in the browser on every visible piece of text, in both themes, with the calendar menus and one row's details open: 631 elements, 0 failures. It also measured every button's hit area at 375 px and 1100 px wide, with the share dialog open: 0 under 44 px, 0 overlaps. Re-run checks like these after you add a new colour or component.
+**2026-10-14 (second audit):** `design_lint.py site`: 0 errors, 0 warnings. The design-brief contrast and tap-target checks ran in the browser at **375 px and 1100 px**, in **light and dark**, in 5 states each: an exam picked (hero with tabs), one row open with its calendar menu, the hero's calendar menu open, the share dialog open, and the exam picker. That's 20 runs of **650–703 text elements and icons** each: **0 contrast failures**. Every run measured **90–99 controls** (11 in the share dialog): **0 under 44 px, 0 overlaps**, and every control was tappable except ones under an open menu or dialog. The share-card and link-preview palettes were checked separately: 5 palettes, 0 failures (table in section 6).
+
+**To re-check:** run `python ~/.claude/skills/design-brief/scripts/design_lint.py site`, then run the skill's `contrast-check.js` and `tap-target-check.js` in the browser in the same states. Read the "covered" list as well as the failures: that's how the clipped hero menu showed up. Run them again after any new colour, component, menu or dialog.
+
+(These results replace the first audit's earlier the same day: 631 elements, 0 failures, 0 small controls.)

@@ -20,7 +20,7 @@
 
 /* Answer-sheet paper, navy ink, a red shaded bubble. Flag blue/gold/red as accents, never all at once. */
 :root {
-  --bg: #f5f0e6;
+  --bg: #f5f0e6; /* design-lint: ok cream paper is the answer-sheet concept (DESIGN.md §1) */
   --surface: #fffcf6;
   --surface-2: #eee7d8;
   --ink: #141c33;
@@ -45,6 +45,10 @@
   --warm: #8f5600;
   --focus: #2152c4;
   --shadow: 0 1px 2px rgba(20, 28, 51, .06), 0 4px 16px rgba(20, 28, 51, .05);
+  --bubble: #b82a28; /* the shaded answer bubble: same red in both themes */
+  --on-gold: #1a1405; /* text on a gold fill (pressed "My exams" chip), both themes */
+  --scrim: rgba(10, 14, 26, .5); /* behind open dialogs */
+  --radius-box: 8px; /* buttons and tabs: the boxes on a printed form */
   --sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
   color-scheme: light;
@@ -91,7 +95,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 /* ---- header ---- */
 .top { padding: 14px 0 6px; }
 .top-row { display: flex; align-items: center; gap: 12px; }
-.brand { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+.brand { display: flex; align-items: center; gap: 8px; min-height: 44px; text-decoration: none; }
 .logo { width: 28px; height: 28px; color: var(--ink); flex: none; }
 .wordmark { font-weight: 700; font-size: 22px; letter-spacing: -.04em; }
 .tagline { color: var(--muted); font-size: 13px; padding-left: 12px; border-left: 1px solid var(--line); }
@@ -106,7 +110,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 /* ---- hero ---- */
 .hero {
   margin: 10px 0 14px; padding: 22px 22px 18px; border-radius: 22px;
-  background: var(--hero-bg); color: var(--hero-fg); position: relative; overflow: hidden;
+  background: var(--hero-bg); color: var(--hero-fg); position: relative;
+  /* No overflow: hidden here: it cut off the "Add to calendar" menu, which opens past the hero's edge. */
 }
 .hero::after { /* a column of answer bubbles, one shaded */
   content: ""; position: absolute; right: 18px; top: 18px; width: 14px; height: 74px; opacity: .5;
@@ -115,7 +120,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   -webkit-mask: linear-gradient(#000, #000); pointer-events: none;
 }
 .hero::before {
-  content: ""; position: absolute; right: 18px; top: 38px; width: 14px; height: 14px; border-radius: 50%; background: #b82a28;
+  content: ""; position: absolute; right: 18px; top: 38px; width: 14px; height: 14px; border-radius: 50%; background: var(--bubble);
 }
 .hero-loading, .hero .empty { margin: 8px 0; color: var(--hero-muted); }
 .eyebrow { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--hero-muted); padding-right: 40px; }
@@ -145,7 +150,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .hero-actions .pill.on { background: var(--hero-fg); color: var(--hero-bg); border-color: var(--hero-fg); }
 .hero-actions .pill.ghost { background: transparent; }
 .switcher { display: flex; gap: 8px; flex-wrap: wrap; margin: -4px 40px 14px 0; }
-.switcher button { font-family: var(--mono); border: 1px solid var(--tile-line); background: transparent; color: var(--hero-muted); border-radius: 999px; height: 36px; min-width: 36px; padding: 0 12px; font-size: 13px; font-weight: 700; }
+.switcher button { font-family: var(--mono); border: 1px solid var(--tile-line); background: transparent; color: var(--hero-muted); border-radius: var(--radius-box); height: 36px; min-width: 36px; padding: 0 12px; font-size: 13px; font-weight: 700; }
 .switcher button[aria-selected="true"] { background: var(--hero-fg); color: var(--hero-bg); border-color: var(--hero-fg); }
 @media (max-width: 560px) {
   .hero { padding: 18px 16px 16px; border-radius: 18px; }
@@ -175,7 +180,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .chip { flex: none; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; height: 32px; padding: 0 12px; font-size: 13px; font-weight: 600; color: var(--muted); white-space: nowrap; }
 .chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 .chip .n { font-weight: 500; margin-left: 2px; }
-.chip.mine[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: #1a1405; }
+.chip.mine[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--on-gold); }
 .chip.sep { margin-left: 6px; }
 @media (max-width: 640px) {
   .tb-row { flex-wrap: wrap; }
@@ -257,13 +262,13 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .others li { padding: 2px 0; }
 .others button { all: unset; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
 .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-.pill, .ql { display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.pill, .ql { display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 12px; border-radius: var(--radius-box); border: 1px solid var(--line); background: var(--surface); font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; }
 .pill svg, .ql svg { width: 16px; height: 16px; }
 .ql.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 .cal-menu { position: relative; }
 .cal-menu summary { list-style: none; }
 .cal-menu summary::-webkit-details-marker { display: none; }
-.cal-menu .menu { color: var(--ink); position: absolute; z-index: 3; top: 40px; left: 0; min-width: 220px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,.15); padding: 6px; display: grid; }
+.cal-menu .menu { color: var(--ink); position: absolute; z-index: 10; /* above the sticky toolbar (5) */ top: 40px; left: 0; min-width: 220px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,.15); padding: 6px; display: grid; }
 .cal-menu .menu a { padding: 12px 10px; border-radius: 8px; text-decoration: none; font-size: 14px; }
 .cal-menu .menu a:hover { background: var(--surface-2); }
 /* Inside the hero, the menu takes the hero's own colours, which are set for both themes. */
@@ -294,7 +299,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 /* ---- dialogs ---- */
 dialog.sheet { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 18px; padding: 0; width: min(520px, calc(100vw - 24px)); max-height: calc(100vh - 32px); box-shadow: 0 20px 60px rgba(0,0,0,.3); }
-dialog.sheet::backdrop { background: rgba(10, 14, 26, .5); }
+dialog.sheet::backdrop { background: var(--scrim); }
 .sd-head { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px 6px; }
 .sd-head h2 { margin: 0; font-size: 17px; }
 .sd-x { border: 0; background: var(--surface-2); width: 36px; height: 36px; border-radius: 50%; font-size: 20px; line-height: 1; }
@@ -304,7 +309,7 @@ dialog.sheet::backdrop { background: rgba(10, 14, 26, .5); }
 .sd-preview img { max-width: 100%; max-height: 46vh; border-radius: 12px; box-shadow: var(--shadow); background: var(--surface-2); min-height: 120px; }
 .sd-controls { padding: 8px 16px; display: grid; gap: 10px; justify-items: center; }
 .sd-themes { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
-.sd-themes button { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; height: 36px; padding: 0 10px 0 6px; font-size: 13px; font-weight: 600; }
+.sd-themes button { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius-box); height: 36px; padding: 0 10px 0 6px; font-size: 13px; font-weight: 600; }
 .sd-themes button[aria-checked="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
 .sd-themes .swatch { width: 24px; height: 24px; border-radius: 50%; position: relative; }
 .sd-themes .swatch i { position: absolute; right: 2px; bottom: 2px; width: 9px; height: 9px; border-radius: 50%; }
@@ -319,3 +324,10 @@ dialog.sheet::backdrop { background: rgba(10, 14, 26, .5); }
 .doc { max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; }
 .doc h1 { letter-spacing: -.03em; }
 .doc h2 { font-size: 17px; margin-top: 28px; }
+
+/* Stars are Tabler icons now (outline = not picked, filled = picked). */
+.star svg { width: 21px; height: 21px; }
+.chip svg, .pill svg.i, .listbar svg, .eyebrow .star-mark svg { width: 15px; height: 15px; vertical-align: -2px; }
+.chip svg { margin-right: 4px; }
+.i-inline { display: inline-block; width: 1em; height: 1em; vertical-align: -.125em; }
+.i-inline svg { width: 100%; height: 100%; }

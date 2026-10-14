@@ -1,5 +1,5 @@
 {
   "version": 1,
   "include": ["/*"],
-  "exclude": ["/style.css", "/app.js", "/share.js", "/manifest.webmanifest", "/robots.txt", "/sitemap.xml", "/credits.html", "/404.html", "/favicon.ico", "/data/*", "/cal/*", "/fonts/*", "/icons/*", "/licenses/*"]
+  "exclude": ["/style.css", "/icons.js", "/app.js", "/share.js", "/manifest.webmanifest", "/robots.txt", "/sitemap.xml", "/credits.html", "/404.html", "/favicon.ico", "/data/*", "/cal/*", "/fonts/*", "/icons/*", "/licenses/*"]
 }

@@ -5,9 +5,7 @@
 
 // The share glyph people know from their own device: box-and-arrow on Apple, three dots elsewhere.
 const IS_APPLE = /Mac|iPhone|iPad|iPod/i.test((navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || navigator.userAgent);
-const SHARE_ICON = IS_APPLE
-  ? '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 12.5V3M6.5 6.5 10 3l3.5 3.5M5 10.5v5a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5v-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-  : '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m7.4 8.8 5.2-2.6M7.4 11.2l5.2 2.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="5.2" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="14.8" cy="5.2" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="14.8" cy="14.8" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
+const SHARE_ICON = IS_APPLE ? ICON.shareApple : ICON.shareDots;
 
 const CARD_FORMATS = {
   story: { w: 1080, h: 1920 },
@@ -16,14 +14,14 @@ const CARD_FORMATS = {
 };
 // Every color is a 6-digit hex (dots append alpha), except `line`.
 const CARD_THEMES = {
-  papel: { name: "Papel", bg1: "#fbf7ee", bg2: "#efe6d3", text: "#141c33", muted: "#5c6377", faint: "#9a9483", line: "#ddd3bf", num: "#c8302e", bubble: "#c8302e",
-    opens: "#7b8297", deadline: "#c8302e", exam: "#2152c4", results: "#1b844b" },
-  gabi: { name: "Gabi", bg1: "#1b2850", bg2: "#0b1022", text: "#f7f1e3", muted: "#b4bcd2", faint: "#6f7896", line: "#2c3966", num: "#ffc53d", bubble: "#ff6b5e",
+  papel: { name: "Papel", bg1: "#fbf7ee", bg2: "#efe6d3", text: "#141c33", muted: "#5c6377", line: "#ddd3bf", num: "#b82a28", bubble: "#b82a28",
+    opens: "#7b8297", deadline: "#b82a28", exam: "#2152c4", results: "#187543" },
+  gabi: { name: "Gabi", bg1: "#1b2850", bg2: "#0b1022", text: "#f7f1e3", muted: "#b4bcd2", line: "#2c3966", num: "#ffc53d", bubble: "#ff6b5e",
     opens: "#a3abc2", deadline: "#ff6b5e", exam: "#85a9ff", results: "#4cd18a" },
-  araw: { name: "Araw", bg1: "#ffd34d", bg2: "#f6a91c", text: "#1a1405", muted: "#5a4310", faint: "#8a6a1e", line: "#00000022", num: "#1b2a52", bubble: "#c8302e",
-    opens: "#6b5a2c", deadline: "#b3261e", exam: "#1b2a52", results: "#0f6b3a" },
-  dagat: { name: "Dagat", bg1: "#0f5c6e", bg2: "#06253a", text: "#effbff", muted: "#a9d3dc", faint: "#5f95a3", line: "#ffffff26", num: "#7ff0d4", bubble: "#ffd34d",
-    opens: "#a9d3dc", deadline: "#ff9a8a", exam: "#ffffff", results: "#7ff0d4" },
+  araw: { name: "Araw", bg1: "#ffd34d", bg2: "#f6a91c", text: "#1a1405", muted: "#5a4310", line: "#00000022", num: "#1b2a52", bubble: "#b82a28",
+    opens: "#6b5a2c", deadline: "#8d1e18", exam: "#1b2a52", results: "#0c532d" },
+  dagat: { name: "Dagat", bg1: "#0f5c6e", bg2: "#06253a", text: "#effbff", muted: "#a9d3dc", line: "#ffffff26", num: "#7ff0d4", bubble: "#ffd34d",
+    opens: "#a9d3dc", deadline: "#ffb8ad", exam: "#ffffff", results: "#7ff0d4" },
 };
 const C = { ...CARD_THEMES.papel };
 const FONT = '"IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif';
@@ -171,7 +169,7 @@ function drawExam(g, W, H, fmt, { p, focus }) {
     font(g, 27, 600); g.fillStyle = C.text;
     wrap(g, unit, rw, 2).forEach((line, i) => g.fillText(line, rx, b.y + 70 + ns * 0.9 + 46 + i * 34));
     drawSteps(g, s, focus, b.x + 14, b.y + b.h - 110, b.w - 28, 22, false);
-    font(g, 22, 600); g.fillStyle = C.faint;
+    font(g, 22, 600); g.fillStyle = C.muted;
     g.fillText(`${url}  ·  ${asOf()}`, b.x, b.y + b.h - 8);
     return;
   }
@@ -194,7 +192,7 @@ function drawExam(g, W, H, fmt, { p, focus }) {
   add(150, (y, k) => drawSteps(g, s, focus, b.x + 22 * k, y + 22 * k, (fmt === "story" ? b.w * 0.8 : b.w) - 44 * k, 40 * k));
   add(fmt === "story" ? 60 : 30, () => {});
   add(40, (y, k) => { font(g, 30 * k, 600); g.fillStyle = C.muted; g.fillText(fitLine(g, url, b.w * 0.72), b.x, y + 30 * k); });
-  add(36, (y, k) => { font(g, 26 * k, 500); g.fillStyle = C.faint; g.fillText(asOf(), b.x, y + 28 * k); });
+  add(36, (y, k) => { font(g, 26 * k, 500); g.fillStyle = C.muted; g.fillText(asOf(), b.x, y + 28 * k); });
   layout(blocks, b);
 }
 
@@ -231,10 +229,10 @@ function drawList(g, W, H, fmt, { rows, title, focus }) {
       g.fillText(fitLine(g, `${{ exam: "Exam", deadline: "Apply by", results: "Results" }[focus]} · ${cardWhen(p, focus)}`, leftW), b.x, y + hh * 0.42 + ts * 0.3 + 42 * k);
     });
   }
-  if (rows.length > shown.length) add(50, (y, k) => { font(g, 30 * k, 600); g.fillStyle = C.faint; g.fillText(`+${rows.length - shown.length} more`, b.x, y + 36 * k); });
+  if (rows.length > shown.length) add(50, (y, k) => { font(g, 30 * k, 600); g.fillStyle = C.muted; g.fillText(`+${rows.length - shown.length} more`, b.x, y + 36 * k); });
   add(fmt === "story" ? 70 : 30, () => {});
   add(40, (y, k) => { font(g, 30 * k, 600); g.fillStyle = C.muted; g.fillText(siteHost(), b.x, y + 30 * k); });
-  add(36, (y, k) => { font(g, 26 * k, 500); g.fillStyle = C.faint; g.fillText(asOf(), b.x, y + 28 * k); });
+  add(36, (y, k) => { font(g, 26 * k, 500); g.fillStyle = C.muted; g.fillText(asOf(), b.x, y + 28 * k); });
   layout(blocks, b);
 }
 

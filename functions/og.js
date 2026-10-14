@@ -78,7 +78,7 @@ function examSvg(p, now) {
   body += txt(W - X, 330, ns, 700, s.est ? C.muted : C.num, num, `text-anchor="end" letter-spacing="-6"${isNum(num) ? " " + MONO : ""}`);
   body += txt(W - X, 380, 28, 700, C.text, unit, 'text-anchor="end"');
   body += steps(s, now, 476);
-  body += txt(X, 600, 21, 500, C.faint, `${SITE}/${ex.key}  ·  as of ${new Intl.DateTimeFormat("en-US", { timeZone: "Asia/Manila", month: "short", day: "numeric", year: "numeric" }).format(new Date(now))}`);
+  body += txt(X, 600, 21, 500, C.muted, `${SITE}/${ex.key}  ·  as of ${new Intl.DateTimeFormat("en-US", { timeZone: "Asia/Manila", month: "short", day: "numeric", year: "numeric" }).format(new Date(now))}`);
   return frame(body);
 }
 
@@ -96,7 +96,7 @@ function listSvg(rows, now) {
     const [, n = "", word = right] = right.match(/^([~\d]+)(.*)$/) || [];
     body += `<text x="${W - X}" y="${y + 56}" font-size="42" font-weight="700" fill="${r.s.est ? C.muted : C.num}" text-anchor="end"><tspan ${MONO}>${esc(n)}</tspan>${esc(word)}</text>`;
   });
-  body += txt(X, 600, 21, 500, C.faint, SITE);
+  body += txt(X, 600, 21, 500, C.muted, SITE);
   if (rows.length > shown.length) body += txt(W - X, 600, 21, 700, C.muted, `+${rows.length - shown.length} more`, 'text-anchor="end"');
   return frame(body);
 }
@@ -109,7 +109,7 @@ function homeSvg(next, now) {
     const [num, unit] = countdown(next, now);
     body += txt(X, 520, 26, 700, C.text, `Next up: ${next.ex.name} · ${num} ${unit.replace(" to the exam", "")}`);
   }
-  body += txt(X, 600, 21, 500, C.faint, SITE);
+  body += txt(X, 600, 21, 500, C.muted, SITE);
   return frame(body);
 }
 

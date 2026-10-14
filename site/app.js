@@ -186,17 +186,13 @@ function renderToolbar() {
   const n = state.starred.size;
   const cats = Object.entries(DATA.categories).filter(([k]) => counts[k]);
   $("chips").innerHTML =
-    `<button class="chip mine" type="button" data-chip="mine" aria-pressed="${state.mine}">★ My exams${n ? ` <span class="n">${n}</span>` : ""}</button>` +
+    `<button class="chip mine" type="button" data-chip="mine" aria-pressed="${state.mine}">${ICON.starFilled}My exams${n ? ` <span class="n">${n}</span>` : ""}</button>` +
     `<button class="chip" type="button" data-chip="all" aria-pressed="${!state.cat && !state.mine}">All <span class="n">${DATA.exams.length}</span></button>` +
     cats.map(([k, name]) => `<button class="chip" type="button" data-chip="cat" data-cat="${k}" aria-pressed="${state.cat === k}">${esc(name)} <span class="n">${counts[k]}</span></button>`).join("") +
     `<button class="chip sep" type="button" data-chip="sple" aria-pressed="${state.sple}" title="Special Professional Licensure Exams held abroad">Abroad (SPLE)</button>`;
 }
 
-const THEME_ICON = {
-  auto: '<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 3.5a6.5 6.5 0 0 1 0 13Z" fill="currentColor"/></svg>',
-  light: '<svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="3.6" fill="currentColor"/><path d="M10 1.8v2.4M10 15.8v2.4M1.8 10h2.4M15.8 10h2.4M4.2 4.2l1.7 1.7M14.1 14.1l1.7 1.7M4.2 15.8l1.7-1.7M14.1 5.9l1.7-1.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
-  dark: '<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.5 12.6A7 7 0 0 1 7.4 3.5a7 7 0 1 0 9.1 9.1Z" fill="currentColor"/></svg>',
-};
+const THEME_ICON = { auto: ICON.sunMoon, light: ICON.sun, dark: ICON.moon };
 function applyTheme() {
   if (state.theme === "auto") delete document.documentElement.dataset.theme;
   else document.documentElement.dataset.theme = state.theme;
@@ -249,14 +245,14 @@ function renderHero() {
   const variant = [s.phase, s.variant === "sple" ? "SPLE abroad" : "", s.cble ? "computer-based" : ""].filter(Boolean).join(" · ");
   hero.innerHTML = `
     ${switcher(ex.key)}
-    <div class="eyebrow">${mine ? `<span class="star-mark">★</span>` : ""}<span>${esc(eyebrow)} · ${esc(focusLabel)}</span></div>
+    <div class="eyebrow">${mine ? `<span class="star-mark">${ICON.starFilled}</span>` : ""}<span>${esc(eyebrow)} · ${esc(focusLabel)}</span></div>
     <h1><button type="button" data-open="${esc(ex.key)}">${esc(ex.name)}</button></h1>
     <p class="sub">${esc([ex.label || (code(ex) && code(ex) + " board exam"), isPrc(ex) ? "" : agencyOf(ex).name, variant].filter(Boolean).join(" · ") || "Board exam")}${s.est ? ` · <span class="badge est">Estimated</span>` : ""}</p>
     ${clock}
     <p class="when">${esc(whenText)}<small>${s.est ? `Projected from ${s.est_from}. PRC hasn't published ${s.year} dates yet.` : "Philippine time"}</small></p>
     <ul class="steps">${stepsHtml(s, state.focus, now)}</ul>
     <div class="hero-actions">
-      ${mine ? "" : `<button class="pill" type="button" data-pick="${esc(ex.key)}">☆ Make this my exam</button>`}
+      ${mine ? "" : `<button class="pill" type="button" data-pick="${esc(ex.key)}">${ICON.star}Make this my exam</button>`}
       <button class="pill" type="button" data-sharecard="${esc(ex.key)}">${SHARE_ICON} Share countdown</button>
       ${s.est ? "" : calMenu(ex, s, "pill")}
       ${mine && !state.spot ? `<button class="pill" type="button" data-change="${esc(ex.key)}">Change exam</button><button class="pill ghost" type="button" data-remove="${esc(ex.key)}">Remove</button>` : ""}
@@ -280,7 +276,7 @@ function renderPicker(hero) {
   hero.innerHTML = `
     <div class="eyebrow"><span>PRC boards, the Bar &amp; the CSE · ${esc(String(new Date().getFullYear()))}–${esc(String(new Date().getFullYear() + 1))}</span></div>
     <h1>${state.replacing ? `Change from ${esc(EXAMS.get(state.replacing)?.name || "")} to…` : state.picking ? "Add another exam" : "Which exam are you taking?"}</h1>
-    <p class="sub">${state.picking ? "Tap one below, or find yours in the list and tap its ☆." : "Pick yours for a countdown to the exam, the last day to apply and results day. Or find it in the list below."}</p>
+    <p class="sub">${state.picking ? `Tap one below, or find yours in the list and tap its <span class="i-inline">${ICON.star}</span>.` : "Pick yours for a countdown to the exam, the last day to apply and results day. Or find it in the list below."}</p>
     <div class="hero-actions picks">${picks.map((ex) => `<button class="pill${state.starred.has(ex.key) ? " on" : ""}" type="button" data-pick="${esc(ex.key)}">${esc(code(ex) ? `${ex.name.replace("Certified Public Accountants", "CPA").replace("Professional Teachers", "Teachers")} · ${code(ex)}` : ex.name)}</button>`).join("")}
       <button class="pill ghost" type="button" data-findexam>Other exam…</button>${state.picking ? `<button class="pill ghost" type="button" data-cancelpick>Cancel</button>` : ""}</div>
     ${next ? `<p class="when"><small>Next up: <b>${esc(next.ex.name)}</b>, ${esc(FOCUS[state.focus].long.toLowerCase())} ${esc(relDays(next.day, state.focus === "deadline"))} (${esc(fmtOne(next.day))})</small></p>` : ""}`;
@@ -319,7 +315,7 @@ function rowHtml(p) {
         ${tags.length ? `<div class="meta">${tags.join("")}</div>` : ""}
       </div>
       <div class="row-acts">
-        <button class="star" type="button" data-star="${esc(ex.key)}" aria-pressed="${starred}" aria-label="${starred ? "Remove" : "Add"} ${esc(ex.name)} ${starred ? "from" : "to"} my exams">${starred ? "★" : "☆"}</button>
+        <button class="star" type="button" data-star="${esc(ex.key)}" aria-pressed="${starred}" aria-label="${starred ? "Remove" : "Add"} ${esc(ex.name)} ${starred ? "from" : "to"} my exams">${starred ? ICON.starFilled : ICON.star}</button>
         <button class="share-btn" type="button" data-sharecard="${esc(ex.key)}" aria-label="Share a countdown card for ${esc(ex.name)}" title="Share countdown">${SHARE_ICON}</button>
       </div>
     </div>
@@ -362,7 +358,7 @@ function calMenu(ex, s, cls) {
   const host = location.host || HOST;
   const https = `${location.protocol}//${host}/cal/${file}`;
   const webcal = `webcal://${host}/cal/${file}`;
-  return `<details class="cal-menu"><summary class="${cls}"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="4.5" width="14" height="12.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 8.5h14M7 2.8v3.4M13 2.8v3.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Add to calendar</summary>
+  return `<details class="cal-menu"><summary class="${cls}">${ICON.calendar}Add to calendar</summary>
     <div class="menu">
       <a href="https://calendar.google.com/calendar/r?cid=${encodeURIComponent(webcal)}" target="_blank" rel="noopener">Google Calendar</a>
       <a href="${esc(webcal)}">Apple Calendar</a>
@@ -372,13 +368,23 @@ function calMenu(ex, s, cls) {
     </div></details>`;
 }
 
+// An open calendar menu stays inside the screen: shift it left when it would run past the right edge.
+document.addEventListener("toggle", (ev) => {
+  const d = ev.target;
+  if (!(d instanceof HTMLDetailsElement) || !d.classList.contains("cal-menu") || !d.open) return;
+  const menu = d.querySelector(".menu");
+  menu.style.left = "";
+  const r = menu.getBoundingClientRect(), vw = document.documentElement.clientWidth;
+  if (r.right > vw - 8) menu.style.left = `${Math.round(Math.max(8, vw - 8 - r.width) - d.getBoundingClientRect().left)}px`;
+}, true);
+
 function renderList() {
   const { rows, none } = rowsFor();
   const list = $("list");
   if (!rows.length) {
     const emptyMine = state.mine && !state.starred.size;
     list.innerHTML = `<div class="empty-state">${emptyMine
-      ? `<h3>No exams picked yet</h3><p>Tap ☆ on an exam to keep it here. Your list stays on this device.</p><button class="btn" type="button" data-chip="all">Show all exams</button>`
+      ? `<h3>No exams picked yet</h3><p>Tap <span class="i-inline">${ICON.star}</span> on an exam to keep it here. Your list stays on this device.</p><button class="btn" type="button" data-chip="all">Show all exams</button>`
       : `<h3>Nothing matches</h3><p>No upcoming ${esc(FOCUS[state.focus].long.toLowerCase())} for these filters${none ? ` (${none} exam${none === 1 ? " has" : "s have"} nothing ahead)` : ""}.</p><button class="btn" type="button" data-chip="all">Show all exams</button>`}</div>`;
     return;
   }
@@ -403,14 +409,14 @@ function renderListbar() {
     const allSaved = [...state.shared].every((k) => state.starred.has(k));
     bar.hidden = false;
     bar.innerHTML = `<span><b>Shared list</b> · ${esc(names.join(", "))}</span>
-      <span class="lb-actions">${allSaved ? `<span class="muted">All in your exams</span>` : `<button class="pill" type="button" data-shared="save">★ Add all to my exams</button>`}
+      <span class="lb-actions">${allSaved ? `<span class="muted">All in your exams</span>` : `<button class="pill" type="button" data-shared="save">${ICON.starFilled}Add all to my exams</button>`}
       <button class="pill" type="button" data-sharecard="list">Share card</button>
       <button class="pill" type="button" data-shared="exit">Show everything</button></span>`;
     return;
   }
   if (state.mine && state.starred.size) {
     bar.hidden = false;
-    bar.innerHTML = `<span><b>★ My exams</b> · ${state.starred.size} picked, kept on this device</span>
+    bar.innerHTML = `<span>${ICON.starFilled}<b>My exams</b> · ${state.starred.size} picked, kept on this device</span>
       <span class="lb-actions"><button class="pill" type="button" data-copymine>Copy link to my list</button><button class="pill" type="button" data-sharecard="list">Share card</button></span>`;
     return;
   }
