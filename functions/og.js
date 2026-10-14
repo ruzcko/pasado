@@ -1,7 +1,7 @@
 // GET /og              → preview image for the home page
 // GET /og?e=nurses     → one exam's countdown
 // GET /og?my=nurses,cpa → a shared list
-// A 1200 x 630 PNG drawn as SVG and rendered with resvg (lib/og, MPL-2.0) in Inter (OFL).
+// A 1200 x 630 PNG drawn as SVG and rendered with resvg (lib/og, MPL-2.0) in IBM Plex Sans and Plex Mono (OFL).
 // The countdown changes daily, so pages link to it with &d=<date> and the edge caches each day's image.
 import { initWasm, Resvg } from "../lib/og/resvg.mjs";
 import wasm from "../lib/og/resvg.wasm";
@@ -12,28 +12,32 @@ let ready = null, fonts = null;
 
 async function setup(env, origin) {
   ready ??= initWasm(wasm);
-  fonts ??= Promise.all(["Inter-Medium.ttf", "Inter-ExtraBold.ttf"].map((f) =>
+  fonts ??= Promise.all(["IBMPlexSans-Medium.ttf", "IBMPlexSans-Bold.ttf", "IBMPlexMono-Bold.ttf"].map((f) =>
     env.ASSETS.fetch(new URL(`/fonts/${f}`, origin)).then((r) => r.arrayBuffer()).then((b) => new Uint8Array(b))));
   await ready;
   return fonts;
 }
 
-// No text measuring in SVG land, so estimate: Inter is ~0.6 em per character at 800, ~0.52 at 500.
-const width = (text, size, bold) => String(text).length * size * (bold ? 0.6 : 0.52);
-const fit = (text, maxW, size, bold, min = 26) => {
+// No text measuring in SVG land, so estimate (measured on exam names, with headroom):
+// Plex Sans is ~0.55 em per character at most at 700 and ~0.5 at 500; Plex Mono is exactly 0.6.
+const width = (text, size, bold, mono) => String(text).length * size * (mono ? 0.6 : bold ? 0.56 : 0.5);
+// Numbers and dates are set in the mono face, as on the site.
+const isNum = (t) => /^[~\d]/.test(String(t));
+const MONO = 'font-family="IBM Plex Mono"';
+const fit = (text, maxW, size, bold, min = 26, mono = false) => {
   let s = size;
-  while (s > min && width(text, s, bold) > maxW) s -= 2;
+  while (s > min && width(text, s, bold, mono) > maxW) s -= 2;
   return s;
 };
 const txt = (x, y, size, weight, fill, s, extra = "") =>
   `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" fill="${fill}" ${extra}>${esc(s)}</text>`;
 
 function frame(body) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" font-family="Inter">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" font-family="IBM Plex Sans">
   <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${C.bg1}"/><stop offset="1" stop-color="${C.bg2}"/></linearGradient></defs>
   <rect width="${W}" height="${H}" fill="url(#bg)"/>
   <circle cx="${X + 16}" cy="80" r="15" fill="none" stroke="${C.text}" stroke-width="3.5"/><circle cx="${X + 16}" cy="80" r="9" fill="${C.bubble}"/>
-  ${txt(X + 44, 91, 32, 800, C.text, "pasado", 'letter-spacing="-1"')}
+  ${txt(X + 44, 91, 32, 700, C.text, "pasado", 'letter-spacing="-1"')}
   ${body}
 </svg>`;
 }
@@ -52,9 +56,9 @@ function steps(s, now, y) {
     out += done ? `<circle cx="${cx}" cy="${y}" r="9" fill="${c}"/>` : `<circle cx="${cx}" cy="${y}" r="${k === "exam" ? 12 : 9}" fill="${C.bg2}" stroke="${c}" stroke-width="4"/>`;
     const anchor = i === 0 ? "start" : i === ms.length - 1 ? "end" : "middle";
     const tx = i === 0 ? x0 - 9 : i === ms.length - 1 ? x1 + 9 : cx;
-    out += txt(tx, y + 38, 17, 800, k === "exam" ? c : C.muted, label[k], `text-anchor="${anchor}" letter-spacing="1"`);
+    out += txt(tx, y + 38, 17, 700, k === "exam" ? c : C.muted, label[k], `text-anchor="${anchor}" letter-spacing="1"`);
     const date = new Date(`${d}T12:00:00+08:00`);
-    out += txt(tx, y + 64, 22, 700, C.text, s.est ? "~" + fm.format(date) : f.format(date), `text-anchor="${anchor}"`);
+    out += txt(tx, y + 64, 22, 700, C.text, s.est ? "~" + fm.format(date) : f.format(date), `text-anchor="${anchor}" ${MONO}`);
   });
   return out;
 }
@@ -65,13 +69,13 @@ function examSvg(p, now) {
   const leftW = 620;
   const eyebrow = [code(ex), s.phase, ex.label || "Board exam"].filter(Boolean).join(" · ").toUpperCase();
   const ts = fit(ex.name, leftW, 76, true, 40);
-  const ns = fit(num, 420, 230, true, 110);
-  let body = txt(X, 176, 22, 800, C.exam, eyebrow, 'letter-spacing="2"');
-  body += txt(X, 186 + ts, ts, 800, C.text, ex.name, 'letter-spacing="-2"');
+  const ns = fit(num, 420, 230, true, 110, isNum(num));
+  let body = txt(X, 176, 22, 700, C.exam, eyebrow, 'letter-spacing="2"');
+  body += txt(X, 186 + ts, ts, 700, C.text, ex.name, 'letter-spacing="-2"');
   const when = whenText(s);
   body += txt(X, 186 + ts + 58, fit(when, leftW, 32, true, 22), 700, C.text, when);
   body += txt(X, 186 + ts + 102, 28, 500, C.muted, cheer(ex));
-  body += txt(W - X, 330, ns, 800, s.est ? C.muted : C.num, num, 'text-anchor="end" letter-spacing="-6"');
+  body += txt(W - X, 330, ns, 700, s.est ? C.muted : C.num, num, `text-anchor="end" letter-spacing="-6"${isNum(num) ? " " + MONO : ""}`);
   body += txt(W - X, 380, 28, 700, C.text, unit, 'text-anchor="end"');
   body += steps(s, now, 476);
   body += txt(X, 600, 21, 500, C.faint, `${SITE}/${ex.key}  ·  as of ${new Intl.DateTimeFormat("en-US", { timeZone: "Asia/Manila", month: "short", day: "numeric", year: "numeric" }).format(new Date(now))}`);
@@ -80,15 +84,17 @@ function examSvg(p, now) {
 
 function listSvg(rows, now) {
   const shown = rows.slice(0, 4);
-  let body = txt(X, 168, 56, 800, C.text, "Exams to watch", 'letter-spacing="-2"');
+  let body = txt(X, 168, 56, 700, C.text, "Exams to watch", 'letter-spacing="-2"');
   shown.forEach((r, i) => {
     const y = 200 + i * 86;
     const [num, unit] = countdown(r, now);
     const right = /^\d+$/.test(num) ? `${num} ${unit.split(" ")[0]}` : num.startsWith("~") ? `${num} ${unit.startsWith("month") ? "mo" : "wk"}` : num;
     body += `<line x1="${X}" y1="${y}" x2="${W - X}" y2="${y}" stroke="${C.line}" stroke-width="2"/>`;
-    body += txt(X, y + 46, 34, 800, C.text, r.ex.name.length > 34 ? r.ex.name.slice(0, 33) + "…" : r.ex.name);
+    body += txt(X, y + 46, 34, 700, C.text, r.ex.name.length > 34 ? r.ex.name.slice(0, 33) + "…" : r.ex.name);
     body += txt(X, y + 76, 21, 500, C.muted, `Exam · ${whenText(r.s)}`);
-    body += txt(W - X, y + 56, 42, 800, r.s.est ? C.muted : C.num, right, 'text-anchor="end"');
+    // "3 days": the number in mono, the word in sans, as on the site.
+    const [, n = "", word = right] = right.match(/^([~\d]+)(.*)$/) || [];
+    body += `<text x="${W - X}" y="${y + 56}" font-size="42" font-weight="700" fill="${r.s.est ? C.muted : C.num}" text-anchor="end"><tspan ${MONO}>${esc(n)}</tspan>${esc(word)}</text>`;
   });
   body += txt(X, 600, 21, 500, C.faint, SITE);
   if (rows.length > shown.length) body += txt(W - X, 600, 21, 700, C.muted, `+${rows.length - shown.length} more`, 'text-anchor="end"');
@@ -96,8 +102,8 @@ function listSvg(rows, now) {
 }
 
 function homeSvg(next, now) {
-  let body = txt(X, 260, 84, 800, C.text, "Your exam,", 'letter-spacing="-3"') +
-    txt(X, 356, 84, 800, C.num, "counting down.", 'letter-spacing="-3"') +
+  let body = txt(X, 260, 84, 700, C.text, "Your exam,", 'letter-spacing="-3"') +
+    txt(X, 356, 84, 700, C.num, "counting down.", 'letter-spacing="-3"') +
     txt(X, 426, 30, 500, C.muted, "PRC boards, the Bar and the Civil Service Exam. No ads.");
   if (next) {
     const [num, unit] = countdown(next, now);
@@ -112,7 +118,7 @@ export async function onRequestGet({ request, env, waitUntil }) {
   const hit = await cache.match(request);
   if (hit) return hit;
   const url = new URL(request.url);
-  const [[medium, bold], data] = await Promise.all([setup(env, url.origin), loadData(env, url.origin)]);
+  const [[medium, bold, mono], data] = await Promise.all([setup(env, url.origin), loadData(env, url.origin)]);
   const now = Date.now();
   const e = cleanKey(url.searchParams.get("e"));
   const my = (url.searchParams.get("my") || "").split(",").map(cleanKey).filter(Boolean).slice(0, 30);
@@ -125,7 +131,7 @@ export async function onRequestGet({ request, env, waitUntil }) {
     svg = rows.length ? listSvg(rows, now) : homeSvg(nextOverall(data, now), now);
   } else svg = homeSvg(nextOverall(data, now), now);
   const png = new Resvg(svg, {
-    font: { fontBuffers: [medium, bold], defaultFontFamily: "Inter", loadSystemFonts: false },
+    font: { fontBuffers: [medium, bold, mono], defaultFontFamily: "IBM Plex Sans", loadSystemFonts: false },
     fitTo: { mode: "width", value: W },
   }).render().asPng();
   const res = new Response(png, { headers: { "content-type": "image/png", "cache-control": "public, max-age=86400" } });

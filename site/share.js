@@ -26,7 +26,10 @@ const CARD_THEMES = {
     opens: "#a9d3dc", deadline: "#ff9a8a", exam: "#ffffff", results: "#7ff0d4" },
 };
 const C = { ...CARD_THEMES.papel };
-const FONT = 'Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif';
+const FONT = '"IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif';
+// Numbers and dates use the mono face, as on the site; words like "Today" stay in the sans.
+const MONO = '"IBM Plex Mono", ui-monospace, Consolas, monospace';
+const faceFor = (t) => (/^[~\d]/.test(t) ? MONO : FONT);
 const CARD_STORE = "pasado:card";
 const shareState = { kind: null, payload: null, format: "story", theme: "gabi", blob: null, url: null, text: "" };
 try {
@@ -39,11 +42,11 @@ function saveCardPrefs() {
 }
 
 // ---- text helpers ----
-function font(g, size, weight = 600) { g.font = `${weight} ${Math.round(size)}px ${FONT}`; }
-function fit(g, text, maxW, size, weight, min = 0.4) {
+function font(g, size, weight = 600, face = FONT) { g.font = `${weight} ${Math.round(size)}px ${face}`; }
+function fit(g, text, maxW, size, weight, min = 0.4, face = FONT) {
   let s = size;
-  font(g, s, weight);
-  while (g.measureText(text).width > maxW && s > size * min) { s *= 0.94; font(g, s, weight); }
+  font(g, s, weight, face);
+  while (g.measureText(text).width > maxW && s > size * min) { s *= 0.94; font(g, s, weight, face); }
   return s;
 }
 function fitLine(g, text, maxW) {
@@ -107,7 +110,7 @@ function brand(g, x, y, size) {
   g.beginPath(); g.arc(x + size * 0.45, y + size * 0.5, size * 0.4, 0, Math.PI * 2); g.stroke();
   g.fillStyle = C.bubble;
   g.beginPath(); g.arc(x + size * 0.45, y + size * 0.5, size * 0.25, 0, Math.PI * 2); g.fill();
-  font(g, size * 0.78, 850);
+  font(g, size * 0.78, 700);
   g.fillStyle = C.text;
   g.textBaseline = "middle";
   g.fillText("pasado", x + size * 1.05, y + size * 0.53);
@@ -136,7 +139,7 @@ function drawSteps(g, s, focus, x, y, w, size, labels = true) {
     const tx = i === 0 ? cx - r : i === ms.length - 1 ? cx + r : cx;
     font(g, size * 0.72, 700); g.fillStyle = isT ? c : C.muted;
     g.fillText(lab.toUpperCase(), tx, y + size * 1.7);
-    font(g, size * 0.85, 650); g.fillStyle = C.text;
+    font(g, size * 0.85, 500, MONO); g.fillStyle = C.text;
     g.fillText(val, tx, y + size * 2.75);
     g.textAlign = "left";
   });
@@ -154,18 +157,18 @@ function drawExam(g, W, H, fmt, { p, focus }) {
   if (fmt === "wide") {
     brand(g, b.x, b.y, 40);
     const colW = b.w * 0.56;
-    font(g, 22, 750); g.fillStyle = accent;
+    font(g, 22, 700); g.fillStyle = accent;
     g.fillText(fitLine(g, eyebrow, colW), b.x, b.y + 104);
-    const ts = fit(g, ex.name, colW, 76, 850);
+    const ts = fit(g, ex.name, colW, 76, 700);
     g.fillStyle = C.text; g.fillText(ex.name, b.x, b.y + 110 + ts);
-    font(g, 28, 650); g.fillStyle = C.text;
+    font(g, 28, 600); g.fillStyle = C.text;
     g.fillText(fitLine(g, cardWhen(p, focus), colW), b.x, b.y + 110 + ts + 52);
     font(g, 26, 600); g.fillStyle = C.muted;
     g.fillText(fitLine(g, cheer(ex), colW), b.x, b.y + 110 + ts + 94);
     const rx = b.x + b.w * 0.62, rw = b.w * 0.38;
-    const ns = fit(g, num, rw, 210, 850);
+    const ns = fit(g, num, rw, 210, 700, 0.4, faceFor(num));
     g.fillStyle = s.est ? C.muted : C.num; g.fillText(num, rx, b.y + 70 + ns * 0.9);
-    font(g, 27, 650); g.fillStyle = C.text;
+    font(g, 27, 600); g.fillStyle = C.text;
     wrap(g, unit, rw, 2).forEach((line, i) => g.fillText(line, rx, b.y + 70 + ns * 0.9 + 46 + i * 34));
     drawSteps(g, s, focus, b.x + 14, b.y + b.h - 110, b.w - 28, 22, false);
     font(g, 22, 600); g.fillStyle = C.faint;
@@ -177,20 +180,20 @@ function drawExam(g, W, H, fmt, { p, focus }) {
   const add = (h, draw) => blocks.push({ h, draw });
   add(56, (y, k) => brand(g, b.x, y, 56 * k));
   add(fmt === "story" ? 120 : 60, () => {});
-  add(44, (y, k) => { font(g, 32 * k, 750); g.fillStyle = accent; g.fillText(fitLine(g, eyebrow, b.w), b.x, y + 32 * k); });
+  add(44, (y, k) => { font(g, 32 * k, 700); g.fillStyle = accent; g.fillText(fitLine(g, eyebrow, b.w), b.x, y + 32 * k); });
   add(14, () => {});
-  add(130, (y, k) => { const ts = fit(g, ex.name, b.w, 124 * k, 850); g.fillStyle = C.text; g.fillText(ex.name, b.x, y + ts * 0.9); });
+  add(130, (y, k) => { const ts = fit(g, ex.name, b.w, 124 * k, 700); g.fillStyle = C.text; g.fillText(ex.name, b.x, y + ts * 0.9); });
   add(fmt === "story" ? 80 : 30, () => {});
-  add(fmt === "story" ? 330 : 250, (y, k, hh) => { const ns = fit(g, num, b.w, hh * 1.04, 850); g.fillStyle = s.est ? C.muted : C.num; g.fillText(num, b.x - ns * 0.02, y + hh * 0.86); });
+  add(fmt === "story" ? 330 : 250, (y, k, hh) => { const ns = fit(g, num, b.w, hh * 1.04, 700, 0.4, faceFor(num)); g.fillStyle = s.est ? C.muted : C.num; g.fillText(num, b.x - ns * 0.02, y + hh * 0.86); });
   add(64, (y, k) => { font(g, 48 * k, 700); g.fillStyle = C.text; g.fillText(fitLine(g, unit, b.w), b.x, y + 48 * k); });
   add(fmt === "story" ? 60 : 30, () => {});
-  add(52, (y, k) => { font(g, 40 * k, 650); g.fillStyle = C.text; g.fillText(fitLine(g, cardWhen(p, focus), b.w), b.x, y + 40 * k); });
-  add(56, (y, k) => { font(g, 40 * k, 650); g.fillStyle = C.muted; g.fillText(fitLine(g, cheer(ex), b.w), b.x, y + 42 * k); });
+  add(52, (y, k) => { font(g, 40 * k, 600); g.fillStyle = C.text; g.fillText(fitLine(g, cardWhen(p, focus), b.w), b.x, y + 40 * k); });
+  add(56, (y, k) => { font(g, 40 * k, 600); g.fillStyle = C.muted; g.fillText(fitLine(g, cheer(ex), b.w), b.x, y + 42 * k); });
   add(fmt === "story" ? 100 : 50, () => {});
   // Stories cover the lower right, so the steps stop short there.
   add(150, (y, k) => drawSteps(g, s, focus, b.x + 22 * k, y + 22 * k, (fmt === "story" ? b.w * 0.8 : b.w) - 44 * k, 40 * k));
   add(fmt === "story" ? 60 : 30, () => {});
-  add(40, (y, k) => { font(g, 30 * k, 650); g.fillStyle = C.muted; g.fillText(fitLine(g, url, b.w * 0.72), b.x, y + 30 * k); });
+  add(40, (y, k) => { font(g, 30 * k, 600); g.fillStyle = C.muted; g.fillText(fitLine(g, url, b.w * 0.72), b.x, y + 30 * k); });
   add(36, (y, k) => { font(g, 26 * k, 500); g.fillStyle = C.faint; g.fillText(asOf(), b.x, y + 28 * k); });
   layout(blocks, b);
 }
@@ -205,7 +208,7 @@ function drawList(g, W, H, fmt, { rows, title, focus }) {
   const add = (h, draw) => blocks.push({ h, draw });
   add(56, (y, k) => brand(g, b.x, y, 56 * k));
   add(fmt === "story" ? 90 : 40, () => {});
-  add(120, (y, k) => { const ts = fit(g, title, b.w, 100 * k, 850); g.fillStyle = C.text; g.fillText(title, b.x, y + ts * 0.9); });
+  add(120, (y, k) => { const ts = fit(g, title, b.w, 100 * k, 700); g.fillStyle = C.text; g.fillText(title, b.x, y + ts * 0.9); });
   add(fmt === "wide" ? 10 : 30, () => {});
   for (const p of shown) {
     add(fmt === "wide" ? 86 : 136, (y, k, hh) => {
@@ -213,20 +216,24 @@ function drawList(g, W, H, fmt, { rows, title, focus }) {
       g.beginPath(); g.moveTo(b.x, y + 2); g.lineTo(b.x + rowW, y + 2); g.stroke();
       const [num, unit] = cardCount(p, focus);
       const right = /^\d+$/.test(num) ? `${num} ${unit.split(" ")[0]}` : num.startsWith("~") ? `${num} ${unit.startsWith("month") ? "mo" : "wk"}` : num;
-      font(g, 48 * k, 850);
-      const rw = g.measureText(right).width;
+      // "3 days": the number in mono, the word in sans, as on the site.
+      const [, n = "", word = right] = right.match(/^([~\d]+)(.*)$/) || [];
+      font(g, 48 * k, 700, MONO); const nw = g.measureText(n).width;
+      font(g, 48 * k, 700); const ww = g.measureText(word).width;
+      const rw = nw + ww;
       g.fillStyle = p.s.est ? C.muted : C.num;
-      g.fillText(right, b.x + rowW - rw, y + hh * 0.55);
+      g.fillText(word, b.x + rowW - ww, y + hh * 0.55);
+      font(g, 48 * k, 700, MONO); g.fillText(n, b.x + rowW - rw, y + hh * 0.55);
       const leftW = rowW - rw - 40 * k;
-      const ts = fit(g, p.ex.name, leftW, 46 * k, 800);
+      const ts = fit(g, p.ex.name, leftW, 46 * k, 700);
       g.fillStyle = C.text; g.fillText(p.ex.name, b.x, y + hh * 0.42 + ts * 0.3);
-      font(g, 30 * k, 550); g.fillStyle = C.muted;
+      font(g, 30 * k, 500); g.fillStyle = C.muted;
       g.fillText(fitLine(g, `${{ exam: "Exam", deadline: "Apply by", results: "Results" }[focus]} · ${cardWhen(p, focus)}`, leftW), b.x, y + hh * 0.42 + ts * 0.3 + 42 * k);
     });
   }
-  if (rows.length > shown.length) add(50, (y, k) => { font(g, 30 * k, 650); g.fillStyle = C.faint; g.fillText(`+${rows.length - shown.length} more`, b.x, y + 36 * k); });
+  if (rows.length > shown.length) add(50, (y, k) => { font(g, 30 * k, 600); g.fillStyle = C.faint; g.fillText(`+${rows.length - shown.length} more`, b.x, y + 36 * k); });
   add(fmt === "story" ? 70 : 30, () => {});
-  add(40, (y, k) => { font(g, 30 * k, 650); g.fillStyle = C.muted; g.fillText(siteHost(), b.x, y + 30 * k); });
+  add(40, (y, k) => { font(g, 30 * k, 600); g.fillStyle = C.muted; g.fillText(siteHost(), b.x, y + 30 * k); });
   add(36, (y, k) => { font(g, 26 * k, 500); g.fillStyle = C.faint; g.fillText(asOf(), b.x, y + 28 * k); });
   layout(blocks, b);
 }
@@ -260,7 +267,7 @@ function renderCard(kind, payload, fmt, theme = shareState.theme) {
 async function refreshCard() {
   const img = $("sdImg");
   img.removeAttribute("src");
-  try { await Promise.all([document.fonts.load("850 40px Inter"), document.fonts.load("600 40px Inter")]); } catch (_) { /* system font */ }
+  try { await Promise.all(["700 40px", "600 40px", "500 40px"].map((f) => document.fonts.load(`${f} "IBM Plex Sans"`)).concat(["700 40px", "500 40px"].map((f) => document.fonts.load(`${f} "IBM Plex Mono"`)))); } catch (_) { /* system font */ }
   shareState.blob = await renderCard(shareState.kind, shareState.payload, shareState.format);
   if (img.dataset.url) URL.revokeObjectURL(img.dataset.url);
   img.dataset.url = URL.createObjectURL(shareState.blob);

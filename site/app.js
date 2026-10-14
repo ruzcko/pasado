@@ -242,7 +242,7 @@ function renderHero() {
   const focusLabel = { exam: s.days.length > 1 ? "Exam days" : "Exam day", deadline: "Last day to apply", results: "Results (target)" }[state.focus];
   const whenText = state.focus === "exam" ? (s.est ? "around " + fMonth.format(noon(s.days[0])) : withWeekdays(s.days)) : fmtOne(p.day, s.est);
   const clock = p.ongoing
-    ? `<div class="clock"><div class="unit" style="max-width:none"><span class="n">Exam ongoing</span><span class="l">Galingan mo!</span></div></div>`
+    ? `<div class="clock"><div class="unit" style="max-width:none"><span class="n word">Exam ongoing</span><span class="l">Galingan mo!</span></div></div>`
     : s.est
       ? `<div class="clock">${unit(Math.round(dayDiff(p.day) / 30.44), "mo", "months (est.)")}</div>`
       : `<div class="clock" role="timer" aria-label="Time left">${unit(pr.d, "d", pr.d === 1 ? "day" : "days")}${unit(pr.h, "h", "hours")}${unit(pr.m, "m", "min")}${unit(pr.s, "s", "sec")}</div>`;
