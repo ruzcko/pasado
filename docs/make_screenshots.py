@@ -25,7 +25,7 @@ CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 PORT = 8775
 EXAM = "physical-therapists"  # an exam with confirmed dates, so the countdown ticks
 SCALE = 2
-LINE = {"light": "#e1d8c6", "dark": "#252e47"}  # --line in each theme
+LINE = {"light": "#e3e3e6", "dark": "#2a2a2f"}  # --line in each theme
 
 # Loads the site in a fixed-size frame with the theme preset, because headless
 # Chrome won't make a window narrower than ~500 px and ignores colour-scheme flags.

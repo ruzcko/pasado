@@ -4,9 +4,9 @@
 
 <p align="center">
   <a href="https://pasado.ruzcko.dev"><img src="https://img.shields.io/badge/live-pasado.ruzcko.dev-b82a28?logo=cloudflare&logoColor=white" alt="Live site: pasado.ruzcko.dev"></a>
-  <a href="https://pasado.ruzcko.dev"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpasado.ruzcko.dev%2Fdata%2Fexams.json&query=%24.exams.length&label=exams&color=16213e" alt="Number of exams covered"></a>
-  <a href="#where-the-dates-come-from"><img src="https://img.shields.io/badge/dates-PRC%20%C2%B7%20Supreme%20Court%20%C2%B7%20CSC-16213e" alt="Dates from PRC, the Supreme Court and the Civil Service Commission"></a>
-  <img src="https://img.shields.io/badge/-no%20ads%2C%20no%20tracking-5c6377" alt="No ads, no tracking">
+  <a href="https://pasado.ruzcko.dev"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fpasado.ruzcko.dev%2Fdata%2Fexams.json&query=%24.exams.length&label=exams&color=1f1f22" alt="Number of exams covered"></a>
+  <a href="#where-the-dates-come-from"><img src="https://img.shields.io/badge/dates-PRC%20%C2%B7%20Supreme%20Court%20%C2%B7%20CSC-1f1f22" alt="Dates from PRC, the Supreme Court and the Civil Service Commission"></a>
+  <img src="https://img.shields.io/badge/-no%20ads%2C%20no%20tracking-5d5d63" alt="No ads, no tracking">
 </p>
 
 # Pasado
@@ -20,6 +20,7 @@ Countdowns to every PRC board exam in the Philippines, plus the Bar and the Civi
 
 - **Pick your exam** and get a live countdown, with the four dates that matter: applications open, apply by, exam days and results.
 - **Share it.** Every exam has its own link (`/nurses`, `/cpa`, `/bar`) with a link preview, and a share card for Stories.
+- **A line for where you are.** Under the countdown, cards say something that fits the date: "Kumpleto na ba ang requirements mo?" while filing is open, "Konting tiis na lang." in the last week, "Kapag hindi sigurado, C." on exam day, "Sana nasa listahan ka." on results day.
 - **Add it to your calendar** with a feed per exam, which updates when PRC moves a date.
 - **Next year's dates are estimated** until PRC publishes them, and marked as such everywhere.
 
@@ -41,7 +42,9 @@ Reschedules, cancellations and added testing centers are pasted into the cells a
   It also keeps when a sitting's dates changed, so the page can say "moved".
 - `data/exams.json` is the catalog: one entry per exam with a permanent `key` (used in links
   like `/nurses`), the names PRC has used for it, acronyms people search for (PNLE, LET, CPALE…),
-  a category, and the title passers earn (RN, CPA, LPT, Engr.…) for share cards.
+  a category, and the title passers earn (RN, CPA, LPT, Engr.…) for "Laban, future ___!" on cards.
+  Only use an abbreviation you can confirm in the law or a PRC resolution; otherwise write the
+  profession in plain words ("future geologist").
   A new exam PRC adds still shows up (under "Other") until it's added here.
 - `data/overrides.json` holds manual corrections, by sitting id. Use sparingly.
 - `data/other_exams.json` holds exams outside PRC, entered by hand: the **Bar exam** (Supreme
@@ -54,17 +57,28 @@ Reschedules, cancellations and added testing centers are pasted into the cells a
   **estimated** from this year's (same weekday, 52 weeks later) and marked as such;
   estimates never go into calendar feeds.
 
+## Design
+
+It looks like the answer sheet you shade on exam day: white paper, pencil-graphite ink, and one
+red bubble. The logo is a row of answer bubbles, A to E, with C shaded (*kapag hindi sigurado, C*)
+and E dashed, because every sheet prints an E and nobody shades it. Fonts are IBM Plex Sans and
+Plex Mono. [`DESIGN.md`](DESIGN.md) has the colour tokens, both themes, the share-card palettes,
+the countdown lines and the contrast and tap-target checks; read it before changing the look.
+
 ## Run locally
 
 ```bash
 python pipeline/prc.py      # fetch and parse (or: python pipeline/prc.py --file page.html --year 2026)
 python pipeline/build.py
 python pipeline/dev.py      # http://localhost:8774, also answers /nurses like production
+python docs/make_screenshots.py   # refresh the README screenshots after a visual change
 ```
 
 ## Deploy (Cloudflare Pages)
 
-- Pages project `pasado`, connected to this repo (branch `main`), custom domain `pasado.ruzcko.dev`.
+- Pages project `pasado`, connected to this repo, custom domain `pasado.ruzcko.dev`. A push to
+  `main` deploys the live site; a push to `preview` deploys https://preview.pasado-emy.pages.dev
+  for review first. Merge `preview` into `main` when it's ready.
 - Build command: `python3 pipeline/build.py`. Output directory: `site`.
 - `functions/` adds what static files can't: `/<exam>` routes and link previews (title,
   description and a 1200×630 countdown image from `functions/og.js`, drawn with resvg).
@@ -72,7 +86,7 @@ python pipeline/dev.py      # http://localhost:8774, also answers /nurses like p
   PRC refuses connections from GitHub's servers. For now, run `pipeline/prc.py` from a PC and push;
   the push rebuilds the site.
 - The ruzcko.dev zone sets a 4-hour browser cache on static files, so Pages builds stamp
-  `app.js`, `share.js` and `style.css` with `?v=<hash>`.
+  `icons.js`, `app.js`, `share.js` and `style.css` with `?v=<hash>`.
 
 ## Credits
 
