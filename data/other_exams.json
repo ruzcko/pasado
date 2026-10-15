@@ -40,6 +40,7 @@
       "label": "Civil Service Exam",
       "short": ["CSE"],
       "aliases": ["civil service", "cse-ppt", "professional", "subprofessional", "sub-professional", "eligibility", "csc"],
+      "title": "lingkod-bayan",
       "category": "government",
       "agency": "csc",
       "note": "Professional and Subprofessional levels, pen and paper test",

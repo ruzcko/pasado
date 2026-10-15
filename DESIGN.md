@@ -170,6 +170,8 @@ Colours with a hex code in the Araw and Dagat rows changed in the 2026-10-14 aud
   | Waiting | After the last exam day | Tapos na ang mahirap. Kapit lang. |
   | Results day | On or after the target results date | Sana nasa listahan ka. |
 
+  `{title}` comes from `title` in `data/exams.json` / `data/other_exams.json`: the abbreviation a passer earns when it's confirmed (RN, Engr., RTRP, RL, IDr., Ar., Atty.), otherwise the profession in plain words ("future geologist", CSE: "future lingkod-bayan"). Never guess an abbreviation. Long lines shrink to 75% before they'd be cut off.
+
   No line promises a pass. During the exam the big word is "Now" and the label under it says which day (`exam day 2 of 3`); on the page the line takes the place of "Philippine time" under the dates.
 - **Specific, not hype.** "Apply by 24 Oct · 10 days left", not "Don't miss out!" Name the agency and the resolution when you cite a date.
 - **Honest about what we don't know.** Estimated dates always say "estimated" or "~", and say what they are based on.

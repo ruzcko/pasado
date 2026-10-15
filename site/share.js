@@ -192,7 +192,8 @@ function drawExam(g, W, H, fmt, { p, focus }) {
     g.fillStyle = C.text; g.fillText(ex.name, b.x, b.y + 110 + ts);
     font(g, 28, 600); g.fillStyle = C.text;
     g.fillText(fitLine(g, cardWhen(p, focus), colW), b.x, b.y + 110 + ts + 52);
-    font(g, 26, 600); g.fillStyle = C.muted;
+    // Long lines ("…future real estate consultant.") shrink a little before they'd be cut off.
+    fit(g, cheer(ex, s), colW, 26, 600, 0.75); g.fillStyle = C.muted;
     g.fillText(fitLine(g, cheer(ex, s), colW), b.x, b.y + 110 + ts + 94);
     const rx = b.x + b.w * 0.62, rw = b.w * 0.38;
     const ns = fit(g, num, rw, 210, 700, 0.4, faceFor(num));
@@ -217,7 +218,7 @@ function drawExam(g, W, H, fmt, { p, focus }) {
   add(64, (y, k) => { font(g, 48 * k, 700); g.fillStyle = C.text; g.fillText(fitLine(g, unit, b.w), b.x, y + 48 * k); });
   add(fmt === "story" ? 60 : 30, () => {});
   add(52, (y, k) => { font(g, 40 * k, 600); g.fillStyle = C.text; g.fillText(fitLine(g, cardWhen(p, focus), b.w), b.x, y + 40 * k); });
-  add(56, (y, k) => { font(g, 40 * k, 600); g.fillStyle = C.muted; g.fillText(fitLine(g, cheer(ex, s), b.w), b.x, y + 42 * k); });
+  add(56, (y, k) => { fit(g, cheer(ex, s), b.w, 40 * k, 600, 0.75); g.fillStyle = C.muted; g.fillText(fitLine(g, cheer(ex, s), b.w), b.x, y + 42 * k); });
   add(fmt === "story" ? 100 : 50, () => {});
   // Stories cover the lower right, so the steps stop short there.
   add(150, (y, k) => drawSteps(g, s, focus, b.x + 22 * k, y + 22 * k, (fmt === "story" ? b.w * 0.8 : b.w) - 44 * k, 40 * k));
