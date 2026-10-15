@@ -154,7 +154,23 @@ Colours with a hex code in the Araw and Dagat rows changed in the 2026-10-14 aud
 
 ## 7. Voice
 
-- **Plain English, with Filipino at the emotional moments.** "Laban, future RN!" on a share card. "Galingan mo!" during the exam. Don't use Filipino in labels, buttons or instructions.
+- **Plain English, with Filipino at the emotional moments.** Don't use Filipino in labels, buttons or instructions.
+- **The line under a countdown follows the reviewee's calendar (2026-10-15).** `cheer()` in `site/share.js` and `lib/exam.js` (keep the two the same) picks it from the sitting's dates. It shows on share cards, link previews, the share text, and in the countdown card during the exam. Estimated dates only get the first line.
+
+  | Stage | When | Line |
+  |---|---|---|
+  | Far off | More than 90 days to the exam | Laban, future {title}! (no title: Laban, kaya mo 'yan!) |
+  | Filing | Last day to apply is 0–14 days away, exam more than a week off | Kumpleto na ba ang requirements mo? |
+  | Review | 31–90 days | Review mode na, future {title}. |
+  | Final stretch | 8–30 days | Final coaching season na. |
+  | Last week | 2–7 days | Konting tiis na lang. |
+  | Night before | 1 day | Matulog nang maaga. Ihanda ang ID at lapis. (Bar: …Ihanda na ang mga dadalhin.) |
+  | Exam day | On an exam day | Kapag hindi sigurado, C. (the logo's joke; Bar: Galingan mo!, since it's essays) |
+  | Rest day | Between exam days | Pahinga muna. Bukas ulit. ("Bukas ulit" only if the next exam day is tomorrow) |
+  | Waiting | After the last exam day | Tapos na ang mahirap. Kapit lang. |
+  | Results day | On or after the target results date | Sana nasa listahan ka. |
+
+  No line promises a pass. During the exam the big word is "Now" and the label under it says which day (`exam day 2 of 3`); on the page the line takes the place of "Philippine time" under the dates.
 - **Specific, not hype.** "Apply by 24 Oct · 10 days left", not "Don't miss out!" Name the agency and the resolution when you cite a date.
 - **Honest about what we don't know.** Estimated dates always say "estimated" or "~", and say what they are based on.
 - **Short buttons that say what happens:** "Share countdown", "Add to calendar", "Make this my exam".

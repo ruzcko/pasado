@@ -75,7 +75,7 @@ function examSvg(p, now) {
   body += txt(X, 186 + ts, ts, 700, C.text, ex.name, 'letter-spacing="-2"');
   const when = whenText(s);
   body += txt(X, 186 + ts + 58, fit(when, leftW, 32, true, 22), 700, C.text, when);
-  body += txt(X, 186 + ts + 102, 28, 500, C.muted, cheer(ex));
+  body += txt(X, 186 + ts + 102, 28, 500, C.muted, cheer(ex, p.s, now));
   body += txt(W - X, 330, ns, 700, s.est ? C.muted : C.num, num, `text-anchor="end" letter-spacing="-6"${isNum(num) ? " " + MONO : ""}`);
   body += txt(W - X, 380, 28, 700, C.text, unit, 'text-anchor="end"');
   body += steps(s, now, 476);

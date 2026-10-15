@@ -70,7 +70,7 @@ function wrap(g, text, maxW, maxLines) {
 // ---- what a card says ----
 const UNIT = { exam: "to the exam", deadline: "left to apply", results: "to results day" };
 function cardCount(p, focus) {
-  if (p.ongoing) return ["Now", "Galingan mo!"];
+  if (p.ongoing) return ["Now", nowLabel(p.s, today())];
   const n = dayDiff(p.day);
   if (p.s.est) return n >= 60 ? [`~${Math.round(n / 30.44)}`, `months ${UNIT[focus]} (est.)`] : [`~${Math.max(1, Math.round(n / 7))}`, `weeks ${UNIT[focus]} (est.)`];
   if (n <= 0) return ["Today", focus === "deadline" ? "is the last day to apply" : focus === "results" ? "results are due" : "is exam day"];
@@ -85,7 +85,31 @@ function cardWhen(p, focus) {
   if (focus === "exam") return s.est ? "around " + fMonth.format(noon(s.days[0])) : withWeekdays(s.days);
   return fmtOne(p.day, s.est) + (s.est ? "" : focus === "results" ? " (target)" : "");
 }
-const cheer = (ex) => (ex.title ? `Laban, future ${ex.title}!` : "Laban, kaya mo 'yan!");
+// The line under a countdown changes with where the reviewee is: filing, review, the last week,
+// the night before, exam day, waiting for results. Estimated dates only get the general line.
+const isBar = (ex) => ex.agency === "sc"; // essays on laptops: no "choose C", no pencils
+function cheer(ex, s) {
+  const t = ex.title;
+  const base = t ? `Laban, future ${t}!` : "Laban, kaya mo 'yan!";
+  if (!s || s.est) return base;
+  const td = today(), days = s.days, last = days[days.length - 1];
+  if (td > last) return s.results && td >= s.results ? "Sana nasa listahan ka." : "Tapos na ang mahirap. Kapit lang.";
+  if (days.includes(td)) return isBar(ex) ? "Galingan mo!" : "Kapag hindi sigurado, C.";
+  if (td > days[0]) return dayDiff(days.find((d) => d > td)) === 1 ? "Pahinga muna. Bukas ulit." : "Pahinga muna.";
+  const n = dayDiff(days[0]), dl = s.deadline ? dayDiff(s.deadline) : -1;
+  if (n > 7 && dl >= 0 && dl <= 14) return "Kumpleto na ba ang requirements mo?";
+  if (n <= 1) return isBar(ex) ? "Matulog nang maaga. Ihanda na ang mga dadalhin." : "Matulog nang maaga. Ihanda ang ID at lapis.";
+  if (n <= 7) return "Konting tiis na lang.";
+  if (n <= 30) return "Final coaching season na.";
+  if (n <= 90) return t ? `Review mode na, future ${t}.` : "Review mode na.";
+  return base;
+}
+// "Now" during the exam: which day of how many, or a rest day in between.
+function nowLabel(s, today) {
+  const k = s.days.indexOf(today);
+  if (k < 0) return "between exam days";
+  return s.days.length > 1 ? `exam day ${k + 1} of ${s.days.length}` : "exam day";
+}
 const asOf = () => "as of " + fDay.format(new Date());
 const siteHost = () => (/localhost|127\.0\.0\.1/.test(location.host) || !location.host ? HOST : location.host);
 
@@ -169,7 +193,7 @@ function drawExam(g, W, H, fmt, { p, focus }) {
     font(g, 28, 600); g.fillStyle = C.text;
     g.fillText(fitLine(g, cardWhen(p, focus), colW), b.x, b.y + 110 + ts + 52);
     font(g, 26, 600); g.fillStyle = C.muted;
-    g.fillText(fitLine(g, cheer(ex), colW), b.x, b.y + 110 + ts + 94);
+    g.fillText(fitLine(g, cheer(ex, s), colW), b.x, b.y + 110 + ts + 94);
     const rx = b.x + b.w * 0.62, rw = b.w * 0.38;
     const ns = fit(g, num, rw, 210, 700, 0.4, faceFor(num));
     g.fillStyle = s.est ? C.muted : C.num; g.fillText(num, rx, b.y + 70 + ns * 0.9);
@@ -193,7 +217,7 @@ function drawExam(g, W, H, fmt, { p, focus }) {
   add(64, (y, k) => { font(g, 48 * k, 700); g.fillStyle = C.text; g.fillText(fitLine(g, unit, b.w), b.x, y + 48 * k); });
   add(fmt === "story" ? 60 : 30, () => {});
   add(52, (y, k) => { font(g, 40 * k, 600); g.fillStyle = C.text; g.fillText(fitLine(g, cardWhen(p, focus), b.w), b.x, y + 40 * k); });
-  add(56, (y, k) => { font(g, 40 * k, 600); g.fillStyle = C.muted; g.fillText(fitLine(g, cheer(ex), b.w), b.x, y + 42 * k); });
+  add(56, (y, k) => { font(g, 40 * k, 600); g.fillStyle = C.muted; g.fillText(fitLine(g, cheer(ex, s), b.w), b.x, y + 42 * k); });
   add(fmt === "story" ? 100 : 50, () => {});
   // Stories cover the lower right, so the steps stop short there.
   add(150, (y, k) => drawSteps(g, s, focus, b.x + 22 * k, y + 22 * k, (fmt === "story" ? b.w * 0.8 : b.w) - 44 * k, 40 * k));
@@ -297,7 +321,7 @@ function shareExam(key) {
   if (!p) { focus = "exam"; p = pick(ex, focus); }
   if (!p) return;
   const [num, unit] = cardCount(p, focus);
-  openShareCard("exam", { p, focus }, examUrl(key), `${examLabel(ex)}: ${num} ${unit}. ${cheer(ex)}`, `${ex.name} countdown`);
+  openShareCard("exam", { p, focus }, examUrl(key), `${examLabel(ex)}: ${p.ongoing ? unit : `${num} ${unit}`}. ${cheer(ex, p.s)}`, `${ex.name} countdown`);
 }
 
 function shareListCard() {

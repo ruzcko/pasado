@@ -113,7 +113,7 @@ function milestones(s) {
 function target(s, focus) {
   if (focus === "exam") return { t: at(s.days[0]), end: at(s.days[s.days.length - 1], true), day: s.days[0] };
   const day = s[focus];
-  return day ? { t: at(day, focus === "deadline"), end: at(day, focus === "deadline"), day } : null;
+  return day ? { t: at(day, focus === "deadline"), end: at(day, true), day } : null; // results day counts until midnight
 }
 // The sitting a row is about: the soonest one still ahead for this focus (announced dates before estimates).
 function pick(ex, focus = state.focus, now = Date.now()) {
@@ -238,7 +238,7 @@ function renderHero() {
   const focusLabel = { exam: s.days.length > 1 ? "Exam days" : "Exam day", deadline: "Last day to apply", results: "Results (target)" }[state.focus];
   const whenText = state.focus === "exam" ? (s.est ? "around " + fMonth.format(noon(s.days[0])) : withWeekdays(s.days)) : fmtOne(p.day, s.est);
   const clock = p.ongoing
-    ? `<div class="clock"><div class="unit" style="max-width:none"><span class="n word">Now</span><span class="l">Galingan mo!</span></div></div>`
+    ? `<div class="clock"><div class="unit" style="max-width:none"><span class="n word">Now</span><span class="l">${esc(nowLabel(s, today()))}</span></div></div>`
     : s.est
       ? `<div class="clock">${unit(Math.round(dayDiff(p.day) / 30.44), "mo", "months (est.)")}</div>`
       : `<div class="clock" role="timer" aria-label="Time left">${unit(pr.d, "d", pr.d === 1 ? "day" : "days")}${unit(pr.h, "h", "hours")}${unit(pr.m, "m", "min")}${unit(pr.s, "s", "sec")}</div>`;
@@ -249,7 +249,7 @@ function renderHero() {
     <h1><button type="button" data-open="${esc(ex.key)}">${esc(ex.name)}</button></h1>
     <p class="sub">${esc([ex.label || (code(ex) && code(ex) + " board exam"), isPrc(ex) ? "" : agencyOf(ex).name, variant].filter(Boolean).join(" · ") || "Board exam")}${s.est ? ` · <span class="badge est">Estimated</span>` : ""}</p>
     ${clock}
-    <p class="when">${esc(whenText)}<small>${s.est ? `Projected from ${s.est_from}. PRC hasn't published ${s.year} dates yet.` : "Philippine time"}</small></p>
+    <p class="when">${esc(whenText)}<small>${s.est ? `Projected from ${s.est_from}. PRC hasn't published ${s.year} dates yet.` : p.ongoing ? esc(cheer(ex, s)) : "Philippine time"}</small></p>
     <ul class="steps">${stepsHtml(s, state.focus, now)}</ul>
     <div class="hero-actions">
       ${mine ? "" : `<button class="pill" type="button" data-pick="${esc(ex.key)}">${ICON.star}Make this my exam</button>`}
