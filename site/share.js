@@ -14,12 +14,12 @@ const CARD_FORMATS = {
 };
 // Every color is a 6-digit hex (dots append alpha), except `line`.
 const CARD_THEMES = {
-  papel: { name: "Papel", bg1: "#ffffff", bg2: "#eef1f6", text: "#141c33", muted: "#5c6377", line: "#dde2ea", num: "#b82a28", bubble: "#b82a28",
-    opens: "#7b8297", deadline: "#b82a28", exam: "#2152c4", results: "#187543" },
-  gabi: { name: "Gabi", bg1: "#1b2850", bg2: "#0b1022", text: "#f5f7fb", muted: "#b4bcd2", line: "#2c3966", num: "#ffc53d", bubble: "#ff6b5e",
-    opens: "#a3abc2", deadline: "#ff6b5e", exam: "#85a9ff", results: "#4cd18a" },
-  araw: { name: "Araw", bg1: "#ffd34d", bg2: "#f6a91c", text: "#1a1405", muted: "#5a4310", line: "#00000022", num: "#1b2a52", bubble: "#b82a28",
-    opens: "#6b5a2c", deadline: "#8d1e18", exam: "#1b2a52", results: "#0c532d" },
+  papel: { name: "Papel", bg1: "#ffffff", bg2: "#f1f1f3", text: "#1c1c1e", muted: "#5d5d63", line: "#e3e3e6", num: "#b82a28", bubble: "#b82a28",
+    opens: "#67676d", deadline: "#b82a28", exam: "#3b3b40", results: "#187543" },
+  gabi: { name: "Gabi", bg1: "#2a2a2e", bg2: "#141416", text: "#f5f5f6", muted: "#b9b9be", line: "#3a3a3f", num: "#ffc53d", bubble: "#ff6b5e",
+    opens: "#a5a5ab", deadline: "#ff6b5e", exam: "#dcdce0", results: "#4cd18a" },
+  araw: { name: "Araw", bg1: "#ffd34d", bg2: "#f6a91c", text: "#1a1405", muted: "#5a4310", line: "#00000022", num: "#1c1c1e", bubble: "#b82a28",
+    opens: "#6b5a2c", deadline: "#8d1e18", exam: "#1c1c1e", results: "#0c532d" },
   dagat: { name: "Dagat", bg1: "#0f5c6e", bg2: "#06253a", text: "#effbff", muted: "#a9d3dc", line: "#ffffff26", num: "#7ff0d4", bubble: "#ffd34d",
     opens: "#a9d3dc", deadline: "#ffb8ad", exam: "#ffffff", results: "#7ff0d4" },
 };

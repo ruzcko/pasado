@@ -2,18 +2,19 @@
 
 The rules for how Pasado looks and sounds. Read this before you change `site/style.css`, `site/share.js` (share cards) or `functions/og.js` (link previews), and update it when a rule changes.
 
-The values below come from `site/style.css` as of 2026-10-15 (white paper instead of cream). Rows marked **Proposed** are not in the code yet.
+The values below come from `site/style.css` as of 2026-10-15 (the Pencil palette: graphite instead of navy). Rows marked **Proposed** are not in the code yet.
 
 **Contrast rule:** text needs at least **4.5:1** against its background (3:1 for text 24 px and up, or 19 px bold and up). Icons need **3:1**. Check both themes.
 
 ## 1. The idea
 
-**A Filipino exam answer sheet.** White paper, navy ink, and one shaded red bubble. The page should feel like the moment before an exam: calm, official and a little exciting. It should not feel like a startup dashboard.
+**A Filipino exam answer sheet.** White paper, pencil graphite, and one shaded red bubble. The page should feel like the moment before an exam: calm, official and a little exciting. It should not feel like a startup dashboard.
 
 - **The logo (2026-10-15): five answer bubbles, A to E, like the real sheet, with C shaded red and E dashed, then "Pasado" with a capital P.** It's two board-exam truths: *kapag hindi sigurado, C* (when you're not sure, choose C), and the E column every sheet prints but nobody ever shades. The About sheet says so in one line. The same row is on the share cards and link previews, and the bubble column in the countdown card's corner matches it. The C bubble in the header uses `--red`, so it brightens in dark mode (6.7:1; `--bubble` would be 2.7:1). App icons and the favicon keep a single shaded bubble, since five bubbles don't read at icon size.
-- The flag colours (blue, gold, red) are **accents**. Use one at a time, never all three in one place.
+- **Pencil, not navy (2026-10-15).** Everything you write on an answer sheet is No. 2 pencil, so the ink, the countdown card and the exam milestone are graphite greys with no blue in them. The old navy, slate and bright blue sat too close to the stock palettes AI-built sites use (Tailwind's slate and blue). Option 2, a printed sheet with pale-red drop-out lines, was the runner-up (`design/palette-2026-10-15/`, not committed).
+- Red, gold and green are **accents**: red for deadlines and the shaded bubble, gold for Estimated, green for results. Use one at a time.
 - Colour always means something (see milestone colours). Don't add colour for decoration.
-- **White paper, not cream (2026-10-15).** Real answer sheets are bright white, and cream is one of the backgrounds AI tools fall back on, so the page, cards and share cards use white, with cool grey (`--surface-2`) for wells. Whites are cool too (`#f5f7fb`, `#eef1f7`), never warm.
+- **White paper, not cream (2026-10-15).** Real answer sheets are bright white, and cream is one of the backgrounds AI tools fall back on, so the page, cards and share cards use white, with a neutral grey (`--surface-2`) for wells. Off-whites are neutral too (`#f5f5f6`, `#f1f1f3`), never warm.
 - Pasado tried two other looks on 2026-10-15 (an ID card in civic blue and gold, then an exam-morning sky; see `design/directions.html`, `design/sky.html`, `design/simple.html`) and came back to the answer sheet.
 
 ## 2. Colour
@@ -24,37 +25,38 @@ Design tokens are the CSS variables in `:root`. Always use a token, never a raw 
 
 | Token | Light | Dark | Use for |
 |---|---|---|---|
-| `--bg` | `#ffffff` | `#0c1120` | Page background (the paper) |
-| `--surface` | `#ffffff` | `#131a2d` | Cards, rows, inputs, dialogs (rows stand out by their border and shadow) |
-| `--surface-2` | `#eef1f6` | `#1b2339` | Wells inside a surface: countdown box, segmented control, tags |
-| `--ink` | `#141c33` | `#eef1f7` | Main text; primary buttons |
-| `--muted` | `#5c6377` | `#a3aabb` | Secondary text, labels |
-| `--faint` | `#8b909c` | `#6e758a` | Icons and decoration only. **Never for text** (2.8:1 on paper) |
-| `--line` | `#dde2ea` | `#252e47` | Borders and dividers |
-| `--focus` | `#2152c4` | `#85a9ff` | Keyboard focus ring |
+| `--bg` | `#ffffff` | `#0e0e10` | Page background (the paper) |
+| `--surface` | `#ffffff` | `#17171a` | Cards, rows, inputs, dialogs (rows stand out by their border and shadow) |
+| `--surface-2` | `#f1f1f3` | `#1f1f23` | Wells inside a surface: countdown box, segmented control, tags |
+| `--ink` | `#1c1c1e` | `#f1f1f3` | Main text; primary buttons (pencil graphite) |
+| `--muted` | `#5d5d63` | `#a5a5ab` | Secondary text, labels |
+| `--faint` | `#8b8b91` | `#75757b` | Icons and decoration only. **Never for text** (3.4:1 on paper) |
+| `--line` | `#e3e3e6` | `#2a2a2f` | Borders and dividers |
+| `--focus` | `#1c1c1e` | `#c9c9ce` | Keyboard focus ring (the hero sets its own: `#f5f5f6` on graphite, `#1c1c1e` on paper) |
 | `--red` | `#b82a28` | `#ff6b5e` | Deadlines, urgency, the bubble. (Was `#c8302e`, which failed on tinted tags.) |
 | `--gold` | `#c98a00` | `#ffc53d` | Gold **backgrounds** and tints only: "My exams" chip, Estimated badge |
 | `--gold-ink` | `#ad7600` | `#ffc53d` | Gold as an **icon or text** colour: the pressed star, the "your exam" star |
+| `--graphite` | `#3b3b40` | `#c9c9ce` | The exam milestone, the "Now" countdown, Opens tags, SPLE badges, info notes. It replaced `--blue` (`#2152c4` / `#85a9ff`) |
 | `--warm` | `#8f5600` | `#ffb547` | Amber text: Estimated notes, "soon" counts. (Was `#b36b00`, 3.7:1.) |
 | `--bubble` | `#b82a28` | same | The shaded answer bubble in the hero corner. Same red in both themes, and the hero's own colour swaps don't touch it. |
 | `--on-gold` | `#1a1405` | same | Text on a gold fill: the pressed "My exams" chip (6.2:1 on `#c98a00`, 11.6:1 on `#ffc53d`) |
-| `--scrim` | `rgba(10, 14, 26, .5)` | same | The dimmed layer behind an open dialog |
+| `--scrim` | `rgba(14, 14, 16, .5)` | same | The dimmed layer behind an open dialog |
 
 ### Hero
 
 The hero is the one dark object on a light page. In dark mode it flips to a sheet of paper. Each version swaps in the milestone colours that work on its background:
 
-- **Light mode (navy hero):** the bright accents from the dark palette (`#ff6b5e`, `#85a9ff`, `#4cd18a`, `#8d94a8`).
-- **Dark mode (paper hero):** the deep accents from the light palette, with results green one shade darker (`#187543`, 5.1:1 on the paper).
+- **Light mode (graphite hero):** the bright accents from the dark palette (`#ff6b5e`, `#4cd18a`), a light graphite for the exam (`#dcdce0`) and `#9a9aa0` for Opens.
+- **Dark mode (paper hero):** the deep accents from the light palette, with results green one shade darker (`#187543`, 4.6:1 on the tiles).
 
 The shaded bubble in the hero corner is always `--bubble` (`#b82a28`).
 
 | Token | Light | Dark |
 |---|---|---|
-| `--hero-bg` | `#16213e` | `#eef1f6` |
-| `--hero-fg` | `#f5f7fb` | `#141c33` |
-| `--hero-muted` | `#b4bcd2` | `#525a6d` |
-| `--tile` / `--tile-line` | `#22305a` / `#33427a` | `#e1e6ef` / `#cdd4e0` |
+| `--hero-bg` | `#1f1f22` | `#f1f1f3` |
+| `--hero-fg` | `#f5f5f6` | `#1c1c1e` |
+| `--hero-muted` | `#b9b9be` | `#55555b` |
+| `--tile` / `--tile-line` | `#2b2b2f` / `#3c3c41` | `#e6e6e9` / `#d2d2d7` |
 
 ### Meaning colours
 
@@ -62,9 +64,9 @@ Each milestone has one colour everywhere: hero steps, row swatches, timeline dot
 
 | Milestone | Token | Colour |
 |---|---|---|
-| Applications open | `--m-opens` | grey `#7b8297` |
+| Applications open | `--m-opens` | light grey `#67676d` (dark `#8f8f95`) |
 | Apply by (deadline) | `--m-deadline` | red `--red` |
-| Exam | `--m-exam` | blue `--blue` |
+| Exam | `--m-exam` | graphite `--graphite` |
 | Results | `--m-results` | green `--green` |
 
 Urgency: `--hot` (red) for a deadline 14 days away or less, `--warm` (amber) for soon. "Estimated" dates use gold (`--gold` background, `--warm` text).
@@ -134,18 +136,18 @@ Numbers that count down always use `font-variant-numeric: tabular-nums`, so the 
 
 ## 6. Share cards and link previews
 
-- Card themes in `site/share.js` (`CARD_THEMES`): **Papel** (paper), **Gabi** (night, default), **Araw** (sun), **Dagat** (sea). Each theme has its own colour for each milestone.
+- Card themes in `site/share.js` (`CARD_THEMES`): **Papel** (paper), **Gabi** (night, default; graphite since 2026-10-15), **Araw** (sun), **Dagat** (sea). Each theme has its own colour for each milestone.
 - Story cards (1080 × 1920) keep text out of the top 14% and bottom 20%, and away from the lower-right corner, because Instagram and Facebook Stories put their buttons there.
 - The link preview image (`/og`, 1200 × 630) uses the Gabi colours (`COLORS` in `lib/exam.js`).
 - Every colour drawn as **text** on a card (the eyebrow line, the highlighted step's label, "as of" and the URL) needs 4.5:1 against **both** ends of the card's background gradient. The big number, the bubble and the step dots need 3:1. There is no `faint` on cards any more: it was only used for text and failed, so those lines use `muted`.
 
-Checked 2026-10-15, after Papel moved to white paper (lowest ratio of the two gradient ends):
+Checked 2026-10-15, after the Pencil palette (lowest ratio of the two gradient ends):
 
 | Theme | text | muted | number | bubble | deadline | exam | results | opens (dot only) |
 |---|---|---|---|---|---|---|---|---|
-| Papel (white `#ffffff` → `#eef1f6`) | 14.9 | 5.3 | 5.5 | 5.5 | 5.5 | 6.0 | 5.1 | 3.4 |
-| Gabi (and link previews; text `#f5f7fb`) | 13.4 | 7.5 | 9.1 | 5.1 | 5.1 | 6.2 | 7.4 | 6.2 |
-| Araw | 9.3 | 4.7 | 7.1 | 3.1 `#b82a28` | 4.6 `#8d1e18` | 7.1 | 4.6 `#0c532d` | 3.4 |
+| Papel (white `#ffffff` → `#f1f1f3`, graphite text `#1c1c1e`, exam `#3b3b40`) | 15.1 | 5.8 | 5.5 | 5.5 | 5.5 | 9.9 | 5.1 | 5.0 |
+| Gabi (and link previews; graphite `#2a2a2e` → `#141416`, exam `#dcdce0`) | 13.1 | 7.3 | 9.1 | 5.1 | 5.1 | 10.5 | 7.3 | 5.8 |
+| Araw (number and exam `#1c1c1e`, was navy) | 9.3 | 4.7 | 8.6 | 3.1 `#b82a28` | 4.6 `#8d1e18` | 8.6 | 4.6 `#0c532d` | 3.4 |
 | Dagat | 7.2 | 4.7 | 5.5 | 5.3 | 4.6 `#ffb8ad` | 7.6 | 5.5 | 4.7 |
 
 Colours with a hex code in the Araw and Dagat rows changed in the 2026-10-14 audit. Before: Papel used the old red `#c8302e` (4.3:1) and green `#1b844b` (3.8:1); Araw's red `#b3261e` (3.3:1), green `#0f6b3a` (3.3:1) and bubble `#c8302e` (2.7:1); Dagat's pink `#ff9a8a` (3.7:1); and every theme's `faint` text (2.3–3.3:1).
@@ -197,6 +199,8 @@ Most visitors are on phones. These rules came from an audit on 2026-10-14, which
 | Share cards and link previews: 9 text colours under 4.5:1 | See the table in section 6 |
 
 ### How to check
+
+**2026-10-15 (Pencil palette):** `design_lint.py site`: 0 errors, 0 warnings. Contrast and tap-target checks at 375 px and 1100 px, light and dark, in the same 5 states (the hero's calendar menu now checked on the Bar exam, since an estimated date has no calendar menu): 20 runs of 648–692 text elements and icons, **0 contrast failures**, nothing to check by eye; 89–98 controls per run (11 in the share dialog), **0 under 44 px, 0 overlaps**. The first run caught one short control: the exam name in the countdown card is a button, and a one-line name like "Nurses" made it 39 px tall at 375 px. It now has an invisible 44 px hit area. Card palettes: 5 checked, 0 failures (section 6).
 
 **2026-10-15 (white paper instead of cream):** `design_lint.py site`: 0 errors, 0 warnings (the cream warning is gone). Contrast and tap-target checks at 375 px and 1100 px, light and dark, in the same 5 states: 20 runs of 649–702 text elements and icons, **0 contrast failures**, nothing to check by eye; 90–99 controls per run (11 in the share dialog), **0 under 44 px, 0 overlaps**. Card palettes: 5 checked, 0 failures (section 6).
 

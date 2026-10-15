@@ -18,36 +18,36 @@
   font-display: swap;
 }
 
-/* White answer-sheet paper, navy ink, a red shaded bubble. Flag blue/gold/red as accents, never all at once. */
+/* White answer-sheet paper, pencil-graphite ink, a red shaded bubble. Red, gold and green are accents, never all at once. */
 :root {
   --bg: #ffffff; /* white answer-sheet paper (2026-10-15: no more cream) */
   --surface: #ffffff;
-  --surface-2: #eef1f6;
-  --ink: #141c33;
-  --muted: #5c6377;
-  --faint: #8b909c; /* icons and decoration only: 2.8:1 is too light for text */
-  --line: #dde2ea;
+  --surface-2: #f1f1f3;
+  --ink: #1c1c1e; /* No. 2 pencil graphite, not navy (2026-10-15) */
+  --muted: #5d5d63;
+  --faint: #8b8b91; /* icons and decoration only: 3.4:1 is too light for text */
+  --line: #e3e3e6;
   --red: #b82a28;
   --gold: #c98a00;
   --gold-ink: #ad7600; /* gold as an icon or text colour; plain --gold is too light on paper */
   --green: #1b844b;
-  --blue: #2152c4;
-  --hero-bg: #16213e;
-  --hero-fg: #f5f7fb;
-  --hero-muted: #b4bcd2;
-  --tile: #22305a;
-  --tile-line: #33427a;
-  --m-opens: #7b8297;
+  --graphite: #3b3b40; /* the exam milestone and info notes: pencil, where it used to be blue */
+  --hero-bg: #1f1f22;
+  --hero-fg: #f5f5f6;
+  --hero-muted: #b9b9be;
+  --tile: #2b2b2f;
+  --tile-line: #3c3c41;
+  --m-opens: #67676d;
   --m-deadline: var(--red);
-  --m-exam: var(--blue);
+  --m-exam: var(--graphite);
   --m-results: var(--green);
   --hot: #b82a28;
   --warm: #8f5600;
-  --focus: #2152c4;
-  --shadow: 0 1px 2px rgba(20, 28, 51, .06), 0 4px 16px rgba(20, 28, 51, .05);
+  --focus: #1c1c1e;
+  --shadow: 0 1px 2px rgba(28, 28, 30, .06), 0 4px 16px rgba(28, 28, 30, .05);
   --bubble: #b82a28; /* the shaded answer bubble: same red in both themes */
   --on-gold: #1a1405; /* text on a gold fill (pressed "My exams" chip), both themes */
-  --scrim: rgba(10, 14, 26, .5); /* behind open dialogs */
+  --scrim: rgba(14, 14, 16, .5); /* behind open dialogs */
   --radius-box: 8px; /* buttons and tabs: the boxes on a printed form */
   --sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
@@ -55,28 +55,28 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0c1120; --surface: #131a2d; --surface-2: #1b2339; --ink: #eef1f7; --muted: #a3aabb; --faint: #6e758a; --line: #252e47;
-    --red: #ff6b5e; --gold: #ffc53d; --green: #4cd18a; --blue: #85a9ff;
-    --hero-bg: #eef1f6; --hero-fg: #141c33; --hero-muted: #525a6d; --tile: #e1e6ef; --tile-line: #cdd4e0;
-    --m-opens: #8d94a8; --hot: #ff6b5e; --warm: #ffb547; --focus: #85a9ff; --gold-ink: #ffc53d;
+    --bg: #0e0e10; --surface: #17171a; --surface-2: #1f1f23; --ink: #f1f1f3; --muted: #a5a5ab; --faint: #75757b; --line: #2a2a2f;
+    --red: #ff6b5e; --gold: #ffc53d; --green: #4cd18a; --graphite: #c9c9ce;
+    --hero-bg: #f1f1f3; --hero-fg: #1c1c1e; --hero-muted: #55555b; --tile: #e6e6e9; --tile-line: #d2d2d7;
+    --m-opens: #8f8f95; --hot: #ff6b5e; --warm: #ffb547; --focus: #c9c9ce; --gold-ink: #ffc53d;
     --shadow: 0 1px 2px rgba(0, 0, 0, .3); color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0c1120; --surface: #131a2d; --surface-2: #1b2339; --ink: #eef1f7; --muted: #a3aabb; --faint: #6e758a; --line: #252e47;
-  --red: #ff6b5e; --gold: #ffc53d; --green: #4cd18a; --blue: #85a9ff;
-  --hero-bg: #eef1f6; --hero-fg: #141c33; --hero-muted: #525a6d; --tile: #e1e6ef; --tile-line: #cdd4e0;
-  --m-opens: #8d94a8; --hot: #ff6b5e; --warm: #ffb547; --focus: #85a9ff; --gold-ink: #ffc53d;
+  --bg: #0e0e10; --surface: #17171a; --surface-2: #1f1f23; --ink: #f1f1f3; --muted: #a5a5ab; --faint: #75757b; --line: #2a2a2f;
+  --red: #ff6b5e; --gold: #ffc53d; --green: #4cd18a; --graphite: #c9c9ce;
+  --hero-bg: #f1f1f3; --hero-fg: #1c1c1e; --hero-muted: #55555b; --tile: #e6e6e9; --tile-line: #d2d2d7;
+  --m-opens: #8f8f95; --hot: #ff6b5e; --warm: #ffb547; --focus: #c9c9ce; --gold-ink: #ffc53d;
   --shadow: 0 1px 2px rgba(0, 0, 0, .3); color-scheme: dark;
 }
 
-/* In light mode the hero is navy, so its milestone colours are the bright ones from the dark palette. */
-.hero { --red: #ff6b5e; --hot: #ff6b5e; --gold-ink: #ffc53d; --blue: #85a9ff; --green: #4cd18a; --m-opens: #8d94a8; --m-deadline: #ff6b5e; --m-exam: #85a9ff; --m-results: #4cd18a; }
+/* In light mode the hero is graphite, so its milestone colours are the bright ones from the dark palette. */
+.hero { --red: #ff6b5e; --hot: #ff6b5e; --gold-ink: #ffc53d; --graphite: #dcdce0; --green: #4cd18a; --m-opens: #9a9aa0; --m-deadline: #ff6b5e; --m-exam: #dcdce0; --m-results: #4cd18a; --focus: #f5f5f6; }
 /* In dark mode the hero is a sheet of white paper, so it keeps the light palette's ink colours (results green a shade darker). */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .hero { --red: #b82a28; --hot: #b82a28; --gold: #c98a00; --gold-ink: #ad7600; --green: #187543; --blue: #2152c4; --m-opens: #7b8297; --m-deadline: #b82a28; --m-exam: #2152c4; --m-results: #187543; --surface: #ffffff; --warm: #8f5600; }
+  :root:not([data-theme="light"]) .hero { --red: #b82a28; --hot: #b82a28; --gold: #c98a00; --gold-ink: #ad7600; --green: #187543; --graphite: #3b3b40; --m-opens: #67676d; --m-deadline: #b82a28; --m-exam: #3b3b40; --m-results: #187543; --surface: #ffffff; --warm: #8f5600; --focus: #1c1c1e; }
 }
-:root[data-theme="dark"] .hero { --red: #b82a28; --hot: #b82a28; --gold: #c98a00; --gold-ink: #ad7600; --green: #187543; --blue: #2152c4; --m-opens: #7b8297; --m-deadline: #b82a28; --m-exam: #2152c4; --m-results: #187543; --surface: #ffffff; --warm: #8f5600; }
+:root[data-theme="dark"] .hero { --red: #b82a28; --hot: #b82a28; --gold: #c98a00; --gold-ink: #ad7600; --green: #187543; --graphite: #3b3b40; --m-opens: #67676d; --m-deadline: #b82a28; --m-exam: #3b3b40; --m-results: #187543; --surface: #ffffff; --warm: #8f5600; --focus: #1c1c1e; }
 
 * { box-sizing: border-box; }
 html { scroll-padding-top: 150px; -webkit-text-size-adjust: 100%; }
@@ -127,7 +127,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .eyebrow { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--hero-muted); padding-right: 40px; }
 .eyebrow .star-mark { color: var(--gold-ink); }
 .hero h1 { margin: 6px 0 0; font-size: clamp(30px, 6.4vw, 46px); line-height: 1.04; letter-spacing: -.035em; font-weight: 700; padding-right: 32px; }
-.hero h1 button { all: unset; cursor: pointer; }
+.hero h1 button { all: unset; cursor: pointer; position: relative; }
+.hero h1 button::after { content: ""; position: absolute; inset: -7px 0; } /* 44 px tall even for a one-line name like "Nurses" */
 .hero .sub { margin: 6px 0 0; color: var(--hero-muted); font-size: 14px; }
 .clock { display: flex; gap: 8px; margin: 18px 0 6px; }
 .unit { background: var(--tile); border: 1px solid var(--tile-line); border-radius: 14px; padding: 10px 8px 8px; min-width: 0; flex: 1; max-width: 120px; text-align: center; }
@@ -207,7 +208,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .row.u-hot .cd .big { color: var(--hot); }
 .row.u-warm .cd .big { color: var(--warm); }
 .row.is-est .cd .big { color: var(--muted); font-weight: 700; font-size: 22px; }
-.row.is-now .cd { background: var(--blue); color: var(--bg); }
+.row.is-now .cd { background: var(--graphite); color: var(--bg); }
 .row.is-now .cd .small { color: var(--bg); opacity: .85; }
 .info { min-width: 0; }
 .info .t { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
@@ -219,11 +220,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .tag { font-size: 12px; font-weight: 600; border-radius: 999px; padding: 2px 8px; background: var(--surface-2); color: var(--muted); white-space: nowrap; }
 .tag.apply { background: color-mix(in srgb, var(--red) 12%, var(--surface)); color: var(--red); }
 .tag.apply.closed { background: var(--surface-2); color: var(--muted); text-decoration: line-through; text-decoration-thickness: 1px; }
-.tag.opens { background: color-mix(in srgb, var(--blue) 12%, var(--surface)); color: var(--blue); }
+.tag.opens { background: color-mix(in srgb, var(--graphite) 12%, var(--surface)); color: var(--graphite); }
 .badge { font-size: 11px; font-weight: 700; border-radius: 6px; padding: 1px 6px; letter-spacing: .02em; white-space: nowrap; }
 .badge.est { background: color-mix(in srgb, var(--gold) 20%, var(--surface)); color: var(--warm); }
 .badge.notice { background: color-mix(in srgb, var(--red) 14%, var(--surface)); color: var(--red); }
-.badge.sple { background: color-mix(in srgb, var(--blue) 14%, var(--surface)); color: var(--blue); }
+.badge.sple { background: color-mix(in srgb, var(--graphite) 14%, var(--surface)); color: var(--graphite); }
 .badge.moved { background: color-mix(in srgb, var(--red) 14%, var(--surface)); color: var(--red); }
 .row-acts { display: flex; gap: 4px; align-self: start; }
 .star, .share-btn { width: 40px; height: 40px; border: 0; background: none; border-radius: 10px; font-size: 20px; color: var(--faint); display: grid; place-items: center; padding: 0; }
@@ -257,7 +258,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .notices { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
 .notices li { font-size: 13.5px; background: color-mix(in srgb, var(--red) 7%, var(--surface)); border: 1px solid color-mix(in srgb, var(--red) 25%, var(--line)); border-radius: 10px; padding: 8px 10px; }
 .est-note { margin: 12px 0 0; font-size: 13px; color: var(--warm); background: color-mix(in srgb, var(--gold) 12%, var(--surface)); border-radius: 10px; padding: 8px 10px; }
-.info-note { margin: 12px 0 0; font-size: 13px; color: var(--blue); background: color-mix(in srgb, var(--blue) 10%, var(--surface)); border-radius: 10px; padding: 8px 10px; }
+.info-note { margin: 12px 0 0; font-size: 13px; color: var(--graphite); background: color-mix(in srgb, var(--graphite) 10%, var(--surface)); border-radius: 10px; padding: 8px 10px; }
 .cancel-note { margin: 12px 0 0; font-size: 13px; color: var(--red); font-weight: 600; }
 .others { margin: 0; padding: 0; list-style: none; font-size: 14px; }
 .others li { padding: 2px 0; }
