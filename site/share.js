@@ -72,7 +72,7 @@ function wrap(g, text, maxW, maxLines) {
 // ---- what a card says ----
 const UNIT = { exam: "to the exam", deadline: "left to apply", results: "to results day" };
 function cardCount(p, focus) {
-  if (p.ongoing) return ["Today", "exam ongoing · galingan!"];
+  if (p.ongoing) return ["Now", "Galingan mo!"];
   const n = dayDiff(p.day);
   if (p.s.est) return n >= 60 ? [`~${Math.round(n / 30.44)}`, `months ${UNIT[focus]} (est.)`] : [`~${Math.max(1, Math.round(n / 7))}`, `weeks ${UNIT[focus]} (est.)`];
   if (n <= 0) return ["Today", focus === "deadline" ? "is the last day to apply" : focus === "results" ? "results are due" : "is exam day"];
