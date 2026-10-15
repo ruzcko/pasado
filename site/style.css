@@ -306,10 +306,11 @@ dialog.sheet::backdrop { background: var(--scrim); }
 .sd-preview { padding: 6px 16px; display: grid; place-items: center; }
 .sd-preview img { max-width: 100%; max-height: 46vh; border-radius: 12px; box-shadow: var(--shadow); background: var(--surface-2); min-height: 120px; }
 .sd-controls { padding: 8px 16px; display: grid; gap: 10px; justify-items: center; }
-.sd-themes { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
-.sd-themes button { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius-box); height: 36px; padding: 0 10px 0 6px; font-size: 13px; font-weight: 600; }
+/* Card themes: one even row of four, swatch above the name, so they never wrap on a phone. */
+.sd-themes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: 100%; max-width: 420px; }
+.sd-themes button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius-box); min-height: 60px; padding: 6px 4px; font-size: 13px; font-weight: 600; min-width: 0; }
 .sd-themes button[aria-checked="true"] { border-color: var(--civic); box-shadow: inset 0 0 0 1px var(--civic); }
-.sd-themes .swatch { width: 24px; height: 24px; border-radius: 50%; position: relative; }
+.sd-themes .swatch { width: 24px; height: 24px; border-radius: 50%; position: relative; box-shadow: inset 0 0 0 1px var(--line); } /* outline: Puti's white swatch on a white button */
 .sd-themes .swatch i { position: absolute; right: 2px; bottom: 2px; width: 9px; height: 9px; border-radius: 50%; }
 .sd-actions { display: flex; gap: 8px; padding: 6px 16px 4px; }
 .sd-actions .btn { flex: 1; }
