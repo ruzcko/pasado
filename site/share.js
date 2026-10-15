@@ -102,16 +102,19 @@ function safeBox(fmt, W, H) {
   if (fmt === "wide") return { x: W * 0.06, y: H * 0.1, w: W * 0.88, h: H * 0.8 };
   return { x: W * 0.08, y: H * 0.08, w: W * 0.84, h: H * 0.84 };
 }
-// The logo: an answer-sheet bubble, shaded.
+// The logo: four answer bubbles A-D with C shaded ("when you're not sure, choose C"), then "Pasado".
 function brand(g, x, y, size) {
-  g.strokeStyle = C.text; g.lineWidth = size * 0.09;
-  g.beginPath(); g.arc(x + size * 0.45, y + size * 0.5, size * 0.4, 0, Math.PI * 2); g.stroke();
-  g.fillStyle = C.bubble;
-  g.beginPath(); g.arc(x + size * 0.45, y + size * 0.5, size * 0.25, 0, Math.PI * 2); g.fill();
+  const r = size * 0.19, step = size * 0.5, cy = y + size * 0.5;
+  for (let i = 0; i < 4; i++) {
+    const cx = x + r + i * step;
+    g.beginPath(); g.arc(cx, cy, i === 2 ? r * 1.15 : r, 0, Math.PI * 2);
+    if (i === 2) { g.fillStyle = C.bubble; g.fill(); }
+    else { g.strokeStyle = C.text; g.lineWidth = size * 0.065; g.stroke(); }
+  }
   font(g, size * 0.78, 700);
   g.fillStyle = C.text;
   g.textBaseline = "middle";
-  g.fillText("pasado", x + size * 1.05, y + size * 0.53);
+  g.fillText("Pasado", x + 3 * step + 2 * r + size * 0.32, y + size * 0.53);
   g.textBaseline = "alphabetic";
 }
 // Opens → apply by → exam → results, with today's position.

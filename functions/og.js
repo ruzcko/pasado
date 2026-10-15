@@ -36,8 +36,9 @@ function frame(body) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" font-family="IBM Plex Sans">
   <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${C.bg1}"/><stop offset="1" stop-color="${C.bg2}"/></linearGradient></defs>
   <rect width="${W}" height="${H}" fill="url(#bg)"/>
-  <circle cx="${X + 16}" cy="80" r="15" fill="none" stroke="${C.text}" stroke-width="3.5"/><circle cx="${X + 16}" cy="80" r="9" fill="${C.bubble}"/>
-  ${txt(X + 44, 91, 32, 700, C.text, "pasado", 'letter-spacing="-1"')}
+  ${[0, 1, 2, 3].map((i) => i === 2 ? `<circle cx="${X + 9 + i * 24}" cy="80" r="10.5" fill="${C.bubble}"/>`
+    : `<circle cx="${X + 9 + i * 24}" cy="80" r="9" fill="none" stroke="${C.text}" stroke-width="3"/>`).join("")}
+  ${txt(X + 110, 91, 32, 700, C.text, "Pasado", 'letter-spacing="-1"')}
   ${body}
 </svg>`;
 }

@@ -96,8 +96,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .top { padding: 14px 0 6px; }
 .top-row { display: flex; align-items: center; gap: 12px; }
 .brand { display: flex; align-items: center; gap: 8px; min-height: 44px; text-decoration: none; }
-.logo { width: 28px; height: 28px; color: var(--ink); flex: none; }
-.wordmark { font-weight: 700; font-size: 22px; letter-spacing: -.04em; }
+.logo { width: 60px; height: 14.5px; color: var(--ink); flex: none; } /* A B C D, with C shaded */
+.wordmark { font-weight: 700; font-size: 22px; letter-spacing: -.035em; }
 .tagline { color: var(--muted); font-size: 13px; padding-left: 12px; border-left: 1px solid var(--line); }
 .top-right { margin-left: auto; display: flex; gap: 8px; }
 .icon-btn {
@@ -113,14 +113,14 @@ button { font: inherit; color: inherit; cursor: pointer; }
   background: var(--hero-bg); color: var(--hero-fg); position: relative;
   /* No overflow: hidden here: it cut off the "Add to calendar" menu, which opens past the hero's edge. */
 }
-.hero::after { /* a column of answer bubbles, one shaded */
+.hero::after { /* a column of answer bubbles A-D, with C shaded, like the logo */
   content: ""; position: absolute; right: 18px; top: 18px; width: 14px; height: 74px; opacity: .5;
   background:
     radial-gradient(circle at 7px 7px, transparent 5px, var(--hero-muted) 5.5px, var(--hero-muted) 6.5px, transparent 7px) 0 0 / 14px 20px repeat-y;
   -webkit-mask: linear-gradient(#000, #000); pointer-events: none;
 }
 .hero::before {
-  content: ""; position: absolute; right: 18px; top: 38px; width: 14px; height: 14px; border-radius: 50%; background: var(--bubble);
+  content: ""; position: absolute; right: 18px; top: 58px; width: 14px; height: 14px; border-radius: 50%; background: var(--bubble);
 }
 .hero-loading, .hero .empty { margin: 8px 0; color: var(--hero-muted); }
 .eyebrow { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--hero-muted); padding-right: 40px; }
