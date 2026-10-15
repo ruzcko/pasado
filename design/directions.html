@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pasado: five directions</title>
+<!--
+  Pasado palette + type directions (design-brief step 2, 2026-10-14). Standalone: open it directly in a browser.
+  Five looks on the same real content: the CPA countdown, a list row, the two main buttons and a mini share card.
+  The page frame uses system-ui on purpose so the directions stand out.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&family=IBM+Plex+Mono:wght@500;700&family=Bungee&family=Work+Sans:wght@400;600;700&family=Rubik+Mono+One&family=Libre+Caslon+Text:wght@700&family=Public+Sans:wght@400;600;700&family=Red+Hat+Mono:wght@500;700&family=Bitter:wght@600;800&family=Source+Sans+3:wght@400;600;700&family=Courier+Prime:wght@400;700&family=Marcellus&family=Alegreya+Sans:wght@400;500;700&family=Fragment+Mono&display=swap">
+<style>
+  /* ---------- Page frame (neutral) ---------- */
+  :root { --f-bg: #e9ebee; --f-fg: #18181a; --f-muted: #5c5c62; --f-line: #d0d0d6; }
+  :root[data-theme="dark"] { --f-bg: #0f0f11; --f-fg: #ececee; --f-muted: #a2a2aa; --f-line: #2a2a2f; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--f-bg); color: var(--f-fg); font: 15px/1.5 system-ui, sans-serif; } /* design-lint: ignore (neutral frame) */
+  .intro { max-width: 1400px; margin: 0 auto; padding: 24px 16px 8px; }
+  .intro h1 { margin: 0 0 4px; font-size: 22px; }
+  .intro p { margin: 0 0 8px; color: var(--f-muted); max-width: 80ch; }
+  .bar { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0 0; }
+  .bar button { font: inherit; min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1px solid var(--f-line); background: transparent; color: inherit; cursor: pointer; }
+  .bar button[aria-pressed="true"] { background: var(--f-fg); color: var(--f-bg); border-color: var(--f-fg); }
+  .grid { max-width: 1400px; margin: 0 auto; padding: 16px 16px 48px; display: grid; gap: 24px;
+          grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); }
+
+  /* ---------- One direction = one token set ---------- */
+  .dir { background: var(--bg); color: var(--ink); font-family: var(--sans); border: 1px solid var(--line);
+         border-radius: var(--r-card); padding: 20px 16px; display: flex; flex-direction: column; gap: 16px; }
+  .dir .label { font: 600 12px/1.2 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0; }
+  .dir h2 { font: 700 24px/1.15 var(--display); margin: 4px 0 0; }
+  .dir .why { margin: 0; font-size: 14px; }
+  .dir .grade { margin: 0; font-size: 14px; color: var(--muted); }
+  .dir .grade b { color: var(--ink); }
+
+  .hero { background: var(--hero-bg); color: var(--hero-fg); border-radius: var(--r-card); padding: 20px 16px; position: relative; }
+  .hero .eyebrow { font: 600 12px/1.2 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--hero-muted); margin: 0 0 6px; }
+  .hero .title { font: 700 27px/1.1 var(--display); margin: 0 0 14px; }
+  .clock { display: flex; gap: 8px; }
+  .unit { flex: 1; text-align: center; }
+  .unit .n { display: block; font: 700 clamp(32px, 9vw, 44px)/1 var(--mono); font-variant-numeric: tabular-nums; color: var(--hero-accent); }
+  .unit .l { display: block; margin-top: 6px; font: 600 11px/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--hero-muted); }
+  .hero .meta { margin: 14px 0 0; font-size: 14px; color: var(--hero-muted); }
+  .hero .meta b { color: var(--hero-fg); }
+
+  .row { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-ctl); padding: 12px; display: flex; gap: 12px; align-items: center; }
+  .row .box { min-width: 64px; padding: 6px 4px; text-align: center; background: var(--surface-2); border-radius: var(--r-ctl); }
+  .row .box b { display: block; font: 700 22px/1 var(--mono); font-variant-numeric: tabular-nums; }
+  .row .box small { font-size: 12px; color: var(--muted); }
+  .row .name { font-weight: 700; margin: 0; }
+  .row .sub { margin: 0; font-size: 13px; color: var(--muted); }
+  .row .sub em { font-style: normal; color: var(--accent-ink); font-weight: 600; }
+
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .btn { font: 600 15px/1 var(--sans); min-height: 44px; padding: 0 18px; border-radius: var(--r-ctl); border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+  .btn.primary { background: var(--accent-ink); border-color: var(--accent-ink); color: var(--on-accent); }
+
+  /* Mini share card (Story, 9:16), the way a friend would first see Pasado. */
+  .card-wrap { display: flex; gap: 14px; align-items: flex-start; }
+  .card { width: 150px; flex: none; aspect-ratio: 9 / 16; background: var(--card-bg); color: var(--card-fg); border-radius: 10px; padding: 26px 12px 12px; display: flex; flex-direction: column; gap: 4px; overflow: hidden; position: relative; }
+  .card .c-brand { font: 700 11px/1 var(--display); color: var(--card-fg); display: flex; gap: 5px; align-items: center; }
+  .card .c-brand i { width: 10px; height: 10px; border-radius: 50%; background: var(--card-bubble); box-shadow: 0 0 0 1.5px var(--card-fg); }
+  .card .c-eye { margin-top: 14px; font: 700 8px/1.2 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--card-muted); }
+  .card .c-name { font: 700 13px/1.15 var(--display); }
+  .card .c-num { margin-top: 10px; font: 700 54px/1 var(--mono); font-variant-numeric: tabular-nums; color: var(--card-num); }
+  .card .c-unit { font: 600 10px/1.2 var(--sans); }
+  .card .c-cheer { margin-top: 6px; font: 600 10px/1.2 var(--sans); color: var(--card-muted); }
+  .card .c-url { margin-top: auto; margin-bottom: 18%; font: 600 7.5px/1 var(--sans); color: var(--card-muted); }
+  .card-notes { font-size: 13px; color: var(--muted); margin: 0; }
+
+  .type p { margin: 0 0 4px; }
+  .type .sample-mono { font: 500 15px/1.4 var(--mono); font-variant-numeric: tabular-nums; }
+  .type .fonts { font-size: 13px; color: var(--muted); }
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); gap: 8px; }
+  .sw { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; font-size: 12px; background: var(--surface); }
+  .sw i { display: block; height: 30px; }
+  .sw span { display: block; padding: 4px 6px; color: var(--muted); }
+  .checks { font: 500 12px/1.6 ui-monospace, monospace; color: var(--muted); margin: 0; padding: 0; list-style: none; } /* design-lint: ignore (readout) */
+  .checks .fail { color: var(--accent-ink); font-weight: 700; }
+
+  /* ===== A · Answer sheet (no cream) =====
+     A machine-read answer sheet: bright white stock, form lines printed in red "drop-out" ink,
+     navy pencil, one shaded bubble. Number cells are the boxes you write your ID number in. */
+  .dir-a { --display: "IBM Plex Sans", sans-serif; --sans: "IBM Plex Sans", sans-serif; --mono: "IBM Plex Mono", monospace;
+    --r-card: 6px; --r-ctl: 4px;
+    --bg: #ffffff; --surface: #f7f8fb; --surface-2: #eef1f7; --ink: #13203d; --muted: #4f5a72; --line: #f0c4c2;
+    --accent: #c62f2b; --accent-ink: #b0281f; --on-accent: #ffffff;
+    --hero-bg: #ffffff; --hero-fg: #13203d; --hero-muted: #4f5a72; --hero-accent: #13203d; --form: #e9a19e;
+    --card-bg: #ffffff; --card-fg: #13203d; --card-muted: #4f5a72; --card-num: #b0281f; --card-bubble: #c62f2b; --card-form: #e9a19e; }
+  [data-theme="dark"] .dir-a {
+    --bg: #0d1324; --surface: #141c33; --surface-2: #1b2541; --ink: #e8edf8; --muted: #a4aec6; --line: #4a2f3d;
+    --accent: #ff6b5e; --accent-ink: #ff7d70; --on-accent: #0d1324;
+    --hero-bg: #141c33; --hero-fg: #e8edf8; --hero-muted: #a4aec6; --hero-accent: #ffffff; --form: #8a4a55;
+    --card-bg: #ffffff; --card-fg: #13203d; --card-muted: #4f5a72; --card-num: #b0281f; --card-bubble: #c62f2b; }
+  .dir-a .hero { border: 1.5px solid var(--form); background-image: linear-gradient(var(--form), var(--form)); background-size: 100% 1px; background-repeat: no-repeat; background-position: 0 44px; }
+  .dir-a .unit { border: 1.5px solid var(--form); border-radius: 3px; padding: 10px 0 8px; }
+  .dir-a .hero::after { content: ""; position: absolute; right: 16px; top: 14px; width: 74px; height: 14px;
+    background: radial-gradient(circle at 7px 7px, var(--accent) 5px, transparent 5.5px) 0 0 / 14px 14px no-repeat,
+                radial-gradient(circle at 7px 7px, transparent 4.5px, var(--form) 5px, var(--form) 6px, transparent 6.5px) 20px 0 / 20px 14px repeat-x; }
+  .dir-a .card { border: 1.5px solid var(--card-form); }
+
+  /* ===== B · Jeepney signboard =====
+     Painted route boards: enamel yellow sign, red lettering with a dark outline, chrome stripes. */
+  .dir-b { --display: "Bungee", sans-serif; --sans: "Work Sans", sans-serif; --mono: "Rubik Mono One", monospace;
+    --r-card: 4px; --r-ctl: 4px;
+    --bg: #ffffff; --surface: #f4f5f7; --surface-2: #ffe27a; --ink: #14151a; --muted: #4c4f57; --line: #cfd3da;
+    --accent: #d7261e; --accent-ink: #b81f18; --on-accent: #ffffff;
+    --hero-bg: #ffcf1f; --hero-fg: #14151a; --hero-muted: #4a3a00; --hero-accent: #b81f18; --stripe: #123c9c; --chrome: #c9ced6;
+    --card-bg: #ffcf1f; --card-fg: #14151a; --card-muted: #4a3a00; --card-num: #b81f18; --card-bubble: #d7261e; }
+  [data-theme="dark"] .dir-b {
+    --bg: #0f1012; --surface: #1a1b1f; --surface-2: #2a2610; --ink: #f3f1ea; --muted: #b0aea6; --line: #33353b;
+    --accent: #ffcf1f; --accent-ink: #ffcf1f; --on-accent: #14151a;
+    --hero-bg: #14151a; --hero-fg: #ffcf1f; --hero-muted: #e9dca3; --hero-accent: #ff6a5c; --stripe: #5b86ff;
+    --card-bg: #ffcf1f; --card-fg: #14151a; --card-muted: #4a3a00; --card-num: #b81f18; --card-bubble: #d7261e; }
+  .dir-b h2, .dir-b .hero .title { font-weight: 400; letter-spacing: .01em; }
+  .dir-b .hero { border-top: 8px solid transparent; border-image: repeating-linear-gradient(90deg, var(--stripe) 0 18px, var(--accent) 18px 36px, var(--chrome) 36px 54px) 8; }
+  .dir-b .hero .title { text-shadow: 2px 2px 0 rgba(0, 0, 0, .12); }
+  .dir-b .unit .n { font-size: clamp(26px, 7vw, 34px); }
+  .dir-b .btn { border-width: 2px; border-color: var(--ink); }
+  .dir-b .card .c-name, .dir-b .card .c-brand { font-weight: 400; }
+  .dir-b .card .c-num { font-size: 40px; }
+
+  /* ===== C · Professional ID =====
+     The ID you get when you pass: deep civic blue card, seal-gold ring, fine security-print lines.
+     Generic on purpose: no PRC seal or real ID layout, so nobody mistakes it for an official PRC page. */
+  .dir-c { --display: "Libre Caslon Text", serif; --sans: "Public Sans", sans-serif; --mono: "Red Hat Mono", monospace;
+    --r-card: 14px; --r-ctl: 8px;
+    --bg: #eef2f8; --surface: #ffffff; --surface-2: #e2e9f4; --ink: #0d1b33; --muted: #46556f; --line: #ccd6e6;
+    --accent: #b88a12; --accent-ink: #0b3a7a; --on-accent: #ffffff;
+    --hero-bg: #0b3a7a; --hero-fg: #ffffff; --hero-muted: #c3d3ee; --hero-accent: #f2c94c;
+    --card-bg: #0b3a7a; --card-fg: #ffffff; --card-muted: #c3d3ee; --card-num: #f2c94c; --card-bubble: #e8564a; --guilloche: rgba(255, 255, 255, .06); --seal-line: rgba(242, 201, 76, .55); }
+  [data-theme="dark"] .dir-c {
+    --bg: #08111f; --surface: #0f1b30; --surface-2: #16243e; --ink: #e9eef7; --muted: #9fb0cc; --line: #23324d;
+    --accent: #f2c94c; --accent-ink: #f2c94c; --on-accent: #08111f;
+    --hero-bg: #0f2b57; --hero-fg: #ffffff; --hero-muted: #c3d3ee; --hero-accent: #f2c94c;
+    --card-bg: #0b3a7a; --card-fg: #ffffff; --card-muted: #c3d3ee; --card-num: #f2c94c; --card-bubble: #e8564a; }
+  .dir-c .hero { overflow: hidden;
+    background-image: repeating-radial-gradient(circle at 110% -10%, transparent 0 9px, var(--guilloche) 9px 10px); }
+  .dir-c .unit { border: 1px solid var(--seal-line); border-radius: 8px; padding: 10px 0 8px; }
+  .dir-c .card { background-image: repeating-radial-gradient(circle at 110% -10%, transparent 0 7px, var(--guilloche) 7px 8px); }
+
+  /* ===== D · Review notebook =====
+     The review months: ruled notebook paper, red margin line, a highlighter swipe across the number. */
+  .dir-d { --display: "Bitter", serif; --sans: "Source Sans 3", sans-serif; --mono: "Courier Prime", monospace;
+    --r-card: 3px; --r-ctl: 3px;
+    --bg: #ffffff; --surface: #ffffff; --surface-2: #fff59a; --ink: #1c2230; --muted: #4c5466; --line: #c9dcf2;
+    --accent: #e0455a; --accent-ink: #b3213b; --on-accent: #ffffff;
+    --hero-bg: #ffffff; --hero-fg: #1c2230; --hero-muted: #4c5466; --hero-accent: #1c2230; --rule: #c9dcf2; --margin: #e57a7a; --hl: #fff176; --hl-ink: #1c2230; --card-hl: #fff176; --card-rule: #c9dcf2;
+    --card-bg: #ffffff; --card-fg: #1c2230; --card-muted: #4c5466; --card-num: #1c2230; --card-bubble: #e0455a; }
+  [data-theme="dark"] .dir-d {
+    --bg: #14171d; --surface: #1b1f27; --surface-2: #3a3612; --ink: #eef1f6; --muted: #a9b0bf; --line: #2a3140;
+    --accent: #ff8fa3; --accent-ink: #ff8fa3; --on-accent: #14171d;
+    --hero-bg: #1b1f27; --hero-fg: #eef1f6; --hero-muted: #a9b0bf; --hero-accent: #ffe95c; --rule: #2c3446; --margin: #8a3c47; --hl: #ffe95c;
+    --card-bg: #ffffff; --card-fg: #1c2230; --card-muted: #4c5466; --card-num: #1c2230; --card-bubble: #e0455a; }
+  .dir-d .hero { border: 1px solid var(--line); padding-left: 30px;
+    background-image: linear-gradient(90deg, transparent 18px, var(--margin) 18px 19.5px, transparent 19.5px),
+                      repeating-linear-gradient(transparent 0 27px, var(--rule) 27px 28px); }
+  .dir-d .unit .n { background: var(--hl); color: var(--hl-ink); padding: 6px 0 4px; line-height: 1; border-radius: 2px; transform: rotate(-1deg); } /* a highlighter swipe: covers the whole digit */
+  .dir-d .card .c-num { background: linear-gradient(transparent 22%, var(--card-hl) 22% 86%, transparent 86%); display: inline-block; padding: 0 4px; }
+  .dir-d .card { background-image: repeating-linear-gradient(transparent 0 15px, var(--card-rule) 15px 16px); border: 1px solid var(--card-rule); }
+
+  /* ===== E · Oath-taking =====
+     The day you take your oath: toga black, tassel gold, engraved capitals, a diploma's double rule. */
+  .dir-e { --display: "Marcellus", serif; --sans: "Alegreya Sans", sans-serif; --mono: "Fragment Mono", monospace;
+    --r-card: 0px; --r-ctl: 0px;
+    --bg: #ffffff; --surface: #f5f5f4; --surface-2: #ececea; --ink: #121212; --muted: #555451; --line: #d6d5d0;
+    --accent: #c9a227; --accent-ink: #121212; --on-accent: #f1d27a;
+    --hero-bg: #121212; --hero-fg: #fafaf8; --hero-muted: #c9c7bf; --hero-accent: #e3bf4f;
+    --card-bg: #121212; --card-fg: #fafaf8; --card-muted: #c9c7bf; --card-num: #e3bf4f; --card-bubble: #c0392b; }
+  [data-theme="dark"] .dir-e {
+    --bg: #0b0b0b; --surface: #161616; --surface-2: #202020; --ink: #f2f1ec; --muted: #b2b0a8; --line: #2e2e2c;
+    --accent: #e3bf4f; --accent-ink: #e3bf4f; --on-accent: #121212;
+    --hero-bg: #000000; --hero-fg: #fafaf8; --hero-muted: #c9c7bf; --hero-accent: #e3bf4f;
+    --card-bg: #121212; --card-fg: #fafaf8; --card-muted: #c9c7bf; --card-num: #e3bf4f; --card-bubble: #c0392b; }
+  .dir-e h2, .dir-e .hero .title { font-weight: 400; letter-spacing: .02em; }
+  .dir-e .hero { outline: 1px solid var(--hero-accent); outline-offset: -8px; box-shadow: inset 0 0 0 11px var(--hero-bg), inset 0 0 0 12px var(--hero-accent); padding: 26px 22px; }
+  .dir-e .unit .l { letter-spacing: .14em; }
+  .dir-e .card .c-name, .dir-e .card .c-brand { font-weight: 400; }
+  .dir-e .card { box-shadow: inset 0 0 0 5px #121212, inset 0 0 0 6px #e3bf4f; }
+</style>
+</head>
+<body>
+<header class="intro">
+  <h1>Pasado: five directions</h1>
+  <p>Each column is one possible look for Pasado: a font pairing, a colour palette, and how your countdown and the share card are drawn. All use the real CPA countdown. Pick one, or mix ("C's colours with A's fonts"). The contrast lines at the bottom of each column check the colours in whichever theme is on.</p>
+  <div class="bar" role="group" aria-label="Theme">
+    <button type="button" data-set="light">Light</button>
+    <button type="button" data-set="dark">Dark</button>
+    <button type="button" data-set="system">Match my device</button>
+  </div>
+</header>
+
+<main class="grid">
+  <section class="dir dir-a" data-key="a"></section>
+  <section class="dir dir-b" data-key="b"></section>
+  <section class="dir dir-c" data-key="c"></section>
+  <section class="dir dir-d" data-key="d"></section>
+  <section class="dir dir-e" data-key="e"></section>
+</main>
+
+<script>
+const CONTENT = {
+  hero: { eyebrow: "Your exam · Exam days", title: "Certified Public Accountants", meta: "<b>Sat–Mon, Oct 24–26, 2026</b> · Philippine time", target: Date.parse("2026-10-24T00:00:00+08:00") },
+  row: { box: "151", unit: "days", name: "Civil Service Exam", sub: "Sun, Mar 14, 2027", flag: "Applications open Nov 2" },
+  primary: "Make this my exam", secondary: "Share countdown",
+  card: { eye: "CPALE · Board exam", name: "Certified Public Accountants", unit: "days to the exam", cheer: "Laban, future CPA!", url: "pasado.ruzcko.dev/cpa" },
+  directions: {
+    a: { name: "A · Answer sheet, no cream", feels: "Feels like a fresh answer sheet on the exam desk.",
+         why: "Today's idea, made more literal and without the cream: bright white paper, form lines in the pale red ink real answer sheets are printed in, and your countdown written in the number boxes. The red shaded bubble stays the brand.",
+         grade: "<b>Grade B+.</b> Calm and readable outdoors (white paper, navy ink). It's the closest to today, so the change is smallest, but also the least surprising.",
+         fonts: "IBM Plex Sans (text) · IBM Plex Mono (numbers), as today" },
+    b: { name: "B · Jeepney signboard", feels: "Feels like a jeepney's painted route board.",
+         why: "Enamel yellow sign, red lettering, chrome-and-colour stripes along the top. Bungee is a typeface made for street signs; Rubik Mono One gives chunky, signboard numbers.",
+         grade: "<b>Grade A−.</b> The most Filipino and the most shareable: a friend's Story would stop you scrolling. Risk: loud for parents and review centres, and the display font must stay in headlines only.",
+         fonts: "Bungee (headlines) · Work Sans (text) · Rubik Mono One (numbers)" },
+    c: { name: "C · Professional ID", feels: "Feels like the professional ID you'll get when you pass.",
+         why: "Deep civic blue, seal gold and the fine security-print lines found on IDs. Libre Caslon gives the name an official, engraved feel. Kept generic: no PRC seal or real ID layout.",
+         grade: "<b>Grade B+.</b> Aspirational and trustworthy for parents and review centres. Risk: it can read as a government site, and blue + gold is a common combination.",
+         fonts: "Libre Caslon Text (headlines) · Public Sans (text) · Red Hat Mono (numbers)" },
+    d: { name: "D · Review notebook", feels: "Feels like your review notebook in the months before the exam.",
+         why: "Ruled paper, a red margin line and a yellow highlighter swipe across the number. Bitter is a sturdy textbook serif; Courier Prime makes the numbers look typed into your notes.",
+         grade: "<b>Grade B+.</b> Warm and relatable for reviewees, and the highlighter makes the countdown pop. Risk: it can feel like a study app rather than the exam itself.",
+         fonts: "Bitter (headlines) · Source Sans 3 (text) · Courier Prime (numbers)" },
+    e: { name: "E · Oath-taking", feels: "Feels like the oath-taking ceremony after you pass.",
+         why: "Toga black, tassel gold and a diploma's double rule. Marcellus has engraved, ceremonial capitals.",
+         grade: "<b>Grade B.</b> Proud and distinctive, and parents will love the card. Risk: black and gold can feel formal or luxury-brand, and less fun day to day.",
+         fonts: "Marcellus (headlines) · Alegreya Sans (text) · Fragment Mono (numbers)" },
+  },
+};
+// Token pairs checked live in each direction: [text, background, minimum ratio].
+const PAIRS = [
+  ["--ink", "--bg", 4.5], ["--muted", "--bg", 4.5], ["--muted", "--surface", 4.5], ["--accent-ink", "--surface", 4.5],
+  ["--on-accent", "--accent-ink", 4.5], ["--hero-fg", "--hero-bg", 4.5], ["--hero-muted", "--hero-bg", 4.5], ["--hero-accent", "--hero-bg", 3],
+  ["--card-fg", "--card-bg", 4.5], ["--card-muted", "--card-bg", 4.5], ["--card-num", "--card-bg", 3],
+];
+const SWATCHES = ["--bg", "--surface", "--ink", "--muted", "--accent", "--accent-ink", "--hero-bg", "--hero-accent", "--card-bg", "--card-num"];
+
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+for (const el of document.querySelectorAll(".dir")) {
+  const d = CONTENT.directions[el.dataset.key], h = CONTENT.hero, r = CONTENT.row, c = CONTENT.card;
+  el.innerHTML = `
+    <div><p class="label">${esc(d.name)}</p><h2>${esc(d.feels)}</h2></div>
+    <p class="why">${esc(d.why)}</p>
+    <p class="grade">${d.grade}</p>
+    <div class="hero">
+      <p class="eyebrow">${esc(h.eyebrow)}</p>
+      <p class="title">${esc(h.title)}</p>
+      <div class="clock">${["days", "hours", "min", "sec"].map((u) => `<div class="unit"><span class="n" data-u="${u}">00</span><span class="l">${u}</span></div>`).join("")}</div>
+      <p class="meta">${h.meta}</p>
+    </div>
+    <div class="row">
+      <div class="box"><b>${esc(r.box)}</b><small>${esc(r.unit)}</small></div>
+      <div><p class="name">${esc(r.name)}</p><p class="sub">${esc(r.sub)} · <em>${esc(r.flag)}</em></p></div>
+    </div>
+    <div class="actions"><button class="btn primary" type="button">${esc(CONTENT.primary)}</button><button class="btn" type="button">${esc(CONTENT.secondary)}</button></div>
+    <div class="card-wrap">
+      <div class="card" aria-label="Share card preview">
+        <span class="c-brand"><i></i>pasado</span>
+        <span class="c-eye">${esc(c.eye)}</span>
+        <span class="c-name">${esc(c.name)}</span>
+        <span class="c-num" data-days>0</span>
+        <span class="c-unit">${esc(c.unit)}</span>
+        <span class="c-cheer">${esc(c.cheer)}</span>
+        <span class="c-url">${esc(c.url)}</span>
+      </div>
+      <p class="card-notes">The share card (Story size). Text stays out of the top 14% and bottom 20%, where Instagram and Facebook put their buttons.</p>
+    </div>
+    <div class="type">
+      <p>Body text reads like this: plain, specific sentences at 15 px. Apply by Wed, Sep 9 · 10 days left.</p>
+      <p class="sample-mono">0123456789 · Oct 24 · 09:41</p>
+      <p class="fonts">${esc(d.fonts)}</p>
+    </div>
+    <div class="swatches">${SWATCHES.map((t) => `<div class="sw"><i style="background:var(${t})"></i><span>${t.slice(2)}</span></div>`).join("")}</div>
+    <ul class="checks" aria-label="Contrast checks"></ul>`;
+}
+
+const tick = () => {
+  const ms = CONTENT.hero.target - Date.now();
+  let s = Math.max(0, Math.floor(ms / 1000));
+  const v = { days: Math.floor(s / 86400), hours: Math.floor(s / 3600) % 24, min: Math.floor(s / 60) % 60, sec: s % 60 };
+  document.querySelectorAll(".unit .n").forEach((n) => { n.textContent = String(v[n.dataset.u]).padStart(2, "0"); });
+  const days = Math.max(0, Math.ceil(ms / 864e5));
+  document.querySelectorAll("[data-days]").forEach((n) => { n.textContent = days; });
+};
+tick(); setInterval(tick, 1000);
+
+const cv = document.createElement("canvas").getContext("2d", { willReadFrequently: true });
+const rgb = (s) => { cv.clearRect(0, 0, 1, 1); cv.fillStyle = "#000"; cv.fillStyle = s; cv.fillRect(0, 0, 1, 1); return [...cv.getImageData(0, 0, 1, 1).data].slice(0, 3); };
+const lum = (c) => c.reduce((a, v, i) => { v /= 255; v = v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; return a + v * [0.2126, 0.7152, 0.0722][i]; }, 0);
+const ratio = (a, b) => { const x = lum(rgb(a)), y = lum(rgb(b)); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); };
+const checkAll = () => {
+  for (const el of document.querySelectorAll(".dir")) {
+    const cs = getComputedStyle(el), get = (t) => cs.getPropertyValue(t).trim();
+    el.querySelector(".checks").innerHTML = PAIRS.map(([fg, bg, min]) => {
+      const r = ratio(get(fg), get(bg)), ok = r >= min;
+      return `<li class="${ok ? "" : "fail"}">${fg.slice(2)} on ${bg.slice(2)}: ${r.toFixed(1)}:1 ${ok ? "pass" : "FAIL (needs " + min + ")"}</li>`;
+    }).join("");
+  }
+};
+
+const mq = matchMedia("(prefers-color-scheme: dark)");
+let mode = "system"; try { mode = localStorage.getItem("directions-theme") || "system"; } catch (e) {}
+const forced = new URLSearchParams(location.search).get("theme"); if (["light", "dark"].includes(forced)) mode = forced;
+const apply = () => {
+  document.documentElement.dataset.theme = mode === "system" ? (mq.matches ? "dark" : "light") : mode;
+  document.querySelectorAll("[data-set]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.set === mode)));
+  checkAll();
+};
+document.querySelectorAll("[data-set]").forEach((b) => b.addEventListener("click", () => {
+  mode = b.dataset.set; try { localStorage.setItem("directions-theme", mode); } catch (e) {} apply();
+}));
+mq.addEventListener("change", () => { if (mode === "system") apply(); });
+apply();
+</script>
+</body>
+</html>

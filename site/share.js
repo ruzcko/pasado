@@ -12,24 +12,26 @@ const CARD_FORMATS = {
   square: { w: 1080, h: 1080 },
   wide: { w: 1200, h: 630 },
 };
-// Every color is a 6-digit hex (dots append alpha), except `line`.
+// Every color is a 6-digit hex (dots append alpha), except `line` and `guil`. `name` colours the exam name (else `text`).
+// Lisensya and Puti are the ID card (DESIGN.md §6); `guil` draws its security-print lines.
 const CARD_THEMES = {
-  papel: { name: "Papel", bg1: "#fbf7ee", bg2: "#efe6d3", text: "#141c33", muted: "#5c6377", line: "#ddd3bf", num: "#b82a28", bubble: "#b82a28",
-    opens: "#7b8297", deadline: "#b82a28", exam: "#2152c4", results: "#187543" },
-  gabi: { name: "Gabi", bg1: "#1b2850", bg2: "#0b1022", text: "#f7f1e3", muted: "#b4bcd2", line: "#2c3966", num: "#ffc53d", bubble: "#ff6b5e",
-    opens: "#a3abc2", deadline: "#ff6b5e", exam: "#85a9ff", results: "#4cd18a" },
+  lisensya: { name: "Lisensya", bg1: "#0e4590", bg2: "#082c5e", text: "#ffffff", muted: "#c3d3ee", line: "#ffffff38", num: "#f2c94c", bubble: "#ff7b6b",
+    opens: "#c3cde0", deadline: "#ffa395", exam: "#a9c8ff", results: "#7fe3a8", guil: "#ffffff" },
+  puti: { name: "Puti", bg1: "#ffffff", bg2: "#e6ecf5", text: "#0d1b33", muted: "#46556f", line: "#ccd6e6", num: "#b82a28", bubble: "#b82a28", nameInk: "#0b3a7a",
+    opens: "#6b778d", deadline: "#b82a28", exam: "#2459c2", results: "#15703f", guil: "#0b3a7a" },
   araw: { name: "Araw", bg1: "#ffd34d", bg2: "#f6a91c", text: "#1a1405", muted: "#5a4310", line: "#00000022", num: "#1b2a52", bubble: "#b82a28",
     opens: "#6b5a2c", deadline: "#8d1e18", exam: "#1b2a52", results: "#0c532d" },
   dagat: { name: "Dagat", bg1: "#0f5c6e", bg2: "#06253a", text: "#effbff", muted: "#a9d3dc", line: "#ffffff26", num: "#7ff0d4", bubble: "#ffd34d",
     opens: "#a9d3dc", deadline: "#ffb8ad", exam: "#ffffff", results: "#7ff0d4" },
 };
-const C = { ...CARD_THEMES.papel };
-const FONT = '"IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif';
-// Numbers and dates use the mono face, as on the site; words like "Today" stay in the sans.
-const MONO = '"IBM Plex Mono", ui-monospace, Consolas, monospace';
+const C = { ...CARD_THEMES.lisensya };
+// Same three fonts as the site: the exam name in the serif, numbers and dates in mono, everything else in the sans.
+const DISPLAY = '"Libre Caslon Text", Georgia, serif';
+const FONT = '"Public Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif';
+const MONO = '"Red Hat Mono", ui-monospace, Consolas, monospace';
 const faceFor = (t) => (/^[~\d]/.test(t) ? MONO : FONT);
 const CARD_STORE = "pasado:card";
-const shareState = { kind: null, payload: null, format: "story", theme: "gabi", blob: null, url: null, text: "" };
+const shareState = { kind: null, payload: null, format: "story", theme: "lisensya", blob: null, url: null, text: "" };
 try {
   const saved = JSON.parse(localStorage.getItem(CARD_STORE) || "{}");
   if (CARD_THEMES[saved.theme]) shareState.theme = saved.theme;
@@ -96,6 +98,15 @@ function background(g, W, H) {
   bg.addColorStop(1, C.bg2);
   g.fillStyle = bg;
   g.fillRect(0, 0, W, H);
+  if (!C.guil) return;
+  const cx = W * 1.04, cy = -H * 0.06, R = Math.max(W, H) * 0.42, step = Math.max(W, H) * 0.0085;
+  g.save();
+  g.strokeStyle = C.guil; g.lineWidth = step * 0.16;
+  for (let r = step; r < R; r += step) {
+    g.globalAlpha = 0.11 * (1 - r / R);
+    g.beginPath(); g.arc(cx, cy, r, 0, Math.PI * 2); g.stroke();
+  }
+  g.restore();
 }
 function safeBox(fmt, W, H) {
   if (fmt === "story") return { x: W * 0.08, y: H * 0.14, w: W * 0.84, h: H * 0.66 };
@@ -108,10 +119,10 @@ function brand(g, x, y, size) {
   g.beginPath(); g.arc(x + size * 0.45, y + size * 0.5, size * 0.4, 0, Math.PI * 2); g.stroke();
   g.fillStyle = C.bubble;
   g.beginPath(); g.arc(x + size * 0.45, y + size * 0.5, size * 0.25, 0, Math.PI * 2); g.fill();
-  font(g, size * 0.78, 700);
+  font(g, size * 0.8, 700, DISPLAY);
   g.fillStyle = C.text;
   g.textBaseline = "middle";
-  g.fillText("pasado", x + size * 1.05, y + size * 0.53);
+  g.fillText("pasado", x + size * 1.05, y + size * 0.55);
   g.textBaseline = "alphabetic";
 }
 // Opens → apply by → exam → results, with today's position.
@@ -157,8 +168,8 @@ function drawExam(g, W, H, fmt, { p, focus }) {
     const colW = b.w * 0.56;
     font(g, 22, 700); g.fillStyle = accent;
     g.fillText(fitLine(g, eyebrow, colW), b.x, b.y + 104);
-    const ts = fit(g, ex.name, colW, 76, 700);
-    g.fillStyle = C.text; g.fillText(ex.name, b.x, b.y + 110 + ts);
+    const ts = fit(g, ex.name, colW, 72, 700, 0.4, DISPLAY);
+    g.fillStyle = C.nameInk || C.text; g.fillText(ex.name, b.x, b.y + 110 + ts);
     font(g, 28, 600); g.fillStyle = C.text;
     g.fillText(fitLine(g, cardWhen(p, focus), colW), b.x, b.y + 110 + ts + 52);
     font(g, 26, 600); g.fillStyle = C.muted;
@@ -180,7 +191,7 @@ function drawExam(g, W, H, fmt, { p, focus }) {
   add(fmt === "story" ? 120 : 60, () => {});
   add(44, (y, k) => { font(g, 32 * k, 700); g.fillStyle = accent; g.fillText(fitLine(g, eyebrow, b.w), b.x, y + 32 * k); });
   add(14, () => {});
-  add(130, (y, k) => { const ts = fit(g, ex.name, b.w, 124 * k, 700); g.fillStyle = C.text; g.fillText(ex.name, b.x, y + ts * 0.9); });
+  add(130, (y, k) => { const ts = fit(g, ex.name, b.w, 116 * k, 700, 0.4, DISPLAY); g.fillStyle = C.nameInk || C.text; g.fillText(ex.name, b.x, y + ts * 0.9); });
   add(fmt === "story" ? 80 : 30, () => {});
   add(fmt === "story" ? 330 : 250, (y, k, hh) => { const ns = fit(g, num, b.w, hh * 1.04, 700, 0.4, faceFor(num)); g.fillStyle = s.est ? C.muted : C.num; g.fillText(num, b.x - ns * 0.02, y + hh * 0.86); });
   add(64, (y, k) => { font(g, 48 * k, 700); g.fillStyle = C.text; g.fillText(fitLine(g, unit, b.w), b.x, y + 48 * k); });
@@ -206,7 +217,7 @@ function drawList(g, W, H, fmt, { rows, title, focus }) {
   const add = (h, draw) => blocks.push({ h, draw });
   add(56, (y, k) => brand(g, b.x, y, 56 * k));
   add(fmt === "story" ? 90 : 40, () => {});
-  add(120, (y, k) => { const ts = fit(g, title, b.w, 100 * k, 700); g.fillStyle = C.text; g.fillText(title, b.x, y + ts * 0.9); });
+  add(120, (y, k) => { const ts = fit(g, title, b.w, 96 * k, 700, 0.4, DISPLAY); g.fillStyle = C.nameInk || C.text; g.fillText(title, b.x, y + ts * 0.9); });
   add(fmt === "wide" ? 10 : 30, () => {});
   for (const p of shown) {
     add(fmt === "wide" ? 86 : 136, (y, k, hh) => {
@@ -223,8 +234,8 @@ function drawList(g, W, H, fmt, { rows, title, focus }) {
       g.fillText(word, b.x + rowW - ww, y + hh * 0.55);
       font(g, 48 * k, 700, MONO); g.fillText(n, b.x + rowW - rw, y + hh * 0.55);
       const leftW = rowW - rw - 40 * k;
-      const ts = fit(g, p.ex.name, leftW, 46 * k, 700);
-      g.fillStyle = C.text; g.fillText(p.ex.name, b.x, y + hh * 0.42 + ts * 0.3);
+      const ts = fit(g, p.ex.name, leftW, 44 * k, 700, 0.4, DISPLAY);
+      g.fillStyle = C.nameInk || C.text; g.fillText(p.ex.name, b.x, y + hh * 0.42 + ts * 0.3);
       font(g, 30 * k, 500); g.fillStyle = C.muted;
       g.fillText(fitLine(g, `${{ exam: "Exam", deadline: "Apply by", results: "Results" }[focus]} · ${cardWhen(p, focus)}`, leftW), b.x, y + hh * 0.42 + ts * 0.3 + 42 * k);
     });
@@ -249,7 +260,7 @@ function layout(blocks, b) {
 
 function renderCard(kind, payload, fmt, theme = shareState.theme) {
   Object.keys(C).forEach((k) => delete C[k]);
-  Object.assign(C, CARD_THEMES[theme] || CARD_THEMES.gabi);
+  Object.assign(C, CARD_THEMES[theme] || CARD_THEMES.lisensya);
   const { w, h } = CARD_FORMATS[fmt];
   const c = document.createElement("canvas");
   c.width = w;
@@ -265,7 +276,9 @@ function renderCard(kind, payload, fmt, theme = shareState.theme) {
 async function refreshCard() {
   const img = $("sdImg");
   img.removeAttribute("src");
-  try { await Promise.all(["700 40px", "600 40px", "500 40px"].map((f) => document.fonts.load(`${f} "IBM Plex Sans"`)).concat(["700 40px", "500 40px"].map((f) => document.fonts.load(`${f} "IBM Plex Mono"`)))); } catch (_) { /* system font */ }
+  // The canvas only draws fonts that are already loaded, so load every face and weight the card uses first.
+  const faces = ["700 40px", "600 40px", "500 40px"].map((f) => `${f} "Public Sans"`).concat(["700 40px \"Libre Caslon Text\"", "700 40px \"Red Hat Mono\"", "500 40px \"Red Hat Mono\""]);
+  try { await Promise.all(faces.map((f) => document.fonts.load(f))); } catch (_) { /* system font */ }
   shareState.blob = await renderCard(shareState.kind, shareState.payload, shareState.format);
   if (img.dataset.url) URL.revokeObjectURL(img.dataset.url);
   img.dataset.url = URL.createObjectURL(shareState.blob);
