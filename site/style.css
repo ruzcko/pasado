@@ -1,85 +1,82 @@
-/* Exam names: set like a name printed on an official card. */
 @font-face {
-  font-family: "Libre Caslon Text";
-  src: url("/fonts/LibreCaslonText-Bold-latin.woff2") format("woff2");
+  font-family: "IBM Plex Sans";
+  src: url("/fonts/IBMPlexSans-latin.woff2") format("woff2");
+  font-weight: 100 700;
+  font-display: swap;
+}
+/* Numbers, dates and exam codes: typed onto the answer sheet. */
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-Medium-latin.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-Bold-latin.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
-/* Everything else: made for US government websites, so it reads plain and official. */
-@font-face {
-  font-family: "Public Sans";
-  src: url("/fonts/PublicSans-latin.woff2") format("woff2");
-  font-weight: 400 700;
-  font-display: swap;
-}
-/* Countdown numbers, dates and exam codes: equal-width digits, so the countdown doesn't wobble. */
-@font-face {
-  font-family: "Red Hat Mono";
-  src: url("/fonts/RedHatMono-latin.woff2") format("woff2");
-  font-weight: 500 700;
-  font-display: swap;
-}
 
-/* The credential you earn when you pass: civic blue, seal gold, fine security-print lines (DESIGN.md §1). */
+/* White answer-sheet paper, navy ink, a red shaded bubble. Flag blue/gold/red as accents, never all at once. */
 :root {
-  --bg: #eef2f8;
+  --bg: #ffffff; /* white answer-sheet paper (2026-10-15: no more cream) */
   --surface: #ffffff;
-  --surface-2: #e2e9f4;
-  --ink: #0d1b33;
-  --muted: #46556f;
-  --faint: #7a879c; /* icons only: too light for text */
-  --line: #ccd6e6;
-  --civic: #0b3a7a; /* the main action: primary buttons, pressed chips */
-  --on-civic: #ffffff;
+  --surface-2: #eef1f6;
+  --ink: #141c33;
+  --muted: #5c6377;
+  --faint: #8b909c; /* icons and decoration only: 2.8:1 is too light for text */
+  --line: #dde2ea;
   --red: #b82a28;
-  --blue: #2459c2;
-  --green: #1a7f48;
-  --gold: #b88a12; /* gold fills */
-  --gold-ink: #8a6508; /* gold as an icon or text colour */
-  --warm: #8a5a00;
-  --m-opens: #6b778d;
+  --gold: #c98a00;
+  --gold-ink: #ad7600; /* gold as an icon or text colour; plain --gold is too light on paper */
+  --green: #1b844b;
+  --blue: #2152c4;
+  --hero-bg: #16213e;
+  --hero-fg: #f5f7fb;
+  --hero-muted: #b4bcd2;
+  --tile: #22305a;
+  --tile-line: #33427a;
+  --m-opens: #7b8297;
   --m-deadline: var(--red);
   --m-exam: var(--blue);
   --m-results: var(--green);
-  --hot: var(--red);
-  --focus: #2459c2;
-  --shadow: 0 1px 2px rgba(13, 27, 51, .06), 0 4px 16px rgba(13, 27, 51, .05);
-  --card-shadow: 0 2px 4px rgba(13, 27, 51, .12), 0 12px 32px rgba(11, 58, 122, .18);
-  /* The ID card (countdown box): civic blue in both themes. */
-  --hero-bg: #0b3a7a;
-  --hero-fg: #ffffff;
-  --hero-muted: #c3d3ee;
-  --hero-num: #f2c94c;
-  --tile: #0e4386;
-  --tile-line: #c9a54a; /* thin gold frame around each number */
-  --hero-line: rgba(255, 255, 255, .28);
-  --guilloche: rgba(255, 255, 255, .07); /* security-print lines */
-  --bubble: #b82a28; /* the logo's shaded answer bubble, both themes */
-  --on-gold: #1a1405; /* text on a gold fill, both themes */
-  --scrim: rgba(8, 17, 31, .55); /* behind open dialogs */
+  --hot: #b82a28;
+  --warm: #8f5600;
+  --focus: #2152c4;
+  --shadow: 0 1px 2px rgba(20, 28, 51, .06), 0 4px 16px rgba(20, 28, 51, .05);
+  --bubble: #b82a28; /* the shaded answer bubble: same red in both themes */
+  --on-gold: #1a1405; /* text on a gold fill (pressed "My exams" chip), both themes */
+  --scrim: rgba(10, 14, 26, .5); /* behind open dialogs */
   --radius-box: 8px; /* buttons and tabs: the boxes on a printed form */
-  --display: "Libre Caslon Text", Georgia, "Times New Roman", serif;
-  --sans: "Public Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono: "Red Hat Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #08111f; --surface: #0f1b30; --surface-2: #16243e; --ink: #e9eef7; --muted: #9fb0cc; --faint: #6b7d9c; --line: #23324d;
-    --civic: #f2c94c; --on-civic: #08111f; --red: #ff7b6b; --blue: #8fb4ff; --green: #4cd18a; --gold: #f2c94c; --gold-ink: #f2c94c; --warm: #ffb547;
-    --m-opens: #a3b0c8; --focus: #8fb4ff; --hero-bg: #0f2b57; --tile: #13386e;
-    --shadow: 0 1px 2px rgba(0, 0, 0, .3); --card-shadow: 0 2px 4px rgba(0, 0, 0, .35), 0 12px 32px rgba(0, 0, 0, .35); color-scheme: dark;
+    --bg: #0c1120; --surface: #131a2d; --surface-2: #1b2339; --ink: #eef1f7; --muted: #a3aabb; --faint: #6e758a; --line: #252e47;
+    --red: #ff6b5e; --gold: #ffc53d; --green: #4cd18a; --blue: #85a9ff;
+    --hero-bg: #eef1f6; --hero-fg: #141c33; --hero-muted: #525a6d; --tile: #e1e6ef; --tile-line: #cdd4e0;
+    --m-opens: #8d94a8; --hot: #ff6b5e; --warm: #ffb547; --focus: #85a9ff; --gold-ink: #ffc53d;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3); color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #08111f; --surface: #0f1b30; --surface-2: #16243e; --ink: #e9eef7; --muted: #9fb0cc; --faint: #6b7d9c; --line: #23324d;
-  --civic: #f2c94c; --on-civic: #08111f; --red: #ff7b6b; --blue: #8fb4ff; --green: #4cd18a; --gold: #f2c94c; --gold-ink: #f2c94c; --warm: #ffb547;
-  --m-opens: #a3b0c8; --focus: #8fb4ff; --hero-bg: #0f2b57; --tile: #13386e;
-  --shadow: 0 1px 2px rgba(0, 0, 0, .3); --card-shadow: 0 2px 4px rgba(0, 0, 0, .35), 0 12px 32px rgba(0, 0, 0, .35); color-scheme: dark;
+  --bg: #0c1120; --surface: #131a2d; --surface-2: #1b2339; --ink: #eef1f7; --muted: #a3aabb; --faint: #6e758a; --line: #252e47;
+  --red: #ff6b5e; --gold: #ffc53d; --green: #4cd18a; --blue: #85a9ff;
+  --hero-bg: #eef1f6; --hero-fg: #141c33; --hero-muted: #525a6d; --tile: #e1e6ef; --tile-line: #cdd4e0;
+  --m-opens: #8d94a8; --hot: #ff6b5e; --warm: #ffb547; --focus: #85a9ff; --gold-ink: #ffc53d;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3); color-scheme: dark;
 }
 
-/* On the blue card the milestone colours are the bright versions, in both themes. */
-.hero { --red: #ff9a8c; --hot: #ff9a8c; --gold-ink: #f2c94c; --blue: #a9c8ff; --green: #7fe3a8; --m-opens: #c3cde0; --m-deadline: #ff9a8c; --m-exam: #a9c8ff; --m-results: #7fe3a8; --warm: #ffc979; }
+/* In light mode the hero is navy, so its milestone colours are the bright ones from the dark palette. */
+.hero { --red: #ff6b5e; --hot: #ff6b5e; --gold-ink: #ffc53d; --blue: #85a9ff; --green: #4cd18a; --m-opens: #8d94a8; --m-deadline: #ff6b5e; --m-exam: #85a9ff; --m-results: #4cd18a; }
+/* In dark mode the hero is a sheet of white paper, so it keeps the light palette's ink colours (results green a shade darker). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero { --red: #b82a28; --hot: #b82a28; --gold: #c98a00; --gold-ink: #ad7600; --green: #187543; --blue: #2152c4; --m-opens: #7b8297; --m-deadline: #b82a28; --m-exam: #2152c4; --m-results: #187543; --surface: #ffffff; --warm: #8f5600; }
+}
+:root[data-theme="dark"] .hero { --red: #b82a28; --hot: #b82a28; --gold: #c98a00; --gold-ink: #ad7600; --green: #187543; --blue: #2152c4; --m-opens: #7b8297; --m-deadline: #b82a28; --m-exam: #2152c4; --m-results: #187543; --surface: #ffffff; --warm: #8f5600; }
 
 * { box-sizing: border-box; }
 html { scroll-padding-top: 150px; -webkit-text-size-adjust: 100%; }
@@ -100,7 +97,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .top-row { display: flex; align-items: center; gap: 12px; }
 .brand { display: flex; align-items: center; gap: 8px; min-height: 44px; text-decoration: none; }
 .logo { width: 28px; height: 28px; color: var(--ink); flex: none; }
-.wordmark { font: 700 23px/1 var(--display); letter-spacing: -.01em; }
+.wordmark { font-weight: 700; font-size: 22px; letter-spacing: -.04em; }
 .tagline { color: var(--muted); font-size: 13px; padding-left: 12px; border-left: 1px solid var(--line); }
 .top-right { margin-left: auto; display: flex; gap: 8px; }
 .icon-btn {
@@ -110,50 +107,55 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .icon-btn svg { width: 18px; height: 18px; }
 @media (max-width: 520px) { .tagline { display: none; } }
 
-/* ---- hero: the ID card ---- */
+/* ---- hero ---- */
 .hero {
-  margin: 10px 0 14px; padding: 22px 22px 18px; border-radius: 18px; color: var(--hero-fg); position: relative; box-shadow: var(--card-shadow);
-  /* Security-print lines in the top-right corner, fading out. Drawn as background, so no overflow: hidden is needed
-     (that once cut off the "Add to calendar" menu). */
+  margin: 10px 0 14px; padding: 22px 22px 18px; border-radius: 22px;
+  background: var(--hero-bg); color: var(--hero-fg); position: relative;
+  /* No overflow: hidden here: it cut off the "Add to calendar" menu, which opens past the hero's edge. */
+}
+.hero::after { /* a column of answer bubbles, one shaded */
+  content: ""; position: absolute; right: 18px; top: 18px; width: 14px; height: 74px; opacity: .5;
   background:
-    radial-gradient(circle at 104% -12%, transparent 0 150px, var(--hero-bg) 300px),
-    repeating-radial-gradient(circle at 104% -12%, transparent 0 7px, var(--guilloche) 7px 8px),
-    var(--hero-bg);
+    radial-gradient(circle at 7px 7px, transparent 5px, var(--hero-muted) 5.5px, var(--hero-muted) 6.5px, transparent 7px) 0 0 / 14px 20px repeat-y;
+  -webkit-mask: linear-gradient(#000, #000); pointer-events: none;
+}
+.hero::before {
+  content: ""; position: absolute; right: 18px; top: 38px; width: 14px; height: 14px; border-radius: 50%; background: var(--bubble);
 }
 .hero-loading, .hero .empty { margin: 8px 0; color: var(--hero-muted); }
-.eyebrow { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--hero-muted); }
+.eyebrow { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--hero-muted); padding-right: 40px; }
 .eyebrow .star-mark { color: var(--gold-ink); }
-.hero h1 { margin: 8px 0 0; font: 700 clamp(28px, 6vw, 42px)/1.08 var(--display); letter-spacing: -.01em; }
+.hero h1 { margin: 6px 0 0; font-size: clamp(30px, 6.4vw, 46px); line-height: 1.04; letter-spacing: -.035em; font-weight: 700; padding-right: 32px; }
 .hero h1 button { all: unset; cursor: pointer; }
 .hero .sub { margin: 6px 0 0; color: var(--hero-muted); font-size: 14px; }
 .clock { display: flex; gap: 8px; margin: 18px 0 6px; }
-.unit { background: var(--tile); border: 1px solid var(--tile-line); border-radius: 12px; padding: 10px 8px 8px; min-width: 0; flex: 1; max-width: 120px; text-align: center; }
-.unit .n { display: block; font: 700 clamp(30px, 8vw, 48px)/1 var(--mono); letter-spacing: -.04em; font-variant-numeric: tabular-nums; color: var(--hero-num); }
-.unit .n.word { font-family: var(--sans); letter-spacing: -.02em; color: var(--hero-fg); }
+.unit { background: var(--tile); border: 1px solid var(--tile-line); border-radius: 14px; padding: 10px 8px 8px; min-width: 0; flex: 1; max-width: 120px; text-align: center; }
+.unit .n { display: block; font: 700 clamp(30px, 8vw, 50px)/1 var(--mono); letter-spacing: -.06em; font-variant-numeric: tabular-nums; }
+.unit .n.word { font-family: var(--sans); letter-spacing: -.03em; }
 .unit .l { display: block; margin-top: 4px; font-size: 11px; color: var(--hero-muted); text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
 .hero .when { margin: 10px 0 0; font-size: 15px; font-weight: 600; }
 .hero .when small { display: block; font-weight: 500; color: var(--hero-muted); font-size: 13px; }
 .hero.est .unit .n { opacity: .7; }
-.steps { list-style: none; margin: 16px 0 0; padding: 14px 0 0; border-top: 1px solid var(--hero-line); display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.steps { list-style: none; margin: 16px 0 0; padding: 14px 0 0; border-top: 1px solid var(--tile-line); display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
 .steps li { min-width: 0; }
 .steps .k { display: flex; align-items: center; gap: 6px; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; font-weight: 700; color: var(--hero-muted); }
 .steps .k i { width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--c); flex: none; }
 .steps .done .k i { background: var(--c); }
-.steps .v { display: block; font: 500 14px/1.5 var(--mono); letter-spacing: -.01em; margin-top: 2px; }
+.steps .v { display: block; font: 500 14px/1.5 var(--mono); letter-spacing: -.02em; margin-top: 2px; }
 .steps .r { display: block; font-size: 12px; color: var(--hero-muted); }
 .steps .is-target .v { color: var(--c); }
 .steps .hot .r { color: var(--red); font-weight: 700; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-.hero-actions .pill { background: var(--tile); border-color: var(--hero-line); color: var(--hero-fg); }
+.hero-actions .pill { background: var(--tile); border-color: var(--tile-line); color: var(--hero-fg); }
 .hero-actions .pill.on { background: var(--hero-fg); color: var(--hero-bg); border-color: var(--hero-fg); }
 .hero-actions .pill.ghost { background: transparent; }
-.switcher { display: flex; gap: 8px; flex-wrap: wrap; margin: -4px 0 14px; }
-.switcher button { font-family: var(--mono); border: 1px solid var(--hero-line); background: transparent; color: var(--hero-muted); border-radius: var(--radius-box); height: 36px; min-width: 36px; padding: 0 12px; font-size: 13px; font-weight: 700; }
+.switcher { display: flex; gap: 8px; flex-wrap: wrap; margin: -4px 40px 14px 0; }
+.switcher button { font-family: var(--mono); border: 1px solid var(--tile-line); background: transparent; color: var(--hero-muted); border-radius: var(--radius-box); height: 36px; min-width: 36px; padding: 0 12px; font-size: 13px; font-weight: 700; }
 .switcher button[aria-selected="true"] { background: var(--hero-fg); color: var(--hero-bg); border-color: var(--hero-fg); }
 @media (max-width: 560px) {
-  .hero { padding: 18px 16px 16px; border-radius: 16px; }
+  .hero { padding: 18px 16px 16px; border-radius: 18px; }
   .clock { gap: 6px; }
-  .unit { padding: 8px 4px 6px; border-radius: 10px; }
+  .unit { padding: 8px 4px 6px; border-radius: 12px; }
   .steps { grid-template-columns: 1fr 1fr; row-gap: 12px; }
 }
 
@@ -176,7 +178,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .chips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding: 6px 0 8px; margin: -6px 0; }
 .chips::-webkit-scrollbar { display: none; }
 .chip { flex: none; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; height: 32px; padding: 0 12px; font-size: 13px; font-weight: 600; color: var(--muted); white-space: nowrap; }
-.chip[aria-pressed="true"] { background: var(--civic); border-color: var(--civic); color: var(--on-civic); }
+.chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 .chip .n { font-weight: 500; margin-left: 2px; }
 .chip.mine[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--on-gold); }
 .chip.sep { margin-left: 6px; }
@@ -194,10 +196,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .month h2 { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .month .n { font-size: 12px; color: var(--muted); }
 .rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-.row { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+.row { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); }
 .row-main { display: grid; grid-template-columns: 76px 1fr auto; gap: 14px; align-items: center; padding: 12px 12px 12px 12px; cursor: pointer; }
 .cd { width: 76px; height: 64px; border-radius: 12px; background: var(--surface-2); display: grid; place-content: center; text-align: center; }
-.cd .big { font: 700 26px/1 var(--mono); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.cd .big { font: 700 26px/1 var(--mono); letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
 .cd .big.word { font-family: var(--sans); font-size: 19px; letter-spacing: -.02em; }
 .cd .small { font-size: 11px; color: var(--muted); font-weight: 600; margin-top: 3px; }
 .row.u-hot .cd { background: color-mix(in srgb, var(--hot) 14%, var(--surface)); }
@@ -208,7 +210,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .row.is-now .cd .small { color: var(--bg); opacity: .85; }
 .info { min-width: 0; }
 .info .t { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-.info .name { font: 700 17px/1.25 var(--display); }
+.info .name { font-weight: 700; font-size: 16px; letter-spacing: -.01em; }
 .info .code { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--muted); background: var(--surface-2); border-radius: 6px; padding: 1px 6px; }
 .info .what { font-size: 13.5px; color: var(--ink); margin-top: 2px; }
 .info .what .sw { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: 1px; }
@@ -262,7 +264,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .pill, .ql { display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 12px; border-radius: var(--radius-box); border: 1px solid var(--line); background: var(--surface); font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; }
 .pill svg, .ql svg { width: 16px; height: 16px; }
-.ql.primary { background: var(--civic); color: var(--on-civic); border-color: var(--civic); }
+.ql.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 .cal-menu { position: relative; }
 .cal-menu summary { list-style: none; }
 .cal-menu summary::-webkit-details-marker { display: none; }
@@ -276,7 +278,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .empty-state { text-align: center; padding: 40px 16px; color: var(--muted); }
 .empty-state h3 { color: var(--ink); margin: 0 0 4px; }
 .btn { border: 1px solid var(--line); background: var(--surface); border-radius: 12px; height: 40px; padding: 0 16px; font-weight: 600; font-size: 14px; }
-.btn.primary { background: var(--civic); color: var(--on-civic); border-color: var(--civic); }
+.btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 
 /* ---- tap targets ----
    Apple's guideline is 44 x 44 px. Smaller-looking buttons get an invisible 44px hit area, centred on them.
@@ -309,8 +311,8 @@ dialog.sheet::backdrop { background: var(--scrim); }
 /* Card themes: one even row of four, swatch above the name, so they never wrap on a phone. */
 .sd-themes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: 100%; max-width: 420px; }
 .sd-themes button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius-box); min-height: 60px; padding: 6px 4px; font-size: 13px; font-weight: 600; min-width: 0; }
-.sd-themes button[aria-checked="true"] { border-color: var(--civic); box-shadow: inset 0 0 0 1px var(--civic); }
-.sd-themes .swatch { width: 24px; height: 24px; border-radius: 50%; position: relative; box-shadow: inset 0 0 0 1px var(--line); } /* outline: Puti's white swatch on a white button */
+.sd-themes button[aria-checked="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+.sd-themes .swatch { width: 24px; height: 24px; border-radius: 50%; position: relative; box-shadow: inset 0 0 0 1px var(--line); } /* outline, so a white swatch shows on a white button */
 .sd-themes .swatch i { position: absolute; right: 2px; bottom: 2px; width: 9px; height: 9px; border-radius: 50%; }
 .sd-actions { display: flex; gap: 8px; padding: 6px 16px 4px; }
 .sd-actions .btn { flex: 1; }
@@ -321,7 +323,7 @@ dialog.sheet::backdrop { background: var(--scrim); }
 
 /* ---- credits page ---- */
 .doc { max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; }
-.doc h1 { font-family: var(--display); letter-spacing: -.01em; }
+.doc h1 { letter-spacing: -.03em; }
 .doc h2 { font-size: 17px; margin-top: 28px; }
 
 /* Stars are Tabler icons now (outline = not picked, filled = picked). */

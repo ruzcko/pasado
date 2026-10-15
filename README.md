@@ -77,7 +77,7 @@ python pipeline/dev.py      # http://localhost:8774, also answers /nurses like p
 ## Credits
 
 Exam dates: PRC's public Schedule of Examinations (not affiliated with PRC).
-Public Sans, Libre Caslon Text and Red Hat Mono (OFL 1.1), Tabler Icons (MIT), resvg-wasm (MPL-2.0). See `site/credits.html`.
+IBM Plex Sans and Plex Mono (OFL 1.1), resvg-wasm (MPL-2.0). See `site/credits.html`.
 
 ## License
 

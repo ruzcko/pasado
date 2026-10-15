@@ -1,7 +1,7 @@
 // GET /og              → preview image for the home page
 // GET /og?e=nurses     → one exam's countdown
 // GET /og?my=nurses,cpa → a shared list
-// A 1200 x 630 PNG drawn as SVG and rendered with resvg (lib/og, MPL-2.0) in Public Sans, Libre Caslon Text and Red Hat Mono (OFL).
+// A 1200 x 630 PNG drawn as SVG and rendered with resvg (lib/og, MPL-2.0) in IBM Plex Sans and Plex Mono (OFL).
 // The countdown changes daily, so pages link to it with &d=<date> and the edge caches each day's image.
 import { initWasm, Resvg } from "../lib/og/resvg.mjs";
 import wasm from "../lib/og/resvg.wasm";
@@ -12,41 +12,32 @@ let ready = null, fonts = null;
 
 async function setup(env, origin) {
   ready ??= initWasm(wasm);
-  fonts ??= Promise.all(["PublicSans-Medium.ttf", "PublicSans-Bold.ttf", "RedHatMono-Bold.ttf", "LibreCaslonText-Bold.ttf"].map((f) =>
+  fonts ??= Promise.all(["IBMPlexSans-Medium.ttf", "IBMPlexSans-Bold.ttf", "IBMPlexMono-Bold.ttf"].map((f) =>
     env.ASSETS.fetch(new URL(`/fonts/${f}`, origin)).then((r) => r.arrayBuffer()).then((b) => new Uint8Array(b))));
   await ready;
   return fonts;
 }
 
-// No text measuring in SVG land, so estimate (measured on every exam name, with headroom):
-// Public Sans ~0.5 em per character at 500 and ~0.51 at 700 (0.6 at most); Libre Caslon Bold ~0.55 (0.68 in capitals);
-// Red Hat Mono exactly 0.6.
-const width = (text, size, bold, mono, serif) => String(text).length * size * (mono ? 0.6 : serif ? 0.6 : bold ? 0.56 : 0.5);
-// Numbers and dates are set in the mono face and exam names in the serif, as on the site.
+// No text measuring in SVG land, so estimate (measured on exam names, with headroom):
+// Plex Sans is ~0.55 em per character at most at 700 and ~0.5 at 500; Plex Mono is exactly 0.6.
+const width = (text, size, bold, mono) => String(text).length * size * (mono ? 0.6 : bold ? 0.56 : 0.5);
+// Numbers and dates are set in the mono face, as on the site.
 const isNum = (t) => /^[~\d]/.test(String(t));
-const MONO = 'font-family="Red Hat Mono"';
-const SERIF = 'font-family="Libre Caslon Text"';
-const fit = (text, maxW, size, bold, min = 26, mono = false, serif = false) => {
+const MONO = 'font-family="IBM Plex Mono"';
+const fit = (text, maxW, size, bold, min = 26, mono = false) => {
   let s = size;
-  while (s > min && width(text, s, bold, mono, serif) > maxW) s -= 2;
+  while (s > min && width(text, s, bold, mono) > maxW) s -= 2;
   return s;
-};
-// The ID card's security-print lines: fine circles from the top-right corner, fading out.
-const guilloche = () => {
-  let out = `<g fill="none" stroke="${C.text}" stroke-width="1.3">`;
-  for (let r = 12; r < 380; r += 12) out += `<circle cx="${W + 40}" cy="-30" r="${r}" stroke-opacity="${(0.12 * (1 - r / 380)).toFixed(3)}"/>`;
-  return out + "</g>";
 };
 const txt = (x, y, size, weight, fill, s, extra = "") =>
   `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" fill="${fill}" ${extra}>${esc(s)}</text>`;
 
 function frame(body) {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" font-family="Public Sans">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" font-family="IBM Plex Sans">
   <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${C.bg1}"/><stop offset="1" stop-color="${C.bg2}"/></linearGradient></defs>
   <rect width="${W}" height="${H}" fill="url(#bg)"/>
-  ${guilloche()}
   <circle cx="${X + 16}" cy="80" r="15" fill="none" stroke="${C.text}" stroke-width="3.5"/><circle cx="${X + 16}" cy="80" r="9" fill="${C.bubble}"/>
-  ${txt(X + 44, 91, 32, 700, C.text, "pasado", SERIF)}
+  ${txt(X + 44, 91, 32, 700, C.text, "pasado", 'letter-spacing="-1"')}
   ${body}
 </svg>`;
 }
@@ -77,10 +68,10 @@ function examSvg(p, now) {
   const [num, unit] = countdown(p, now);
   const leftW = 620;
   const eyebrow = [code(ex), s.phase, ex.label || "Board exam"].filter(Boolean).join(" · ").toUpperCase();
-  const ts = fit(ex.name, leftW, 70, true, 40, false, true);
+  const ts = fit(ex.name, leftW, 76, true, 40);
   const ns = fit(num, 420, 230, true, 110, isNum(num));
   let body = txt(X, 176, 22, 700, C.exam, eyebrow, 'letter-spacing="2"');
-  body += txt(X, 186 + ts, ts, 700, C.text, ex.name, SERIF);
+  body += txt(X, 186 + ts, ts, 700, C.text, ex.name, 'letter-spacing="-2"');
   const when = whenText(s);
   body += txt(X, 186 + ts + 58, fit(when, leftW, 32, true, 22), 700, C.text, when);
   body += txt(X, 186 + ts + 102, 28, 500, C.muted, cheer(ex));
@@ -93,13 +84,13 @@ function examSvg(p, now) {
 
 function listSvg(rows, now) {
   const shown = rows.slice(0, 4);
-  let body = txt(X, 168, 54, 700, C.text, "Exams to watch", SERIF);
+  let body = txt(X, 168, 56, 700, C.text, "Exams to watch", 'letter-spacing="-2"');
   shown.forEach((r, i) => {
     const y = 200 + i * 86;
     const [num, unit] = countdown(r, now);
     const right = /^\d+$/.test(num) ? `${num} ${unit.split(" ")[0]}` : num.startsWith("~") ? `${num} ${unit.startsWith("month") ? "mo" : "wk"}` : num;
     body += `<line x1="${X}" y1="${y}" x2="${W - X}" y2="${y}" stroke="${C.line}" stroke-width="2"/>`;
-    body += txt(X, y + 46, 32, 700, C.text, r.ex.name.length > 32 ? r.ex.name.slice(0, 31) + "…" : r.ex.name, SERIF);
+    body += txt(X, y + 46, 34, 700, C.text, r.ex.name.length > 34 ? r.ex.name.slice(0, 33) + "…" : r.ex.name);
     body += txt(X, y + 76, 21, 500, C.muted, `Exam · ${whenText(r.s)}`);
     // "3 days": the number in mono, the word in sans, as on the site.
     const [, n = "", word = right] = right.match(/^([~\d]+)(.*)$/) || [];
@@ -111,8 +102,8 @@ function listSvg(rows, now) {
 }
 
 function homeSvg(next, now) {
-  let body = txt(X, 260, 80, 700, C.text, "Your exam,", SERIF) +
-    txt(X, 356, 80, 700, C.num, "counting down.", SERIF) +
+  let body = txt(X, 260, 84, 700, C.text, "Your exam,", 'letter-spacing="-3"') +
+    txt(X, 356, 84, 700, C.num, "counting down.", 'letter-spacing="-3"') +
     txt(X, 426, 30, 500, C.muted, "PRC boards, the Bar and the Civil Service Exam. No ads.");
   if (next) {
     const [num, unit] = countdown(next, now);
@@ -127,7 +118,7 @@ export async function onRequestGet({ request, env, waitUntil }) {
   const hit = await cache.match(request);
   if (hit) return hit;
   const url = new URL(request.url);
-  const [[medium, bold, mono, serif], data] = await Promise.all([setup(env, url.origin), loadData(env, url.origin)]);
+  const [[medium, bold, mono], data] = await Promise.all([setup(env, url.origin), loadData(env, url.origin)]);
   const now = Date.now();
   const e = cleanKey(url.searchParams.get("e"));
   const my = (url.searchParams.get("my") || "").split(",").map(cleanKey).filter(Boolean).slice(0, 30);
@@ -140,7 +131,7 @@ export async function onRequestGet({ request, env, waitUntil }) {
     svg = rows.length ? listSvg(rows, now) : homeSvg(nextOverall(data, now), now);
   } else svg = homeSvg(nextOverall(data, now), now);
   const png = new Resvg(svg, {
-    font: { fontBuffers: [medium, bold, mono, serif], defaultFontFamily: "Public Sans", loadSystemFonts: false },
+    font: { fontBuffers: [medium, bold, mono], defaultFontFamily: "IBM Plex Sans", loadSystemFonts: false },
     fitTo: { mode: "width", value: W },
   }).render().asPng();
   const res = new Response(png, { headers: { "content-type": "image/png", "cache-control": "public, max-age=86400" } });
