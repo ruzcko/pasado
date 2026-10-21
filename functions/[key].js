@@ -2,6 +2,7 @@
 // Anything that isn't an exam key falls through to the static files (and their 404 page).
 import { cleanKey, loadData } from "../lib/exam.js";
 import { withMeta } from "../lib/meta.js";
+import { secure } from "../lib/security.js";
 
 export async function onRequestGet(ctx) {
   const key = cleanKey(ctx.params.key);
@@ -10,5 +11,5 @@ export async function onRequestGet(ctx) {
     const data = await loadData(ctx.env, url.origin);
     if (key && key === ctx.params.key && data.exams.some((x) => x.key === key)) return withMeta(ctx, { key });
   } catch (_) { /* fall through */ }
-  return ctx.env.ASSETS.fetch(ctx.request);
+  return secure(await ctx.env.ASSETS.fetch(ctx.request));
 }

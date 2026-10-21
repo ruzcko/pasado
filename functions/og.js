@@ -116,14 +116,21 @@ function homeSvg(next, now) {
 }
 
 export async function onRequestGet({ request, env, waitUntil }) {
-  const cache = caches.default;
-  const hit = await cache.match(request);
-  if (hit) return hit;
   const url = new URL(request.url);
-  const [[medium, bold, mono], data] = await Promise.all([setup(env, url.origin), loadData(env, url.origin)]);
-  const now = Date.now();
   const e = cleanKey(url.searchParams.get("e"));
   const my = (url.searchParams.get("my") || "").split(",").map(cleanKey).filter(Boolean).slice(0, 30);
+  const d = /^\d{4}-\d{2}-\d{2}$/.test(url.searchParams.get("d") || "") ? url.searchParams.get("d") : "";
+  // Cache on the cleaned params only, so junk in the query can't force a fresh render.
+  const key = new URL("/og", url.origin);
+  if (e) key.searchParams.set("e", e);
+  if (my.length) key.searchParams.set("my", my.join(","));
+  if (d) key.searchParams.set("d", d);
+  const cacheKey = new Request(key.toString(), { method: "GET" });
+  const cache = caches.default;
+  const hit = await cache.match(cacheKey);
+  if (hit) return hit;
+  const [[medium, bold, mono], data] = await Promise.all([setup(env, url.origin), loadData(env, url.origin)]);
+  const now = Date.now();
   let svg;
   const ex = e && data.exams.find((x) => x.key === e);
   const p = ex && pick(ex, now);
@@ -137,6 +144,6 @@ export async function onRequestGet({ request, env, waitUntil }) {
     fitTo: { mode: "width", value: W },
   }).render().asPng();
   const res = new Response(png, { headers: { "content-type": "image/png", "cache-control": "public, max-age=86400" } });
-  waitUntil(cache.put(request, res.clone()));
+  waitUntil(cache.put(cacheKey, res.clone()));
   return res;
 }
