@@ -82,9 +82,9 @@ python docs/make_screenshots.py   # refresh the README screenshots after a visua
 - Build command: `python3 pipeline/build.py`. Output directory: `site`.
 - `functions/` adds what static files can't: `/<exam>` routes and link previews (title,
   description and a 1200×630 countdown image from `functions/og.js`, drawn with resvg).
-- `.github/workflows/schedule.yml` would read PRC twice a day and commit changes, but it's disabled:
-  PRC refuses connections from GitHub's servers. For now, run `pipeline/prc.py` from a PC and push;
-  the push rebuilds the site.
+- `pipeline/update.sh` reads PRC, commits any change to `main` and pushes, which rebuilds the site.
+  PRC refuses connections from cloud servers (GitHub Actions included), so it runs on a schedule
+  (twice a day) from an ordinary connection, in a clone that stays on `main`.
 - The ruzcko.dev zone sets a 4-hour browser cache on static files, so Pages builds stamp
   `icons.js`, `app.js`, `share.js` and `style.css` with `?v=<hash>`.
 
