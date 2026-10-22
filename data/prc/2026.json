@@ -1,9 +1,9 @@
 {
  "year": 2026,
  "source": "https://www.prc.gov.ph/2026-schedule-examination",
- "updated_at": "2026-10-12T01:25:31Z",
- "hash": "24bdc3ac97ef6195",
- "count": 158,
+ "updated_at": "2026-10-21T15:05:04Z",
+ "hash": "d93b604fd01238ff",
+ "count": 160,
  "unknown_names": [],
  "rows": [
   {
@@ -2939,6 +2939,10 @@
    "variant": null,
    "cble": false,
    "days": [
+    "2026-09-11",
+    "2026-09-12"
+   ],
+   "orig_days": [
     "2026-08-29",
     "2026-08-30"
    ],
@@ -2973,10 +2977,26 @@
    "opens": "2026-05-15",
    "deadline": "2026-07-15",
    "results": "2026-09-18",
-   "notices": [],
+   "notices": [
+    {
+     "text": "Resolution No. 2240 s.2026 - Cancellation of the Nurses Licensure Examination in Pampanga and Cabanatuan on August 29 and 30, 2026 and Rescheduling the Same to September 11 and 12, 2026 (Rescheduled to September 12, 2026)",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2240 Cancellation Of The Nurses Licensure Examination In Pampanga And Cabanatuan On August 29 And 30, 2026.pdf"
+    },
+    {
+     "text": "Resolution No. 2241 s.2026 - Cancellation of the Second Day of the Nurses Licensure Examination in the National Capital Region on August 30, 2026 and Rescheduling Thereof to September 12, 2026",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2240 Cancellation Of The Nurses Licensure Examination In Pampanga And Cabanatuan On August 29 And 30, 2026.pdf"
+    }
+   ],
    "program": "https://www.prc.gov.ph/sites/default/files/exam progam aug 2026 nle (nursing) signed.pdf",
    "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Nursing.pdf",
-   "id": "nurses-2026-08-29"
+   "id": "nurses-2026-08-29",
+   "changed": {
+    "at": "2026-10-21T15:05:04Z",
+    "from": [
+     "2026-08-29",
+     "2026-08-30"
+    ]
+   }
   },
   {
    "seq": "46",
@@ -3466,8 +3486,7 @@
    ],
    "centers": [
     "NCR",
-    "Cebu",
-    "Davao"
+    "Cebu"
    ],
    "opens": "2026-06-30",
    "deadline": "2026-08-31",
@@ -3476,6 +3495,10 @@
     {
      "text": "Resolution No. 2176 - Designating Cebu City as an Additional Testing Center for the September 2026 Optometrists Licensure Examination (Written Phase)",
      "url": "https://www.prc.gov.ph/sites/default/files/2026-2176 Designating Cebu City As An Additional Testing Center For The September 2026 Optometrists Licensure.pdf"
+    },
+    {
+     "text": "Resolution No. 2249(A) - Removing Davao as A Testing Center for the September 2026 Optometrists Licensure Examination (Written Phase)",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2249(A) Removing Davao As A Testing Center For The September 2026 Optometrists Licensure Examination.pdf"
     }
    ],
    "program": "https://www.prc.gov.ph/sites/default/files/Exam Program September 2026 Optometrists Licensure Examination.pdf",
@@ -3912,14 +3935,18 @@
     "NCR",
     "Cagayan de Oro",
     "Cebu",
-    "Davao",
     "Lucena",
     "Pampanga"
    ],
    "opens": "2026-07-22",
    "deadline": "2026-09-21",
    "results": "2026-10-26",
-   "notices": [],
+   "notices": [
+    {
+     "text": "Resolution No. 2262 - Removing Davao as a Testing Center for the October 2026 Metallurgical Engineers Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/Reso 2262 s2026 Removing Davao as a Testing Center for the Oct 2026 Metallurgical Engr LE.pdf"
+    }
+   ],
    "program": "https://www.prc.gov.ph/sites/default/files/Oct 2026 MetELE program with memo 2020-57.pdf",
    "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-MetallurgicalEngineering.pdf",
    "id": "metallurgical-engineers-2026-10-20"
@@ -4101,6 +4128,7 @@
      "url": "https://www.prc.gov.ph/sites/default/files/2026-2178 Designating Cebu City As An Additional Testing Center For The November 2026 Aeronautical Engineers.pdf"
     }
    ],
+   "program": "https://www.prc.gov.ph/sites/default/files/exam program nov 2026 (aero).pdf",
    "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-AeronauticalEngineering.pdf",
    "id": "aeronautical-engineers-2026-11-09"
   },
@@ -4155,10 +4183,46 @@
    "opens": "2026-08-14",
    "deadline": "2026-10-13",
    "results": "2026-11-17",
-   "notices": [],
+   "notices": [
+    {
+     "text": "Resolution No. 2260 - Designating Tacloban City as an Additional Testing Center for the November 2026 Nutritionist-Dietitians Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2260 Designating Tacloban City as an Additional Testing Center for the November 2026 Nutritionists-Dietitians Licensure.pdf"
+    }
+   ],
    "program": "https://www.prc.gov.ph/sites/default/files/080326 exam program nov 2026 nutri.pdf",
    "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-NutritionDietetics.pdf",
    "id": "nutritionist-dietitians-2026-11-12"
+  },
+  {
+   "seq": null,
+   "name": "Professional Mechanical Engineers (Technical Evaluation)",
+   "key": "professional-mechanical-engineers",
+   "phase": "Technical evaluation",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-11-13",
+    "2026-11-14",
+    "2026-11-15",
+    "2026-11-16",
+    "2026-11-17",
+    "2026-11-18",
+    "2026-11-19",
+    "2026-11-20",
+    "2026-11-21",
+    "2026-11-22"
+   ],
+   "centers": [
+    "Dubai",
+    "United Arab Emirates"
+   ],
+   "opens": "2026-10-01",
+   "deadline": "2026-10-31",
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/2026-2252 Scheduling The Professional Mechanical Engineers Technical Evaluation In Dubai, United Arab Emir.pdf",
+   "id": "professional-mechanical-engineers-technical-evaluation-2026-11-13",
+   "first_seen": "2026-10-21T15:05:04Z"
   },
   {
    "seq": "75",
@@ -4407,6 +4471,35 @@
   },
   {
    "seq": null,
+   "name": "Professional Electrical Engineers (Oral Examination)",
+   "key": "professional-electrical-engineers",
+   "phase": "Oral",
+   "variant": null,
+   "cble": false,
+   "days": [
+    "2026-11-29",
+    "2026-11-30",
+    "2026-12-01",
+    "2026-12-02",
+    "2026-12-03",
+    "2026-12-04",
+    "2026-12-05",
+    "2026-12-06"
+   ],
+   "centers": [
+    "Dubai",
+    "United Arab Emirates"
+   ],
+   "opens": "2026-10-15",
+   "deadline": "2026-11-15",
+   "results": null,
+   "notices": [],
+   "program": "https://www.prc.gov.ph/sites/default/files/2026-2259 Scheduling The PEE Oral Examination In Dubai United Arab Emirates.pdf",
+   "id": "professional-electrical-engineers-oral-2026-11-29",
+   "first_seen": "2026-10-21T15:05:04Z"
+  },
+  {
+   "seq": null,
    "name": "Professional Mechanical Engineers (Technical Evaluation)",
    "key": "professional-mechanical-engineers",
    "phase": "Technical evaluation",
@@ -4456,6 +4549,7 @@
     "Palawan",
     "Pampanga",
     "Rosales",
+    "Santiago",
     "Tacloban",
     "Tuguegarao",
     "Zamboanga"
@@ -4463,7 +4557,12 @@
    "opens": "2026-09-02",
    "deadline": "2026-11-03",
    "results": "2026-12-10",
-   "notices": [],
+   "notices": [
+    {
+     "text": "Resolution No. 2254 - Designating Santiago City as an Additional Testing Center for the December 2026 Agriculturists Licensure Examination",
+     "url": "https://www.prc.gov.ph/sites/default/files/2026-2254 Designating Santiago City As An Additional Testing Center For The December 2026 Agriculturists L.pdf"
+    }
+   ],
    "program": "https://www.prc.gov.ph/sites/default/files/AgLE Program December 2026.pdf",
    "requirements": "https://www.prc.gov.ph/sites/default/files/requirementsV1/ListOfRequirements-Agriculture.pdf",
    "id": "agriculturists-2026-12-01"
